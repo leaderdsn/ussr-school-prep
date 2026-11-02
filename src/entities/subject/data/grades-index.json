@@ -155,5 +155,22 @@
     "quizCount": 12,
     "controlCount": 6,
     "controlPoints": 27
+  },
+  {
+    "id": "geometry-8",
+    "subjectId": "geometry",
+    "grade": 8,
+    "ussrGrade": 7,
+    "textbook": "А. В. Погорелов «Геометрия 6–10»",
+    "topicTitles": [
+      "Четырёхугольники",
+      "Теорема Пифагора и соотношения в прямоугольном треугольнике",
+      "Декартовы координаты на плоскости",
+      "Движение",
+      "Векторы на плоскости"
+    ],
+    "quizCount": 12,
+    "controlCount": 7,
+    "controlPoints": 34
   }
 ]

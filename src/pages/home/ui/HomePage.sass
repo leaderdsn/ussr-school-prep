@@ -43,20 +43,10 @@
     width: 100%
     height: 0.5rem
 
-  &__manage
-    display: grid
-    gap: ds.$space-3
-    padding-top: ds.$space-6
-    border-top: 1px solid var(--p-content-border-color)
 
   &__subtitle
     margin: 0
     font-size: ds.$font-size-lg
-
-  &__hint
-    margin: 0
-    color: var(--p-text-muted-color)
-    font-size: ds.$font-size-sm
 
   &__grades
     display: grid
@@ -65,3 +55,17 @@
   &__grade-select
     max-width: 100%
     overflow-x: auto
+
+  &__child
+    margin: 0
+    font-size: ds.$font-size-sm
+
+  &__family
+    display: inline-flex
+    align-items: center
+    gap: ds.$space-2
+    color: var(--app-link)
+    font-size: ds.$font-size-sm
+
+    &:focus-visible
+      +ds.focus-ring

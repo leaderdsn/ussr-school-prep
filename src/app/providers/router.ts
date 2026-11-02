@@ -36,6 +36,11 @@ const routes: RouteRecordRaw[] = [
     beforeEnter: guardGrade,
   },
   {
+    path: '/family',
+    name: ROUTE_NAMES.family,
+    component: () => import('@/pages/family').then((m) => m.FamilyPage),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: ROUTE_NAMES.notFound,
     component: () => import('@/pages/not-found').then((m) => m.NotFoundPage),

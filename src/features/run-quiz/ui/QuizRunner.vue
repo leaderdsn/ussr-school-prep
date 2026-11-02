@@ -3,7 +3,7 @@ import { computed, nextTick, ref, useTemplateRef, watch } from 'vue'
 
 import { PASS_SCORES, useProgressStore } from '@/entities/progress'
 
-import { createQuizSession, isAnswered, isQuestionCorrect, scoreQuiz } from '../model/quiz'
+import { answerText, createQuizSession, isAnswered, isQuestionCorrect, scoreQuiz } from '../model/quiz'
 
 import type { Grade, QuizQuestion } from '@/entities/subject'
 
@@ -28,6 +28,7 @@ const progress = useProgressStore()
 const session = ref(createQuizSession(grade.quiz))
 const answers = ref<QuizAnswers>({})
 const result = ref<QuizResult | null>(null)
+const startedAt = ref(Date.now())
 const warnedUnanswered = ref(false)
 const resultRef = useTemplateRef<HTMLElement>('resultRef')
 
@@ -69,7 +70,17 @@ async function check() {
     return
   }
   result.value = scoreQuiz(grade.quiz, answers.value)
-  progress.recordResult(grade.id, 'test', result.value.percent)
+  progress.recordAttempt({
+    gradeId: grade.id,
+    kind: 'test',
+    percent: result.value.percent,
+    durationSec: Math.round((Date.now() - startedAt.value) / 1000),
+    mistakes: result.value.wrong.map((index) => ({
+      index,
+      topic: grade.quiz[index]!.topic,
+      given: answerText(grade.quiz[index]!, answers.value[index]),
+    })),
+  })
   await nextTick()
   resultRef.value?.focus()
 }
@@ -79,6 +90,7 @@ function restart() {
   answers.value = {}
   result.value = null
   warnedUnanswered.value = false
+  startedAt.value = Date.now()
   window.scrollTo?.({ top: 0 })
 }
 

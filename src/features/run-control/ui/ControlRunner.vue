@@ -19,6 +19,7 @@ const progress = useProgressStore()
 
 const answers = ref<ControlAnswers>({})
 const result = ref<ControlResult | null>(null)
+const startedAt = ref(Date.now())
 const warnedUnanswered = ref(false)
 const resultRef = useTemplateRef<HTMLElement>('resultRef')
 
@@ -41,7 +42,16 @@ async function submit() {
     return
   }
   result.value = scoreControl(grade.control, answers.value)
-  progress.recordResult(grade.id, 'control', result.value.percent)
+  const { solved, percent } = result.value
+  progress.recordAttempt({
+    gradeId: grade.id,
+    kind: 'control',
+    percent,
+    durationSec: Math.round((Date.now() - startedAt.value) / 1000),
+    mistakes: grade.control.flatMap((task, index) =>
+      solved[index] ? [] : [{ index, topic: task.topic, given: answers.value[index]?.trim() ?? '' }],
+    ),
+  })
   await nextTick()
   resultRef.value?.focus()
 }
@@ -50,6 +60,7 @@ function restart() {
   answers.value = {}
   result.value = null
   warnedUnanswered.value = false
+  startedAt.value = Date.now()
   window.scrollTo?.({ top: 0 })
 }
 

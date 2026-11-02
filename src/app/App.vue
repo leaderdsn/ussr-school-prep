@@ -1,10 +1,16 @@
 <script setup lang="ts">
+import { useSyncStore } from '@/features/sync-progress'
 import { useThemeStore } from '@/features/toggle-theme'
+import { useActivityTracker } from '@/features/track-activity'
 import { APP_VERSION, env } from '@/shared/config'
 import { AppHeader } from '@/widgets/app-header'
 
 // Initializes theme (reads saved choice and applies the dark-mode class) before first paint.
 useThemeStore()
+// Restores the sync session of a parent who signed in earlier; loads Firebase only for them.
+useSyncStore().init()
+// Counts study time of the active child.
+useActivityTracker()
 </script>
 
 <template>

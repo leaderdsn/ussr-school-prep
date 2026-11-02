@@ -4,7 +4,6 @@ import { useRoute, useRouter } from 'vue-router'
 
 import { useProgressStore } from '@/entities/progress'
 import { findGrade, GRADE_NUMBERS, GRADES } from '@/entities/subject'
-import { ManageProgress } from '@/features/manage-progress'
 import { ROUTE_NAMES } from '@/shared/config'
 import { SubjectGrid } from '@/widgets/subject-grid'
 
@@ -64,6 +63,7 @@ const selectedGrade = computed<GradeNumber>({
       </div>
 
       <div class="home-page__progress">
+        <p class="home-page__child">Занимается: <strong>{{ progress.activeChild.name }}</strong></p>
         <p class="home-page__stats">
           <strong>{{ seenTopics }}</strong> из {{ totalTopics }} тем изучено ·
           <strong>{{ passedControls }}</strong> из {{ GRADES.length }} контрольных сдано
@@ -71,6 +71,9 @@ const selectedGrade = computed<GradeNumber>({
         <ProgressBar :value="percent" :show-value="false" aria-label="Общий прогресс по темам" class="home-page__bar" />
         <RouterLink v-if="resume" v-slot="{ navigate, href }" :to="resume.to" custom>
           <Button as="a" :href="href" icon="pi pi-play" :label="`Продолжить: ${resume.label}`" @click="navigate" />
+        </RouterLink>
+        <RouterLink class="home-page__family" :to="{ name: ROUTE_NAMES.family }">
+          <i class="pi pi-chart-bar" aria-hidden="true" /> Прогресс детей для родителей
         </RouterLink>
       </div>
     </section>
@@ -87,12 +90,6 @@ const selectedGrade = computed<GradeNumber>({
         class="home-page__grade-select"
       />
       <SubjectGrid :grade="selectedGrade" />
-    </section>
-
-    <section class="home-page__manage" aria-labelledby="manage-title">
-      <h2 id="manage-title" class="home-page__subtitle">Мой прогресс</h2>
-      <p class="home-page__hint">Он хранится в этом браузере. Сохраните файл, чтобы перенести его на другое устройство.</p>
-      <ManageProgress />
     </section>
   </div>
 </template>

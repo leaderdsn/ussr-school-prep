@@ -1,24 +1,55 @@
 import { defineStore } from 'pinia'
-import { ref, watch } from 'vue'
+import { computed, ref, toRaw, watch } from 'vue'
 
-import { PASS_SCORES, PROGRESS_STORAGE_KEY, PROGRESS_VERSION } from '../config/storage'
-import { createEmptyGrade, isRecord, parseGrade, parseGrades, parseLastVisited } from '../lib/parse'
+import { DEFAULT_CHILD_NAME, PASS_SCORES, PROGRESS_STORAGE_KEY, PROGRESS_VERSION } from '../config/storage'
+import { createId, dayKey } from '../lib/day'
+import {
+  createEmptyChildProgress,
+  createEmptyGrade,
+  isRecord,
+  parseChildProgress,
+  parseFamily,
+} from '../lib/parse'
 
-import type { GradeProgress, LastVisited, ProgressSnapshot, ResultKind } from './types'
+import type {
+  AttemptRecord,
+  Child,
+  ChildProgress,
+  ChildRecord,
+  FamilySnapshot,
+  GradeProgress,
+  LastVisited,
+} from './types'
 
-type Persisted = ProgressSnapshot & { version: number }
+/** Local copy: the family plus the profile chosen on THIS device (not synced). */
+type Persisted = { version: number; children: FamilySnapshot; activeChildId: string | null }
 
-function readStored(): Persisted | null {
+export type NewAttempt = Omit<AttemptRecord, 'id' | 'at'>
+
+function createChild(name: string, progress: ChildProgress = createEmptyChildProgress()): ChildRecord {
+  return { profile: { id: createId('child'), name, createdAt: new Date().toISOString() }, progress }
+}
+
+/** v2 as is; v1 (one learner) becomes the progress of the default profile. */
+function parsePersisted(data: unknown): { family: FamilySnapshot; activeChildId: string | null } | null {
+  if (!isRecord(data)) return null
+  if (data.version === PROGRESS_VERSION && isRecord(data.children)) {
+    return {
+      family: parseFamily(data.children),
+      activeChildId: typeof data.activeChildId === 'string' ? data.activeChildId : null,
+    }
+  }
+  if (data.version === 1 && isRecord(data.grades)) {
+    const record = createChild(DEFAULT_CHILD_NAME, parseChildProgress(data))
+    return { family: { [record.profile.id]: record }, activeChildId: record.profile.id }
+  }
+  return null
+}
+
+function readStored(): ReturnType<typeof parsePersisted> {
   try {
     const raw = localStorage.getItem(PROGRESS_STORAGE_KEY)
-    if (!raw) return null
-    const data: unknown = JSON.parse(raw)
-    if (!isRecord(data) || data.version !== PROGRESS_VERSION) return null
-    return {
-      version: PROGRESS_VERSION,
-      grades: parseGrades(data.grades),
-      lastVisited: parseLastVisited(data.lastVisited),
-    }
+    return raw ? parsePersisted(JSON.parse(raw)) : null
   } catch {
     return null
   }
@@ -32,23 +63,76 @@ function store(payload: Persisted) {
   }
 }
 
+function byCreation(a: Child, b: Child): number {
+  return Date.parse(a.createdAt) - Date.parse(b.createdAt)
+}
+
 export const useProgressStore = defineStore('progress', () => {
   const stored = readStored()
-  const grades = ref<Record<string, GradeProgress>>(stored?.grades ?? {})
-  const lastVisited = ref<LastVisited | null>(stored?.lastVisited ?? null)
+  const family = ref<FamilySnapshot>(stored?.family ?? {})
+  const activeChildId = ref<string | null>(stored?.activeChildId ?? null)
+
+  const children = computed(() => Object.values(family.value).map((record) => record.profile).sort(byCreation))
+
+  /** There is always at least one profile, and one of them is active. */
+  function ensureActive() {
+    if (children.value.length === 0) {
+      const record = createChild(DEFAULT_CHILD_NAME)
+      family.value = { ...family.value, [record.profile.id]: record }
+    }
+    if (!activeChildId.value || !family.value[activeChildId.value]) activeChildId.value = children.value[0]!.id
+  }
+  ensureActive()
+
+  const activeRecord = computed(() => family.value[activeChildId.value!]!)
+  const activeChild = computed(() => activeRecord.value.profile)
+  const current = computed(() => activeRecord.value.progress)
+  const grades = computed(() => current.value.grades)
+  const lastVisited = computed(() => current.value.lastVisited)
 
   function payload(): Persisted {
-    return { version: PROGRESS_VERSION, grades: grades.value, lastVisited: lastVisited.value }
+    return { version: PROGRESS_VERSION, children: family.value, activeChildId: activeChildId.value }
   }
 
-  watch([grades, lastVisited], () => store(payload()), { deep: true })
+  watch([family, activeChildId], () => store(payload()), { deep: true })
+
+  // --- profiles ---
+
+  function addChild(name: string): string {
+    const record = createChild(name.trim() || DEFAULT_CHILD_NAME)
+    family.value[record.profile.id] = record
+    return record.profile.id
+  }
+
+  function renameChild(childId: string, name: string) {
+    const record = family.value[childId]
+    if (record && name.trim()) record.profile.name = name.trim()
+  }
+
+  /** The last profile cannot be removed. */
+  function removeChild(childId: string): boolean {
+    if (!family.value[childId] || children.value.length <= 1) return false
+    delete family.value[childId]
+    ensureActive()
+    return true
+  }
+
+  function selectChild(childId: string) {
+    if (family.value[childId]) activeChildId.value = childId
+  }
+
+  function progressOf(childId: string): ChildProgress {
+    return family.value[childId]?.progress ?? createEmptyChildProgress()
+  }
+
+  // --- progress of the active child ---
 
   function getGrade(gradeId: string): GradeProgress {
     return grades.value[gradeId] ?? createEmptyGrade()
   }
 
   function ensureGrade(gradeId: string): GradeProgress {
-    return (grades.value[gradeId] ??= createEmptyGrade())
+    return (current.value.grades[gradeId] ??= createEmptyGrade())
   }
 
   function markTopicSeen(gradeId: string, topicIndex: number) {
@@ -57,32 +141,56 @@ export const useProgressStore = defineStore('progress', () => {
     grade.seenTopics = [...grade.seenTopics, topicIndex].sort((a, b) => a - b)
   }
 
-  function recordResult(gradeId: string, kind: ResultKind, percent: number) {
-    const result = ensureGrade(gradeId)[kind]
+  function recordAttempt(attempt: NewAttempt): AttemptRecord {
+    const record: AttemptRecord = { ...attempt, id: createId('a'), at: new Date().toISOString() }
+    current.value.history.push(record)
+
+    const result = ensureGrade(attempt.gradeId)[attempt.kind]
     result.attempts += 1
-    result.lastScore = percent
-    result.bestScore = Math.max(result.bestScore ?? 0, percent)
-    if (percent >= PASS_SCORES[kind] && result.passedAt === null) result.passedAt = new Date().toISOString()
+    result.lastScore = attempt.percent
+    result.bestScore = Math.max(result.bestScore ?? 0, attempt.percent)
+    if (attempt.percent >= PASS_SCORES[attempt.kind] && result.passedAt === null) result.passedAt = record.at
+    return record
+  }
+
+  function addActivity(seconds: number, date: Date = new Date()) {
+    if (seconds <= 0) return
+    const day = dayKey(date)
+    const { activity } = current.value
+    activity[day] = (activity[day] ?? 0) + Math.round(seconds)
   }
 
   function setLastVisited(value: LastVisited) {
-    lastVisited.value = { ...value }
+    current.value.lastVisited = { ...value }
   }
 
   function resetGrade(gradeId: string) {
-    delete grades.value[gradeId]
-    if (lastVisited.value?.gradeId === gradeId) lastVisited.value = null
+    delete current.value.grades[gradeId]
+    if (current.value.lastVisited?.gradeId === gradeId) current.value.lastVisited = null
   }
 
+  /** Clears the progress of every child; profiles stay. */
   function resetAll() {
-    grades.value = {}
-    lastVisited.value = null
+    for (const record of Object.values(family.value)) record.progress = createEmptyChildProgress()
+  }
+
+  // --- sync and files ---
+
+  /** Detached copy, safe to send over the network or compare. */
+  function snapshot(): FamilySnapshot {
+    return structuredClone(toRaw(family.value))
+  }
+
+  function applySnapshot(value: FamilySnapshot) {
+    family.value = structuredClone(value)
+    ensureActive()
   }
 
   function exportJson(): string {
-    return JSON.stringify(payload(), null, 2)
+    return JSON.stringify({ version: PROGRESS_VERSION, children: family.value }, null, 2)
   }
 
+  /** Replaces all profiles with the file's; a v1 file goes to the active child. */
   function importJson(json: string) {
     let data: unknown
     try {
@@ -90,30 +198,39 @@ export const useProgressStore = defineStore('progress', () => {
     } catch {
       throw new Error('Файл не является корректным JSON')
     }
-    if (!isRecord(data) || data.version !== PROGRESS_VERSION || !isRecord(data.grades)) {
-      throw new Error('Неверный формат файла прогресса')
-    }
+    const parsed = parsePersisted(data)
+    if (!parsed || Object.keys(parsed.family).length === 0) throw new Error('Неверный формат файла прогресса')
 
-    const parsed: Record<string, GradeProgress> = {}
-    for (const [id, value] of Object.entries(data.grades)) {
-      const grade = parseGrade(value)
-      if (!grade) throw new Error(`Некорректные данные прогресса для класса «${id}»`)
-      parsed[id] = grade
+    if (isRecord(data) && data.version === 1) {
+      activeRecord.value.progress = Object.values(parsed.family)[0]!.progress
+      return
     }
-
-    grades.value = parsed
-    lastVisited.value = parseLastVisited(data.lastVisited)
+    family.value = parsed.family
+    ensureActive()
   }
 
   return {
+    family,
+    activeChildId,
+    children,
+    activeChild,
+    current,
     grades,
     lastVisited,
+    addChild,
+    renameChild,
+    removeChild,
+    selectChild,
+    progressOf,
     getGrade,
     markTopicSeen,
-    recordResult,
+    recordAttempt,
+    addActivity,
     setLastVisited,
     resetGrade,
     resetAll,
+    snapshot,
+    applySnapshot,
     exportJson,
     importJson,
   }

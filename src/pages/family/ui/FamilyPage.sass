@@ -1,0 +1,57 @@
+@use "@/shared/styles" as ds
+
+.family-page
+  +ds.container
+  display: grid
+  gap: ds.$space-8
+  padding-block: ds.$space-8 ds.$space-12
+
+  &__head
+    display: grid
+    gap: ds.$space-3
+
+  &__title
+    margin: 0
+    font-size: clamp(1.75rem, 4vw, 2.5rem)
+    line-height: ds.$line-height-tight
+
+  &__lead,
+  &__hint
+    margin: 0
+    color: var(--p-text-muted-color)
+
+  &__hint
+    font-size: ds.$font-size-sm
+
+  &__sync
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: ds.$space-2
+    margin: 0
+    padding: ds.$space-3 ds.$space-4
+    border-left: 3px solid var(--app-link)
+    border-radius: 0 ds.$radius-sm ds.$radius-sm 0
+    background: var(--app-soft)
+    font-size: ds.$font-size-sm
+
+  &__report,
+  &__section
+    display: grid
+    gap: ds.$space-4
+    min-width: 0
+
+  &__section
+    padding-top: ds.$space-6
+    border-top: 1px solid var(--p-content-border-color)
+
+  &__report-head
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    gap: ds.$space-3
+
+  &__subtitle
+    margin: 0
+    font-size: ds.$font-size-xl

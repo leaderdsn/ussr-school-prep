@@ -1,0 +1,202 @@
+@use "@/shared/styles" as ds
+
+.child-report
+  display: grid
+  gap: ds.$space-8
+  min-width: 0
+
+.report-tiles
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr))
+  gap: ds.$space-3
+  margin: 0
+  padding: 0
+  list-style: none
+
+.report-tile
+  display: grid
+  gap: ds.$space-1
+  align-content: start
+  padding: ds.$space-4
+  border: 1px solid var(--p-content-border-color)
+  border-radius: ds.$radius-md
+  background: var(--app-card)
+
+  &__value
+    font-size: ds.$font-size-xl
+    font-weight: 700
+    font-variant-numeric: tabular-nums
+    line-height: 1.1
+
+  &__label
+    color: var(--p-text-muted-color)
+    font-size: ds.$font-size-xs
+    line-height: 1.35
+
+.report-section
+  display: grid
+  gap: ds.$space-3
+  min-width: 0
+  justify-items: start
+
+  > *
+    width: 100%
+
+  &__title
+    margin: 0
+    font-size: ds.$font-size-lg
+
+  &__hint,
+  &__empty
+    margin: 0
+    color: var(--p-text-muted-color)
+    font-size: ds.$font-size-sm
+
+.activity
+  display: grid
+  grid-template-columns: repeat(14, minmax(0, 1fr))
+  gap: ds.$space-1
+  height: 10rem
+  margin: 0
+  padding: 0
+  list-style: none
+
+  &__day
+    display: grid
+    grid-template-rows: auto 1fr auto
+    gap: 2px
+    align-items: end
+    justify-items: center
+    min-width: 0
+
+  &__value
+    color: var(--p-text-muted-color)
+    font-size: 0.6875rem
+    font-variant-numeric: tabular-nums
+
+  &__bar
+    width: 70%
+    max-width: 1.75rem
+    min-height: 2px
+    border-radius: 4px 4px 0 0
+    background: var(--app-link)
+    align-self: end
+
+  &__day--empty &__bar
+    background: var(--p-content-border-color)
+
+  &__label
+    display: grid
+    color: var(--p-text-muted-color)
+    font-size: 0.625rem
+    line-height: 1.2
+    text-align: center
+    white-space: nowrap
+
+  &__weekday
+    font-weight: 600
+
+.report-table
+  overflow-x: auto
+  border: 1px solid var(--p-content-border-color)
+  border-radius: ds.$radius-md
+  background: var(--app-card)
+
+  table
+    width: 100%
+    border-collapse: collapse
+    font-size: ds.$font-size-sm
+
+  th,
+  td
+    padding: ds.$space-2 ds.$space-3
+    border-bottom: 1px solid var(--p-content-border-color)
+    text-align: left
+    vertical-align: middle
+
+  thead th
+    background: var(--app-background)
+    color: var(--p-text-muted-color)
+    font-weight: 600
+    white-space: nowrap
+
+  tbody th
+    font-weight: 600
+
+  tr:last-child th,
+  tr:last-child td
+    border-bottom: 0
+
+  a
+    color: var(--app-link)
+
+  &__muted
+    margin-left: ds.$space-2
+    color: var(--p-text-muted-color)
+    font-size: ds.$font-size-xs
+    white-space: nowrap
+
+.badge
+  padding: 2px ds.$space-2
+  border-radius: ds.$radius-full
+  font-size: ds.$font-size-xs
+  font-weight: 600
+  white-space: nowrap
+
+  &--good
+    background: var(--app-good-soft)
+    color: var(--app-good)
+
+  &--bad
+    background: var(--app-bad-soft)
+    color: var(--app-bad)
+
+.mistakes
+  display: grid
+  gap: ds.$space-3
+  margin: 0
+  padding: 0
+  list-style: none
+
+  &__group
+    display: grid
+    gap: ds.$space-2
+    padding: ds.$space-4
+    border: 1px solid var(--p-content-border-color)
+    border-left: 3px solid var(--app-bad)
+    border-radius: 0 ds.$radius-md ds.$radius-md 0
+    background: var(--app-card)
+    font-size: ds.$font-size-sm
+
+  &__head,
+  &__topics
+    margin: 0
+
+  &__topics a
+    color: var(--app-link)
+
+  &__details summary
+    color: var(--app-link)
+    cursor: pointer
+
+  &__list
+    display: grid
+    gap: ds.$space-3
+    margin: ds.$space-3 0 0
+    padding-left: ds.$space-5
+
+  &__question,
+  &__answer
+    margin: 0
+
+  &__question
+    font-weight: 600
+
+  &__answer--given
+    color: var(--app-bad)
+
+  &__answer--right
+    color: var(--app-good)
+
+.visually-hidden
+  +ds.visually-hidden

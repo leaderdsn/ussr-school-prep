@@ -37,7 +37,10 @@ describe('ControlRunner', () => {
 
     expect(wrapper.find('.control-result__mark').text()).toBe('5')
     expect(wrapper.findAll('.task__solution')).toHaveLength(2)
-    expect(useProgressStore().getGrade('math-1').control.bestScore).toBe(100)
+    const store = useProgressStore()
+    expect(store.getGrade('math-1').control.bestScore).toBe(100)
+    expect(store.current.history).toHaveLength(1)
+    expect(store.current.history[0]).toMatchObject({ kind: 'control', percent: 100, mistakes: [] })
   })
 
   it('предупреждает о пустых ответах и сдаёт работу со второго нажатия', async () => {

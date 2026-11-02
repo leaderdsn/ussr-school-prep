@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ChildSwitcher } from '@/features/select-child'
+import { SyncButton } from '@/features/sync-progress'
 import { ThemeToggle } from '@/features/toggle-theme'
 import { env, ROUTE_NAMES } from '@/shared/config'
 
@@ -14,6 +16,8 @@ const logo = `${import.meta.env.BASE_URL}favicon.svg`
       </RouterLink>
 
       <div class="app-header__actions">
+        <ChildSwitcher />
+        <SyncButton />
         <ThemeToggle />
       </div>
     </div>

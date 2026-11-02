@@ -1,0 +1,64 @@
+@use "@/shared/styles" as ds
+
+.child-switcher
+  max-width: 12rem
+
+  :deep(.p-button-label)
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+.child-panel
+  display: grid
+  gap: ds.$space-3
+  min-width: 14rem
+
+  &__title
+    margin: 0
+    color: var(--p-text-muted-color)
+    font-size: ds.$font-size-xs
+    font-weight: 600
+    letter-spacing: 0.06em
+    text-transform: uppercase
+
+  &__list
+    display: grid
+    gap: ds.$space-1
+    margin: 0
+    padding: 0
+    list-style: none
+
+  &__item
+    display: flex
+    align-items: center
+    gap: ds.$space-2
+    width: 100%
+    padding: ds.$space-2 ds.$space-3
+    border: 1px solid transparent
+    border-radius: ds.$radius-sm
+    background: none
+    color: var(--p-text-color)
+    font: inherit
+    text-align: left
+    cursor: pointer
+
+    &:hover
+      background: var(--app-background)
+
+    &:focus-visible
+      +ds.focus-ring
+
+    &--active
+      border-color: var(--app-link)
+      background: var(--app-soft)
+      font-weight: 600
+
+  &__link
+    display: inline-flex
+    align-items: center
+    gap: ds.$space-2
+    color: var(--app-link)
+    font-size: ds.$font-size-sm
+
+    &:focus-visible
+      +ds.focus-ring

@@ -85,3 +85,11 @@ export function scoreQuiz(questions: QuizQuestion[], answers: QuizAnswers): Quiz
   const total = questions.length
   return { correct, total, percent: total === 0 ? 0 : Math.round((correct / total) * 100), wrong, byType }
 }
+
+/** The answer as the child saw it, for the parent's report; empty when unanswered. */
+export function answerText(question: QuizQuestion, answer: QuizAnswer | undefined): string {
+  if (!isAnswered(answer)) return ''
+  if (question.kind === 'input') return typeof answer === 'string' ? answer.trim() : ''
+  const indexes = Array.isArray(answer) ? [...answer].sort((a, b) => a - b) : [answer as number]
+  return indexes.map((index) => question.options[index] ?? '').join('; ')
+}

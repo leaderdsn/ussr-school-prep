@@ -8,6 +8,18 @@
 
 Объяснения написаны своими словами по программе и логике учебников, тексты учебников не копируются.
 
+**Открыть:** https://leaderdsn.github.io/ussr-school-prep/
+
+## Деплой
+
+Каждый push в `main` собирает и публикует сайт на GitHub Pages ([deploy.yml](.github/workflows/deploy.yml)): lint, тесты,
+`content:check`, сборка с базовым путём `/ussr-school-prep/`. Один раз нужно:
+
+1. **Settings → Pages → Source:** GitHub Actions.
+2. **Settings → Secrets and variables → Actions:** добавить `VITE_FIREBASE_API_KEY`, `VITE_FIREBASE_AUTH_DOMAIN`,
+   `VITE_FIREBASE_DATABASE_URL`, `VITE_FIREBASE_PROJECT_ID`, `VITE_FIREBASE_APP_ID` — значения из `.env.local`.
+   Без них сайт работает, но без входа через Google.
+
 ## Запуск
 
 Нужны Node.js `^22.18.0` или `>=24.12.0` и pnpm 11 (`corepack enable`).

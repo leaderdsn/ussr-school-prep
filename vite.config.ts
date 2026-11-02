@@ -15,7 +15,9 @@ const pkg = JSON.parse(
 ) as PackageJson
 
 // https://vite.dev/config/
-export default defineConfig({
+// GitHub Pages serves the site from /ussr-school-prep/ (build and preview); the dev server stays at the root.
+export default defineConfig(({ command, isPreview }) => ({
+  base: command === 'build' || isPreview ? '/ussr-school-prep/' : '/',
   plugins: [
     vue(),
     // Auto-imports PrimeVue components only. Our own components are imported explicitly
@@ -56,4 +58,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))

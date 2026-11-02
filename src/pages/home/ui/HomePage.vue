@@ -56,6 +56,7 @@ const selectedGrade = computed<GradeNumber>({
     <section class="home-page__hero" aria-labelledby="home-title">
       <div class="home-page__intro">
         <h1 id="home-title" class="home-page__title">Школьная программа с 1 по 11 класс</h1>
+        <p class="home-page__motto" aria-hidden="true">Повторение — мать учения</p>
         <p class="home-page__lead">
           Теория, тест и контрольная работа по каждому предмету. Предметы, которые были в СССР, — по советским
           учебникам, с пометкой, как их проходят сейчас. Новые предметы — по программе РФ.

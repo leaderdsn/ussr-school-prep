@@ -5,7 +5,7 @@
   top: 0
   z-index: 10
   height: ds.$header-height
-  border-bottom: 1px solid var(--p-content-border-color)
+  border-bottom: 3px double var(--p-content-border-color)
   background: color-mix(in srgb, var(--app-background) 80%, transparent)
   backdrop-filter: blur(12px)
 
@@ -35,6 +35,8 @@
       +ds.focus-ring
 
   &__title
+    font-family: ds.$font-family-heading
+    font-size: ds.$font-size-lg
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis

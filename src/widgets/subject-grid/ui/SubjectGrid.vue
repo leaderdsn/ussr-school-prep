@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
 import { PASS_SCORES, schoolMark, useProgressStore } from '@/entities/progress'
-import { ERA_LABELS, findGrade, gradeId, SUBJECTS } from '@/entities/subject'
+import { accentValue, ERA_LABELS, findGrade, gradeId, subjectTheme, SUBJECTS } from '@/entities/subject'
 import { ROUTE_NAMES } from '@/shared/config'
 
 import type { GradeNumber } from '@/entities/subject'
@@ -17,9 +17,12 @@ const cards = computed(() =>
     const id = gradeId(subject.id, grade)
     const summary = findGrade(id)?.grade ?? null
     const state = progress.getGrade(id)
+    const theme = subjectTheme(subject)
     return {
       id,
       subject,
+      icon: theme.icon,
+      style: { '--subject-accent': accentValue(theme) },
       summary,
       description: subject.gradeDescriptions[`${grade}`] ?? subject.description,
       seen: summary ? Math.min(state.seenTopics.length, summary.topicTitles.length) : 0,
@@ -33,7 +36,13 @@ const cards = computed(() =>
 
 <template>
   <ul v-if="cards.length" class="subject-grid">
-    <li v-for="card in cards" :key="card.id" class="subject-card" :class="{ 'subject-card--empty': !card.summary }">
+    <li
+      v-for="card in cards"
+      :key="card.id"
+      class="subject-card"
+      :class="[`subject-card--${card.subject.era}`, { 'subject-card--empty': !card.summary }]"
+      :style="card.style"
+    >
       <component
         :is="card.summary ? RouterLink : 'div'"
         class="subject-card__body"
@@ -41,7 +50,10 @@ const cards = computed(() =>
         :data-grade="card.id"
       >
         <span class="subject-card__head">
-          <span class="subject-card__title">{{ card.subject.title }}</span>
+          <span class="subject-card__title">
+            <i class="subject-card__icon" :class="card.icon" aria-hidden="true" />
+            {{ card.subject.title }}
+          </span>
           <span class="subject-card__era" :class="`subject-card__era--${card.subject.era}`">
             {{ card.subject.era === 'ussr' ? 'СССР' : 'РФ' }}
             <span class="visually-hidden">— {{ ERA_LABELS[card.subject.era] }}</span>
@@ -57,7 +69,7 @@ const cards = computed(() =>
           </span>
           <span v-if="card.mark !== null" class="pill" :class="card.mark >= 3 ? 'pill--good' : 'pill--bad'">
             <span class="visually-hidden">Лучшая оценка за контрольную:</span>
-            контрольная «{{ card.mark }}»
+            контрольная <span class="pill__mark">{{ card.mark }}</span>
           </span>
         </span>
         <span v-else class="subject-card__soon">Материал готовится</span>

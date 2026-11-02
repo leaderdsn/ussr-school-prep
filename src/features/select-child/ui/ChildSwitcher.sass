@@ -3,10 +3,15 @@
 .child-switcher
   max-width: 12rem
 
+  // On a phone only the icon stays; the name is in the aria-label and in the panel.
   :deep(.p-button-label)
+    display: none
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis
+
+    +ds.media(sm)
+      display: block
 
 .child-panel
   display: grid

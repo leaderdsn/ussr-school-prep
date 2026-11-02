@@ -22,34 +22,107 @@
     display: block
     max-width: 100%
 
+// Themes are layers of CSS variables on <html>:
+//   :root                — Soviet school, light: a squared exercise book, violet ink, red teacher's pen;
+//   .app-dark            — Soviet school, dark: a green chalkboard;
+//   [data-era="rf"]      — modern RF style inside an RF subject (set by entities/subject useSubjectTheme);
+//   inline style on html — the subject's own accent and lesson paper (also useSubjectTheme).
+// The app layer comes after PrimeVue's, so the --p-* tokens below override the preset.
 @layer app
   :root
-    --app-background: var(--p-surface-50)
-    --app-card: #ffffff
-    --app-link: #1f4ea3
+    --app-font-heading: #{ds.$font-stack-schoolbook}
+    --app-font-body: #{ds.$font-stack-text}
+    --app-font-hand: #{ds.$font-stack-hand}
+    --app-radius-sm: 0.25rem
+    --app-radius-md: 0.375rem
+    --app-radius-lg: 0.5rem
+
+    --app-background: #efe8d8
+    --app-card: #fffcf3
+    --app-link: #4a3a9c
     --app-on-link: #ffffff
-    --app-soft: #e7eefb
-    --app-good: #1b7a4b
-    --app-good-soft: #e1f3e8
+    --app-soft: color-mix(in srgb, var(--app-link) 11%, var(--app-card))
+    --app-ink-red: #c62828
+    --app-good: #2f7a3a
+    --app-good-soft: #e4f1df
     --app-bad: #b3261e
-    --app-bad-soft: #fbe8e6
+    --app-bad-soft: #f9e4df
     --app-warn: #8a5300
-    --app-warn-soft: #fff0d9
-    --app-shadow: 0 1px 2px rgb(24 32 46 / 6%), 0 4px 16px rgb(24 32 46 / 6%)
+    --app-warn-soft: #fbeed3
+    --app-shadow: 0 1px 0 rgb(70 50 20 / 8%), 0 4px 14px rgb(70 50 20 / 10%)
+
+    // Exercise book: the page and the lesson sheet are squared, the lesson has a red margin.
+    --app-grid-line: rgb(60 100 170 / 16%)
+    --app-margin-line: rgb(214 69 65 / 55%)
+    --app-page-image: linear-gradient(var(--app-grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--app-grid-line) 1px, transparent 1px)
+    --app-page-size: 1.25rem 1.25rem, 1.25rem 1.25rem
+    --app-paper-image: var(--app-page-image)
+    --app-paper-size: var(--app-page-size)
+
+    --p-text-color: #2a251e
+    --p-text-muted-color: #6c6252
+    --p-content-border-color: #dacfb8
+    --p-content-background: var(--app-card)
+    --p-form-field-background: #fffefa
+    --p-form-field-border-color: #cdbf9f
+    --p-primary-color: var(--app-link)
+    --p-primary-contrast-color: var(--app-on-link)
+    --p-primary-hover-color: color-mix(in srgb, var(--app-link) 85%, black)
+    --p-primary-active-color: color-mix(in srgb, var(--app-link) 72%, black)
 
   :root.app-dark
-    --app-background: var(--p-surface-950)
-    --app-card: var(--p-surface-900)
-    --app-link: #8fb4ff
-    --app-on-link: #0d1526
-    --app-soft: #172440
-    --app-good: #5cc48c
-    --app-good-soft: #14301f
-    --app-bad: #f28b82
-    --app-bad-soft: #3a1a18
-    --app-warn: #f2b054
-    --app-warn-soft: #33270f
+    --app-background: #1c2922
+    --app-card: #23332a
+    --app-link: #c9bcff
+    --app-on-link: #1b1630
+    --app-ink-red: #ff8a80
+    --app-good: #86d692
+    --app-good-soft: #20382a
+    --app-bad: #ff9a8f
+    --app-bad-soft: #3d2622
+    --app-warn: #f2c46b
+    --app-warn-soft: #3a3220
     --app-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 4px 16px rgb(0 0 0 / 25%)
+
+    // Chalkboard: faint chalk squares instead of ink ones.
+    --app-grid-line: rgb(255 255 255 / 5%)
+    --app-margin-line: rgb(255 130 120 / 35%)
+
+    --p-text-color: #ece6d6
+    --p-text-muted-color: #a9b4a7
+    --p-content-border-color: #3a4d42
+    --p-form-field-background: #1f2d25
+    --p-form-field-border-color: #4a5f52
+    --p-primary-hover-color: color-mix(in srgb, var(--app-link) 85%, white)
+    --p-primary-active-color: color-mix(in srgb, var(--app-link) 72%, white)
+
+  // Modern RF school: clean sheet, sans-serif headings, rounder corners, no squares.
+  :root[data-era="rf"]
+    --app-font-heading: #{ds.$font-stack-modern}
+    --app-font-body: #{ds.$font-stack-modern}
+    --app-radius-sm: 0.5rem
+    --app-radius-md: 0.75rem
+    --app-radius-lg: 1rem
+    --app-background: #f3f5f9
+    --app-card: #ffffff
+    --app-margin-line: transparent
+    --app-page-image: none
+    --app-shadow: 0 1px 2px rgb(24 32 46 / 6%), 0 4px 16px rgb(24 32 46 / 6%)
+    --p-text-color: #1f2733
+    --p-text-muted-color: #5b6575
+    --p-content-border-color: #e1e6ee
+    --p-form-field-background: #ffffff
+    --p-form-field-border-color: #cbd3df
+
+  :root.app-dark[data-era="rf"]
+    --app-background: #10151c
+    --app-card: #18202a
+    --app-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 4px 16px rgb(0 0 0 / 25%)
+    --p-text-color: #e6ebf2
+    --p-text-muted-color: #9aa5b4
+    --p-content-border-color: #29333f
+    --p-form-field-background: #121922
+    --p-form-field-border-color: #334050
 
   html
     color-scheme: light
@@ -59,13 +132,21 @@
 
   body
     min-height: 100dvh
-    background: var(--app-background)
+    background-color: var(--app-background)
+    background-image: var(--app-page-image)
+    background-size: var(--app-page-size)
     color: var(--p-text-color)
     font-family: ds.$font-family
     font-size: ds.$font-size-md
     line-height: ds.$line-height-normal
     -webkit-font-smoothing: antialiased
-    transition: background ds.$transition-base
+    transition: background-color ds.$transition-base
+
+  h1,
+  h2
+    font-family: ds.$font-family-heading
+    font-weight: 700
+    letter-spacing: 0.005em
 
   #app
     display: flex

@@ -3,7 +3,7 @@ import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 import { useProgressStore } from '@/entities/progress'
-import { COMPARE_TITLES, ERA_LABELS, fetchGrade, findGrade } from '@/entities/subject'
+import { COMPARE_TITLES, ERA_LABELS, fetchGrade, findGrade, subjectTheme, useSubjectTheme } from '@/entities/subject'
 import { ControlRunner } from '@/features/run-control'
 import { QuizRunner } from '@/features/run-quiz'
 import { CONTROL_STEP, ROUTE_NAMES, TEST_STEP } from '@/shared/config'
@@ -22,6 +22,10 @@ const summary = computed(() => findGrade(gradeId))
 const titles = computed(() => summary.value?.grade.topicTitles ?? [])
 const current = computed<GradeStep>(() => (step === TEST_STEP || step === CONTROL_STEP ? step : Number(step)))
 const heading = computed(() => (summary.value ? `${summary.value.subject.title}, ${summary.value.grade.grade} класс` : ''))
+const theme = computed(() => (summary.value ? subjectTheme(summary.value.subject) : null))
+
+// Inside the subject the app takes on its style: accent, lesson paper, Soviet or modern typography.
+useSubjectTheme(() => summary.value?.subject ?? null)
 
 const grade = ref<Grade | null>(null)
 const loading = ref(false)
@@ -66,22 +70,24 @@ function goTo(target: GradeStep) {
 
 <template>
   <div v-if="summary" class="grade-page">
-    <header class="grade-page__bar">
-      <RouterLink class="grade-page__back" :to="{ name: ROUTE_NAMES.home, query: { grade: summary.grade.grade } }">
-        <i class="pi pi-arrow-left" aria-hidden="true" />
-        Все предметы
-      </RouterLink>
-      <div class="grade-page__heading">
-        <p class="grade-page__eyebrow">{{ ERA_LABELS[summary.subject.era] }}</p>
-        <h1 class="grade-page__title">{{ heading }}</h1>
-        <p class="grade-page__meta">
+    <RouterLink class="grade-page__back" :to="{ name: ROUTE_NAMES.home, query: { grade: summary.grade.grade } }">
+      <i class="pi pi-arrow-left" aria-hidden="true" />
+      Все предметы
+    </RouterLink>
+
+    <header class="cover" :class="`cover--${summary.subject.era}`">
+      <span class="cover__emblem" aria-hidden="true"><i :class="theme?.icon" /></span>
+      <div class="cover__heading">
+        <p class="cover__eyebrow">{{ ERA_LABELS[summary.subject.era] }}</p>
+        <h1 class="cover__title">{{ heading }}</h1>
+        <p class="cover__meta">
           {{ summary.grade.textbook }}
           <template v-if="summary.grade.ussrGrade"> · в СССР — {{ summary.grade.ussrGrade }} класс</template>
         </p>
       </div>
-      <div class="grade-page__progress">
+      <div class="cover__progress">
         <span>Прочитано тем: {{ seenCount }} из {{ titles.length }}</span>
-        <ProgressBar :value="percent" :show-value="false" aria-label="Прогресс по темам класса" class="grade-page__bar-fill" />
+        <ProgressBar :value="percent" :show-value="false" aria-label="Прогресс по темам класса" class="cover__bar" />
       </div>
     </header>
 
@@ -95,7 +101,7 @@ function goTo(target: GradeStep) {
         :control-passed="gradeProgress.control.passedAt !== null"
       />
 
-      <section class="lesson" aria-live="polite" :aria-busy="loading">
+      <section class="lesson" :class="`lesson--${summary.subject.era}`" aria-live="polite" :aria-busy="loading">
         <div v-if="loading" class="lesson__loading" role="status">
           <span class="visually-hidden">Загружаем материал…</span>
           <Skeleton height="2rem" width="60%" />

@@ -12,6 +12,7 @@
     margin: 0
     color: var(--p-text-muted-color)
 
+// Each card is a small textbook: a spine in the subject's colour along the left edge.
 .subject-card
   display: grid
 
@@ -19,51 +20,73 @@
     display: grid
     gap: ds.$space-2
     align-content: start
-    padding: ds.$space-5
+    padding: ds.$space-5 ds.$space-5 ds.$space-5 calc(#{ds.$space-5} + 0.5rem)
     border: 1px solid var(--p-content-border-color)
     border-radius: ds.$radius-lg
-    background: var(--app-card)
+    background: linear-gradient(90deg, var(--subject-accent) 0.5rem, transparent 0.5rem), var(--app-card)
     box-shadow: var(--app-shadow)
     color: var(--p-text-color)
     text-decoration: none
-    transition: border-color ds.$transition-fast
+    transition: border-color ds.$transition-fast, transform ds.$transition-fast
 
   a.subject-card__body
     &:hover
-      border-color: var(--app-link)
+      border-color: var(--subject-accent)
+      transform: translateY(-2px)
+
+      @media (prefers-reduced-motion: reduce)
+        transform: none
 
     &:focus-visible
       +ds.focus-ring
 
+  &--rf &__body
+    font-family: ds.$font-stack-modern
+
   &--empty &__body
-    background: transparent
+    background: linear-gradient(90deg, color-mix(in srgb, var(--subject-accent) 35%, transparent) 0.5rem, transparent 0.5rem), color-mix(in srgb, var(--app-card) 60%, transparent)
     box-shadow: none
     border-style: dashed
 
   &__head
     display: flex
-    align-items: center
+    align-items: flex-start
     justify-content: space-between
     gap: ds.$space-2
 
   &__title
+    display: inline-flex
+    align-items: center
+    gap: ds.$space-2
+    font-family: ds.$font-family-heading
     font-size: ds.$font-size-lg
-    font-weight: 600
+    font-weight: 700
 
+  &--rf &__title
+    font-family: ds.$font-stack-modern
+
+  &__icon
+    color: var(--subject-accent)
+
+  // Soviet subjects carry a slanted ink stamp, RF subjects a neat modern label.
   &__era
-    padding: 3px ds.$space-2
-    border-radius: ds.$radius-full
+    flex-shrink: 0
+    padding: 2px ds.$space-2
     font-size: 0.6875rem
     font-weight: 700
-    letter-spacing: 0.06em
+    letter-spacing: 0.08em
 
     &--ussr
-      background: var(--app-bad-soft)
-      color: var(--app-bad)
+      border: 2px solid var(--app-ink-red)
+      border-radius: 0.25rem
+      color: var(--app-ink-red)
+      transform: rotate(-6deg)
+      opacity: 0.85
 
     &--rf
-      background: var(--app-soft)
-      color: var(--app-link)
+      border-radius: ds.$radius-full
+      background: light-dark(#e7f1fc, #13263a)
+      color: light-dark(#1864ab, #74c0fc)
 
   &__description
     color: var(--p-text-muted-color)
@@ -90,6 +113,9 @@
     font-style: italic
 
 .pill
+  display: inline-flex
+  align-items: center
+  gap: ds.$space-1
   padding: 3px ds.$space-2
   border-radius: ds.$radius-full
   font-size: ds.$font-size-xs
@@ -103,6 +129,13 @@
   &--bad
     background: var(--app-bad-soft)
     color: var(--app-bad)
+
+  // The mark is written by the teacher's red pen
+  &__mark
+    color: var(--app-ink-red)
+    font-family: ds.$font-family-hand
+    font-size: 1.25rem
+    line-height: 0.8
 
 .visually-hidden
   +ds.visually-hidden

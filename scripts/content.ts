@@ -20,8 +20,10 @@ const INDEX_FILE = join(DATA_DIR, 'grades-index.json')
 const QUEUE_GROUPS: readonly (readonly string[])[] = [
   ['math', 'algebra', 'geometry'],
   ['russian'],
+  ['reading'],
   ['physics'],
   ['chemistry'],
+  ['literature'],
 ]
 
 function readJson(file: string): unknown {

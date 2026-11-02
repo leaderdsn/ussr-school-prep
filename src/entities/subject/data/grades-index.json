@@ -65,5 +65,23 @@
     "quizCount": 12,
     "controlCount": 7,
     "controlPoints": 30
+  },
+  {
+    "id": "math-5",
+    "subjectId": "math",
+    "grade": 5,
+    "ussrGrade": 4,
+    "textbook": "Н. Я. Виленкин и др. «Математика 4»",
+    "topicTitles": [
+      "Натуральные числа и шкалы",
+      "Действия с натуральными числами. Выражения и уравнения",
+      "Площади и объёмы",
+      "Обыкновенные дроби",
+      "Десятичные дроби",
+      "Проценты"
+    ],
+    "quizCount": 12,
+    "controlCount": 6,
+    "controlPoints": 27
   }
 ]

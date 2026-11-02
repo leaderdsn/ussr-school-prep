@@ -121,6 +121,24 @@
     "controlPoints": 30
   },
   {
+    "id": "algebra-8",
+    "subjectId": "algebra",
+    "grade": 8,
+    "ussrGrade": 7,
+    "textbook": "Ю. Н. Макарычев и др. «Алгебра 7»",
+    "topicTitles": [
+      "Рациональные дроби и их преобразования",
+      "Функция y = k/x",
+      "Квадратные корни",
+      "Квадратные уравнения",
+      "Дробные рациональные уравнения",
+      "Неравенства и степень с целым показателем"
+    ],
+    "quizCount": 12,
+    "controlCount": 7,
+    "controlPoints": 38
+  },
+  {
     "id": "geometry-7",
     "subjectId": "geometry",
     "grade": 7,

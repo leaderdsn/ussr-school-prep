@@ -76,9 +76,11 @@ describe('validateGrade', () => {
   })
 
   it('требует gradeDescriptions для нового класса и ссылки вопросов на существующие темы', () => {
+    // A catalog where math has no description for grade 2, whatever the real subjects.json says.
+    const subjects = SUBJECTS.map((subject) => (subject.id === 'math' ? { ...subject, gradeDescriptions: {} } : subject))
     const issues = validateGrade(
       { ...base, id: 'math-2', grade: 2, quiz: [{ ...base.quiz[0]!, topic: 99 }, ...base.quiz.slice(1)] },
-      SUBJECTS,
+      subjects,
     ).join('\n')
 
     expect(issues).toContain('gradeDescriptions["2"]')

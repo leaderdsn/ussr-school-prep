@@ -6,181 +6,654 @@
   "textbook": "Н. Я. Виленкин и др. «Математика. 5 класс» (советская нумерация; сейчас — 6 класс)",
   "topics": [
     {
-      "title": "Делимость чисел",
-      "html": "<p>Натуральное число <b>a</b> делится на натуральное число <b>b</b> нацело, если при делении остатка нет. Тогда <b>b</b> называют <b>делителем</b> числа <b>a</b>, а <b>a</b> — <b>кратным</b> числа <b>b</b>. Например, 12 делится на 4, поэтому 4 — делитель числа 12, а 12 — кратное числа 4.</p><p>У любого числа наименьший делитель — 1, наибольший — само число. Кратных у числа бесконечно много: чтобы их получить, число умножают на 1, 2, 3 и так далее.</p><h3>Признаки делимости</h3><div class=\"table-wrap\"><table><thead><tr><th>Делитель</th><th>Признак</th></tr></thead><tbody><tr><td>2</td><td>последняя цифра чётная: 0, 2, 4, 6, 8</td></tr><tr><td>5</td><td>последняя цифра 0 или 5</td></tr><tr><td>10</td><td>последняя цифра 0</td></tr><tr><td>3</td><td>сумма цифр делится на 3</td></tr><tr><td>9</td><td>сумма цифр делится на 9</td></tr></tbody></table></div><p class=\"example\">Число 4 725: сумма цифр 4 + 7 + 2 + 5 = 18. Она делится на 9, значит, 4 725 делится и на 9, и на 3. Последняя цифра 5, поэтому число делится ещё и на 5, но не на 2.</p><h3>Простые и составные числа</h3><p><b>Простое</b> число имеет ровно два делителя: единицу и само себя (2, 3, 5, 7, 11, 13). <b>Составное</b> имеет больше двух делителей (4, 6, 9, 12). Число 1 не относят ни к простым, ни к составным. Любое составное число можно разложить на простые множители: 60 = 2 · 2 · 3 · 5.</p><h3>НОД и НОК</h3><div class=\"rule\"><b>Наибольший общий делитель</b> (НОД) двух чисел — самое большое число, на которое делятся оба. <b>Наименьшее общее кратное</b> (НОК) — самое маленькое число, которое делится на оба.</div><p>Чтобы найти НОД, раскладывают числа на простые множители и перемножают общие. Чтобы найти НОК, берут разложение большего числа и добавляют недостающие множители второго.</p><p class=\"example\">18 = 2 · 3 · 3, 24 = 2 · 2 · 2 · 3. Общие множители: 2 и 3, поэтому НОД(18, 24) = 6. НОК: к разложению 24 добавляем недостающую тройку, получаем 2 · 2 · 2 · 3 · 3 = 72.</p><p>Числа, у которых НОД равен 1, называют <b>взаимно простыми</b>: например, 8 и 15. Они могут быть и составными — важно лишь, что общих делителей, кроме 1, нет.</p><p class=\"note\">НОД нужен, чтобы сокращать дроби, а НОК — чтобы приводить дроби к общему знаменателю.</p>",
-      "compare": "<p>Делители и кратные, признаки делимости на 2, 3, 5, 9, 10, простые и составные числа, НОД и НОК входят в программу 6 класса по ФОП ООО; изучают их в начале года, как и в учебнике Виленкина.</p>"
+      "title": "Делители и кратные. Признаки делимости",
+      "html": "<p>В коробку помещается ровно 6 карандашей. Можно ли разложить по коробкам 24 карандаша так, чтобы не осталось лишних и ни одна коробка не была неполной? Да: понадобится 4 коробки. А 25 карандашей так разложить не получится. Вопрос, делится ли одно число на другое без остатка, в математике возникает постоянно. Займёмся им.</p>\n<h3>Делители и кратные</h3>\n<p>Мы говорим, что 24 <b>делится нацело</b> на 6, если при делении получается натуральное число и остатка нет: 24 : 6 = 4. Число 6 в этом случае называют <b>делителем</b> числа 24, а число 24 — <b>кратным</b> числа 6.</p>\n<div class=\"rule\">Натуральное число <b>b</b> называют <b>делителем</b> натурального числа <b>a</b>, если <b>a</b> делится на <b>b</b> без остатка. Тогда <b>a</b> называют <b>кратным</b> числа <b>b</b>.</div>\n<p>Запомни несколько простых свойств.</p>\n<ul><li>Единица — делитель любого натурального числа, и любое число делится на само себя.</li><li>Делитель никогда не больше самого числа. Поэтому у числа конечное число делителей.</li><li>Наименьшее кратное числа — это само число. Кратные получают умножением на 1, 2, 3, …, поэтому их бесконечно много.</li></ul>\n<p class=\"example\"><b>Пример 1.</b> Найди все делители числа 36.<br>Решение. Проверяем числа по порядку: 36 : 1 = 36, 36 : 2 = 18, 36 : 3 = 12, 36 : 4 = 9, 36 : 5 — не делится, 36 : 6 = 6. Дальше делители повторяются парами (9 и 4, 12 и 3, 18 и 2, 36 и 1), поэтому проверку можно закончить на числе 6.<br>Ответ: 1, 2, 3, 4, 6, 9, 12, 18, 36.</p>\n<p class=\"example\"><b>Пример 2.</b> Запиши первые пять кратных числа 8.<br>Решение. Умножаем 8 на 1, 2, 3, 4, 5: 8, 16, 24, 32, 40.<br>Ответ: 8, 16, 24, 32, 40.</p>\n<h3>Признаки делимости</h3>\n<p>Чтобы узнать, делится ли число на 2, 3, 5, 9 или 10, делить необязательно. Достаточно взглянуть на его запись.</p>\n<div class=\"rule\"><b>На 10</b> делятся числа, которые оканчиваются цифрой 0.<br><b>На 5</b> делятся числа, которые оканчиваются цифрой 0 или 5.<br><b>На 2</b> делятся числа, которые оканчиваются цифрой 0, 2, 4, 6 или 8 (такие числа называют <b>чётными</b>, остальные — <b>нечётными</b>).<br><b>На 3</b> делятся числа, сумма цифр которых делится на 3.<br><b>На 9</b> делятся числа, сумма цифр которых делится на 9.</div>\n<p>Признаки для 2, 5 и 10 работают потому, что 10 делится на каждое из этих чисел: от разряда десятков и выше число уже делится на 10, и всё зависит от последней цифры. Признаки для 3 и 9 работают потому, что числа 10, 100, 1000 дают при делении на 9 (и на 3) остаток 1. Поэтому остаток всего числа равен остатку от деления суммы его цифр.</p>\n<p class=\"formula\">Если число делится на 9, оно делится и на 3. Обратное неверно: 12 делится на 3, но не делится на 9.</p>\n<p class=\"example\"><b>Пример 3.</b> Выясни, на какие из чисел 2, 3, 5, 9, 10 делится число 4 725.<br>Решение. Последняя цифра 5, значит, число делится на 5, но не на 2 и не на 10. Сумма цифр 4 + 7 + 2 + 5 = 18. Число 18 делится на 3 и на 9.<br>Ответ: делится на 3, 5 и 9.</p>\n<p class=\"example\"><b>Пример 4.</b> Какую цифру надо поставить вместо звёздочки в числе 47*, чтобы оно делилось на 3?<br>Решение. Сумма известных цифр 4 + 7 = 11. Нужно, чтобы 11 + * делилось на 3. Это 12, 15 или 18, значит, * равна 1, 4 или 7. Суммы 21 и больше не подходят, так как цифра не больше 9.<br>Ответ: 1, 4 или 7 (471, 474, 477).</p>\n<p class=\"note\">Проверь себя. Что такое делитель и кратное? Назови признак делимости на 9. Почему число 1 245 делится на 3, но не делится на 9? Почему число, делящееся на 10, делится на 2 и на 5?</p>",
+      "exercises": [
+        {
+          "text": "Выпиши все делители числа 28.",
+          "answer": "<p>1, 2, 4, 7, 14, 28.</p>"
+        },
+        {
+          "text": "Запиши первые пять кратных числа 7.",
+          "answer": "<p>7, 14, 21, 28, 35.</p>"
+        },
+        {
+          "text": "Какие из чисел 135, 462, 1 080, 7 301 делятся на 5?",
+          "answer": "<p>135 и 1 080: они оканчиваются на 5 и на 0.</p>"
+        },
+        {
+          "text": "Какие из чисел 2 340, 5 871, 9 999, 1 234 делятся на 9? Какие делятся на 3?",
+          "answer": "<p>На 9 делятся 2 340 (сумма цифр 9) и 9 999 (сумма 36). На 3 делятся ещё 5 871 (сумма 21). Число 1 234 (сумма 10) не делится ни на 3, ни на 9.</p>"
+        },
+        {
+          "text": "Какую цифру надо поставить вместо звёздочки в числе 52*, чтобы оно делилось и на 2, и на 5?",
+          "answer": "<p>Нужно, чтобы число оканчивалось на 0: получается 520.</p>"
+        },
+        {
+          "text": "Какую цифру надо поставить вместо звёздочки в числе 7*4, чтобы оно делилось на 9?",
+          "answer": "<p>7 + 4 = 11. Нужно получить сумму 18, значит, * = 7: число 774 (7 + 7 + 4 = 18).</p>"
+        },
+        {
+          "text": "Сколько среди чисел от 1 до 50 чисел, кратных 6?",
+          "answer": "<p>Кратные 6: 6, 12, 18, 24, 30, 36, 42, 48 — всего 8 чисел.</p>"
+        },
+        {
+          "text": "Найди наименьшее трёхзначное число, которое делится на 9.",
+          "answer": "<p>108, так как 1 + 0 + 8 = 9. Числа 100–107 имеют суммы цифр от 1 до 8.</p>"
+        }
+      ],
+      "compare": "<p>Признаки делимости на 2, 3, 5, 9 и 10 входят в школьную программу и сейчас. В современном учебнике Н. Я. Виленкина для 6 класса делимость чисел открывает курс, как и в советском издании для 5 класса.</p>"
     },
     {
-      "title": "Сложение и вычитание дробей с разными знаменателями",
-      "html": "<p>Обыкновенная дробь a/b показывает, что целое разделили на b равных частей и взяли a из них. Число a — <b>числитель</b>, b — <b>знаменатель</b>. Дроби с одинаковыми знаменателями складывают и вычитают просто: знаменатель сохраняют, числители складывают или вычитают.</p><p class=\"formula\">3/7 + 2/7 = 5/7 &nbsp;&nbsp; 6/7 − 2/7 = 4/7</p><h3>Основное свойство дроби</h3><div class=\"rule\">Если числитель и знаменатель дроби умножить или разделить на одно и то же натуральное число, получится равная ей дробь.</div><p>Деление числителя и знаменателя на общий делитель называют <b>сокращением</b> дроби. Сократить дробь полностью — значит разделить их на НОД: 18/24 = 3/4. Когда числитель и знаменатель не сокращаются, дробь называют <b>несократимой</b>.</p><h3>Приведение к общему знаменателю</h3><p>Дроби с разными знаменателями сначала приводят к одному знаменателю. Удобнее всего взять НОК знаменателей, он и будет <b>наименьшим общим знаменателем</b>. Дополнительный множитель каждой дроби — это частное от деления общего знаменателя на её знаменатель.</p><p class=\"example\">5/6 + 3/8. НОК(6, 8) = 24. Дополнительные множители: 24 : 6 = 4 и 24 : 8 = 3. Получаем 20/24 + 9/24 = 29/24 = 1 5/24.</p><h3>Правила действий</h3><ol><li>Найти наименьший общий знаменатель.</li><li>Найти дополнительные множители и умножить на них числители.</li><li>Сложить или вычесть числители, знаменатель оставить.</li><li>Сократить результат и выделить целую часть, если дробь неправильная.</li></ol><p>Дробь, у которой числитель не меньше знаменателя, называют <b>неправильной</b>. Её можно записать как смешанное число: 29/24 = 1 5/24.</p><h3>Смешанные числа</h3><p>Складывая смешанные числа, отдельно складывают целые и дробные части. При вычитании, если дробная часть уменьшаемого меньше дробной части вычитаемого, одну единицу занимают из целой части.</p><p class=\"example\">3 1/4 − 1 1/2. Приводим: 3 1/4 − 1 2/4. Дроби 1/4 не хватает на 2/4, поэтому 3 1/4 = 2 5/4. Тогда 2 5/4 − 1 2/4 = 1 3/4.</p><p class=\"note\">Сравнивая дроби, приводят их к общему знаменателю: из двух дробей с одинаковыми знаменателями больше та, у которой числитель больше.</p>",
-      "compare": "<p>Основное свойство дроби, сокращение, приведение к общему знаменателю и действия со смешанными числами изучаются в 6 классе и по ФОП ООО. Обыкновенные дроби в программе идут вместе с десятичными дробями.</p>"
+      "title": "Простые и составные числа. Разложение на простые множители",
+      "html": "<p>Двенадцать учеников хотят построиться в прямоугольник: можно в 2 ряда по 6, в 3 ряда по 4 или в 4 по 3. А семь учеников могут встать только в одну шеренгу. Числа ведут себя по-разному: у одних много делителей, у других почти нет. Это различие важно во всей арифметике.</p>\n<h3>Простые и составные числа</h3>\n<div class=\"rule\"><b>Простым</b> называют натуральное число, у которого ровно два делителя: единица и само число. <b>Составным</b> называют натуральное число, у которого больше двух делителей. Число 1 не относят ни к простым, ни к составным: у него только один делитель.</div>\n<p>Числа 2, 3, 5, 7, 11, 13 простые. Числа 4 (делители 1, 2, 4), 6, 9, 12 составные. Число 2 — единственное чётное простое число: любое другое чётное число делится на 2, а значит, имеет больше двух делителей.</p>\n<h3>Решето Эратосфена</h3>\n<p>Простые числа можно найти по таблице. Греческий учёный Эратосфен придумал такой способ. Запиши числа от 1 до 100 и действуй по шагам.</p>\n<ol><li>Зачеркни 1: она не простая.</li><li>Оставь 2 и зачеркни все следующие числа, кратные 2: 4, 6, 8, …</li><li>Первое незачёркнутое число — 3. Оставь его и зачеркни все числа, кратные 3.</li><li>Следующее незачёркнутое — 5. Оставь его, зачеркни кратные 5. Так же поступи с 7.</li><li>Все оставшиеся числа простые.</li></ol>\n<figure><svg viewBox=\"0 0 400 300\" role=\"img\" aria-label=\"Таблица чисел от 1 до 100 в десять строк. Простые числа выделены заливкой, составные подписаны бледно, единица отмечена красным\"><rect x=\"10\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"29\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">1</text><rect x=\"48\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"67\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"86\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"105\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"124\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">4</text><rect x=\"162\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"181\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"200\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">6</text><rect x=\"238\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"257\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"276\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">8</text><rect x=\"314\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"333\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">9</text><rect x=\"352\" y=\"10\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"29\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">10</text><rect x=\"10\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"29\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"48\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">12</text><rect x=\"86\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"105\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">13</text><rect x=\"124\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">14</text><rect x=\"162\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">15</text><rect x=\"200\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">16</text><rect x=\"238\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"257\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">17</text><rect x=\"276\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">18</text><rect x=\"314\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"333\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">19</text><rect x=\"352\" y=\"38\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"57\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">20</text><rect x=\"10\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"29\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">21</text><rect x=\"48\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">22</text><rect x=\"86\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"105\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">23</text><rect x=\"124\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">24</text><rect x=\"162\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">25</text><rect x=\"200\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">26</text><rect x=\"238\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"257\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">27</text><rect x=\"276\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">28</text><rect x=\"314\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"333\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">29</text><rect x=\"352\" y=\"66\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"85\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">30</text><rect x=\"10\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"29\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">31</text><rect x=\"48\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">32</text><rect x=\"86\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">33</text><rect x=\"124\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">34</text><rect x=\"162\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">35</text><rect x=\"200\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">36</text><rect x=\"238\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"257\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">37</text><rect x=\"276\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">38</text><rect x=\"314\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"333\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">39</text><rect x=\"352\" y=\"94\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"113\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">40</text><rect x=\"10\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"29\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">41</text><rect x=\"48\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">42</text><rect x=\"86\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"105\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">43</text><rect x=\"124\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">44</text><rect x=\"162\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">45</text><rect x=\"200\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">46</text><rect x=\"238\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"257\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">47</text><rect x=\"276\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">48</text><rect x=\"314\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"333\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">49</text><rect x=\"352\" y=\"122\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"141\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">50</text><rect x=\"10\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"29\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">51</text><rect x=\"48\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">52</text><rect x=\"86\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"105\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">53</text><rect x=\"124\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">54</text><rect x=\"162\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">55</text><rect x=\"200\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">56</text><rect x=\"238\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"257\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">57</text><rect x=\"276\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">58</text><rect x=\"314\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"333\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">59</text><rect x=\"352\" y=\"150\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"169\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">60</text><rect x=\"10\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"29\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">61</text><rect x=\"48\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">62</text><rect x=\"86\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">63</text><rect x=\"124\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">64</text><rect x=\"162\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">65</text><rect x=\"200\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">66</text><rect x=\"238\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"257\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">67</text><rect x=\"276\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">68</text><rect x=\"314\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"333\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">69</text><rect x=\"352\" y=\"178\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"197\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">70</text><rect x=\"10\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"29\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">71</text><rect x=\"48\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">72</text><rect x=\"86\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"105\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">73</text><rect x=\"124\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">74</text><rect x=\"162\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">75</text><rect x=\"200\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">76</text><rect x=\"238\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"257\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">77</text><rect x=\"276\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">78</text><rect x=\"314\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"333\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">79</text><rect x=\"352\" y=\"206\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"225\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">80</text><rect x=\"10\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"29\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">81</text><rect x=\"48\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">82</text><rect x=\"86\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"105\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">83</text><rect x=\"124\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">84</text><rect x=\"162\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">85</text><rect x=\"200\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">86</text><rect x=\"238\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"257\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">87</text><rect x=\"276\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">88</text><rect x=\"314\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"333\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">89</text><rect x=\"352\" y=\"234\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"253\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">90</text><rect x=\"10\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"29\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">91</text><rect x=\"48\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"67\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">92</text><rect x=\"86\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">93</text><rect x=\"124\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"143\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">94</text><rect x=\"162\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"181\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">95</text><rect x=\"200\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"219\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">96</text><rect x=\"238\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><text x=\"257\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">97</text><rect x=\"276\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"295\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">98</text><rect x=\"314\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"333\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">99</text><rect x=\"352\" y=\"262\" width=\"38\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"371\" y=\"281\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">100</text></svg><figcaption>Рис. 1. Решето Эратосфена: простые числа до 100 выделены заливкой.</figcaption></figure>\n<p>Дальше 7 идти не нужно: любое составное число до 100 имеет простой делитель не больше 7 (иначе оно было бы не меньше 11 · 11 = 121). Всего до 100 найдено 25 простых чисел: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97. Простых чисел бесконечно много.</p>\n<h3>Разложение на простые множители</h3>\n<p>Каждое составное число можно записать как произведение простых чисел — его <b>разложение на простые множители</b>. Делим число на наименьшее простое число, на которое оно делится, затем частное снова, и так до единицы. Одинаковые множители записывают степенью: 2 · 2 · 2 = 2<sup>3</sup>.</p>\n<div class=\"rule\">Каждое составное число раскладывается на простые множители, и притом единственным образом (если не учитывать порядок множителей).</div>\n<p class=\"example\"><b>Пример 1.</b> Разложи на простые множители число 360.<br>Решение. 360 : 2 = 180, 180 : 2 = 90, 90 : 2 = 45, 45 : 3 = 15, 15 : 3 = 5, 5 : 5 = 1. Множители: 2, 2, 2, 3, 3, 5.<br>Ответ: 360 = 2<sup>3</sup> · 3<sup>2</sup> · 5. Проверка: 8 · 9 · 5 = 360.</p>\n<p class=\"example\"><b>Пример 2.</b> Простое ли число 191?<br>Решение. Проверим простые делители по порядку. Не делится на 2 (оканчивается на 1) и на 5. Сумма цифр 11 — не делится на 3. Далее: 7 · 27 = 189, остаток 2; 11 · 17 = 187, остаток 4; 13 · 14 = 182, остаток 9. Следующий простой делитель 17, но 17 · 17 = 289 уже больше 191. Если бы 191 было произведением двух чисел, большего единицы, то меньшее из них было бы не больше 13, а такого делителя у 191 нет.<br>Ответ: 191 — простое число.</p>\n<p class=\"note\">Проверь себя. Почему 1 не простое число? Назови все простые числа меньше 20. Как работает решето Эратосфена? Разложи на простые множители 60.</p>",
+      "exercises": [
+        {
+          "text": "Какие из чисел 17, 21, 29, 39, 51, 53 простые?",
+          "answer": "<p>Простые: 17, 29, 53. Составные: 21 = 3 · 7, 39 = 3 · 13, 51 = 3 · 17.</p>"
+        },
+        {
+          "text": "Разложи на простые множители число 84.",
+          "answer": "<p>84 = 2 · 2 · 3 · 7 = 2<sup>2</sup> · 3 · 7.</p>"
+        },
+        {
+          "text": "Разложи на простые множители число 150.",
+          "answer": "<p>150 = 2 · 3 · 5 · 5 = 2 · 3 · 5<sup>2</sup>.</p>"
+        },
+        {
+          "text": "Разложи на простые множители число 1 001.",
+          "answer": "<p>1 001 = 7 · 11 · 13 (7 · 11 = 77, 77 · 13 = 1 001).</p>"
+        },
+        {
+          "text": "Выпиши все простые числа между 40 и 60.",
+          "answer": "<p>41, 43, 47, 53, 59.</p>"
+        },
+        {
+          "text": "Найди число, разложение которого на простые множители 2<sup>3</sup> · 3 · 5<sup>2</sup>.",
+          "answer": "<p>8 · 3 · 25 = 600.</p>"
+        },
+        {
+          "text": "Сколько делителей у числа 36? Выпиши их.",
+          "answer": "<p>9 делителей: 1, 2, 3, 4, 6, 9, 12, 18, 36.</p>"
+        },
+        {
+          "text": "Существует ли чётное простое число? Сколько их?",
+          "answer": "<p>Да, 2. Оно единственное: любое другое чётное число делится на 2 и поэтому составное.</p>"
+        }
+      ],
+      "compare": "<p>Простые и составные числа и разложение на простые множители входят в школьную программу и сейчас; в современном учебнике Н. Я. Виленкина для 6 класса они стоят в первой главе о делимости.</p>"
     },
     {
-      "title": "Умножение и деление обыкновенных дробей",
-      "html": "<p>Умножение дробей проще сложения: общий знаменатель не нужен.</p><div class=\"rule\">Чтобы умножить дробь на дробь, перемножают числители и отдельно знаменатели: первое произведение записывают числителем, второе — знаменателем.</div><p class=\"formula\">2/3 · 4/5 = (2 · 4)/(3 · 5) = 8/15</p><p>Перед умножением полезно сократить: если числитель одной дроби и знаменатель другой имеют общий делитель, на него можно сразу разделить.</p><p class=\"example\">5/9 · 3/10. Сокращаем 5 и 10 на 5, 3 и 9 на 3. Остаётся 1/3 · 1/2 = 1/6.</p><h3>Умножение на натуральное число и смешанные числа</h3><p>Натуральное число можно записать дробью со знаменателем 1: 4 = 4/1. Поэтому числитель умножают на это число, а знаменатель оставляют. Смешанные числа сначала переводят в неправильные дроби: 1 1/2 = 3/2.</p><h3>Взаимно обратные числа</h3><p>Два числа называют <b>взаимно обратными</b>, если их произведение равно 1. Чтобы получить число, обратное дроби, меняют местами числитель и знаменатель: для 3/7 обратным будет 7/3. Число 0 обратного не имеет.</p><h3>Деление дробей</h3><div class=\"rule\">Чтобы разделить одну дробь на другую, делимое умножают на число, обратное делителю.</div><p class=\"example\">3/4 : 2/5 = 3/4 · 5/2 = 15/8 = 1 7/8.</p><p>Деление на натуральное число — частный случай: 6/7 : 3 = 6/7 · 1/3 = 2/7. То есть знаменатель дроби умножается на делитель.</p><h3>Задачи на дроби</h3><p>Две основные задачи нужно различать. Чтобы найти <b>дробь от числа</b>, число умножают на эту дробь. Чтобы найти <b>число по его дроби</b>, значение делят на дробь.</p><p class=\"example\">В классе 30 учеников, 2/5 из них — мальчики. Мальчиков: 30 · 2/5 = 12. А если известно, что 12 учеников составляют 2/5 класса, то весь класс: 12 : 2/5 = 12 · 5/2 = 30.</p><p class=\"note\">При умножении на правильную дробь число уменьшается, а при делении на правильную дробь — увеличивается.</p><p>Порядок действий с дробями такой же, как с натуральными числами: сначала скобки, затем умножение и деление слева направо, потом сложение и вычитание. Привыкай проверять ответ прикидкой: если умножаешь 8 на 3/4, результат должен быть меньше 8, и 6 подходит.</p>",
-      "compare": "<p>Умножение и деление обыкновенных дробей, взаимно обратные числа и задачи на нахождение дроби от числа и числа по его дроби входят в программу 6 класса по ФОП ООО.</p>"
+      "title": "Наибольший общий делитель и наименьшее общее кратное",
+      "html": "<p>Есть полоса бумаги 18 см на 24 см. Её нужно без остатка нарезать на одинаковые квадраты, и квадраты должны быть как можно больше. Какова сторона квадрата? А вот другая задача: автобус маршрута А уходит с вокзала каждые 6 минут, а маршрута Б — каждые 8 минут. Они ушли одновременно. Через сколько минут они снова отправятся вместе? Первая задача про общие делители, вторая — про общие кратные.</p>\n<h3>Наибольший общий делитель</h3>\n<p>Делители числа 18: 1, 2, 3, 6, 9, 18. Делители числа 24: 1, 2, 3, 4, 6, 8, 12, 24. Общие делители: 1, 2, 3, 6. Наибольший из них — 6. Значит, сторона самого большого квадрата — 6 см: вдоль 18 см уложится 3 квадрата, вдоль 24 см — 4.</p>\n<div class=\"rule\"><b>Наибольшим общим делителем</b> (НОД) натуральных чисел называют наибольшее натуральное число, на которое делится каждое из них. Записывают: НОД (18; 24) = 6. Если НОД равен 1, числа называют <b>взаимно простыми</b>.</div>\n<p>Перебирать делители долго, поэтому есть способ получше — через разложение на простые множители.</p>\n<div class=\"rule\">Чтобы найти НОД, разложи числа на простые множители и перемножь <b>общие</b> множители, взяв каждый с наименьшим показателем степени.</div>\n<h3>Наименьшее общее кратное</h3>\n<p>Кратные 6: 6, 12, 18, 24, 30, 36, 42, 48, … Кратные 8: 8, 16, 24, 32, 40, 48, … Общие: 24, 48, … Наименьшее — 24. Значит, автобусы снова отправятся вместе через 24 минуты.</p>\n<div class=\"rule\"><b>Наименьшим общим кратным</b> (НОК) натуральных чисел называют наименьшее натуральное число, которое делится на каждое из них. Записывают: НОК (6; 8) = 24. Чтобы найти НОК, разложи числа на простые множители и перемножь <b>все</b> множители, взяв каждый с наибольшим показателем степени.</div>\n<p class=\"example\"><b>Пример 1.</b> Найди НОД и НОК чисел 72 и 120.<br>Решение. 72 = 2<sup>3</sup> · 3<sup>2</sup>, 120 = 2<sup>3</sup> · 3 · 5.<br>НОД: общие множители 2<sup>3</sup> и 3 (с наименьшей степенью), НОД = 8 · 3 = 24.<br>НОК: 2<sup>3</sup>, 3<sup>2</sup> и 5 (с наибольшей степенью), НОК = 8 · 9 · 5 = 360.<br>Ответ: НОД (72; 120) = 24, НОК (72; 120) = 360. Проверка: 24 · 360 = 8 640 = 72 · 120.</p>\n<p class=\"formula\">Для двух чисел: НОД (a; b) · НОК (a; b) = a · b.</p>\n<p>Если числа взаимно простые, то НОД равен 1, а НОК равен их произведению. Например, НОК (9; 10) = 90.</p>\n<p class=\"example\"><b>Пример 2.</b> У мастера 40 красных и 56 синих лент. Он хочет сделать одинаковые наборы, использовав все ленты. Какое наибольшее число наборов можно сделать?<br>Решение. Число наборов должно быть общим делителем 40 и 56. Нужен наибольший. 40 = 2<sup>3</sup> · 5, 56 = 2<sup>3</sup> · 7, НОД = 8.<br>Ответ: 8 наборов, в каждом по 5 красных и 7 синих лент.</p>\n<p class=\"example\"><b>Пример 3.</b> Найди наименьшее число, которое делится на 4, 6 и 10.<br>Решение. 4 = 2<sup>2</sup>, 6 = 2 · 3, 10 = 2 · 5. Берём 2<sup>2</sup>, 3 и 5: НОК = 4 · 3 · 5 = 60.<br>Ответ: 60.</p>\n<p class=\"note\">Проверь себя. Что такое НОД и НОК? В какой задаче нужен НОД, а в какой — НОК: «разрезать полосу на наибольшие квадраты» и «через сколько дней события совпадут»? Какие числа называют взаимно простыми?</p>",
+      "exercises": [
+        {
+          "text": "Найди НОД (12; 18) и НОК (12; 18).",
+          "answer": "<p>НОД = 6, НОК = 36 (6 · 36 = 216 = 12 · 18).</p>"
+        },
+        {
+          "text": "Найди НОД (35; 48) и НОК (35; 48). Какие это числа?",
+          "answer": "<p>Взаимно простые: НОД = 1, НОК = 35 · 48 = 1 680.</p>"
+        },
+        {
+          "text": "Найди НОД и НОК чисел 84 и 126.",
+          "answer": "<p>84 = 2<sup>2</sup> · 3 · 7, 126 = 2 · 3<sup>2</sup> · 7. НОД = 2 · 3 · 7 = 42, НОК = 4 · 9 · 7 = 252.</p>"
+        },
+        {
+          "text": "Найди НОК (4; 6; 9).",
+          "answer": "<p>4 = 2<sup>2</sup>, 6 = 2 · 3, 9 = 3<sup>2</sup>. НОК = 4 · 9 = 36.</p>"
+        },
+        {
+          "text": "Найди НОД (210; 330) и НОК (210; 330).",
+          "answer": "<p>210 = 2 · 3 · 5 · 7, 330 = 2 · 3 · 5 · 11. НОД = 30, НОК = 2 · 3 · 5 · 7 · 11 = 2 310.</p>"
+        },
+        {
+          "text": "Нужно разложить поровну 40 тетрадей и 56 ручек в наборы без остатка. Каково наибольшее число наборов и что в каждом?",
+          "answer": "<p>НОД (40; 56) = 8. Наборов 8, в каждом 5 тетрадей и 7 ручек.</p>"
+        },
+        {
+          "text": "Один теплоход возвращается в порт каждые 12 дней, другой — каждые 15 дней. Они вышли из порта вместе. Через сколько дней снова будут в порту одновременно?",
+          "answer": "<p>НОК (12; 15) = 60. Через 60 дней.</p>"
+        }
+      ],
+      "compare": "<p>Наибольший общий делитель и наименьшее общее кратное входят в школьную программу и сейчас; в современном учебнике Н. Я. Виленкина для 6 класса они стоят в той же первой главе о делимости, что и в советском издании для 5 класса.</p>"
     },
     {
-      "title": "Отношения и пропорции",
-      "html": "<p><b>Отношение</b> двух чисел — это их частное. Оно показывает, во сколько раз одно число больше другого или какую часть одно число составляет от другого. Отношение a к b записывают как a : b или a/b.</p><p class=\"example\">В классе 12 девочек и 18 мальчиков. Отношение числа девочек к числу мальчиков 12 : 18 = 2 : 3. Девочки составляют 12/30 = 2/5 всего класса.</p><p>Отношение не изменится, если оба его члена умножить или разделить на одно и то же число, отличное от нуля.</p><h3>Масштаб</h3><p><b>Масштаб</b> — это отношение длины отрезка на плане или карте к длине соответствующего отрезка на местности. Запись 1 : 1 000 000 означает, что 1 см на карте соответствует 1 000 000 см, то есть 10 км на местности.</p><h3>Пропорция</h3><div class=\"rule\">Равенство двух отношений называют <b>пропорцией</b>: a : b = c : d. Числа a и d — крайние члены, b и c — средние.</div><p>Основное свойство пропорции: произведение крайних членов равно произведению средних, то есть ad = bc. Отсюда находят неизвестный член.</p><p class=\"example\">x : 6 = 10 : 15. Тогда 15x = 6 · 10, x = 60 : 15 = 4.</p><h3>Прямая и обратная пропорциональность</h3><p>Две величины <b>прямо пропорциональны</b>, если при увеличении одной в несколько раз другая увеличивается во столько же раз. Пример: стоимость и количество купленных тетрадей по одной цене.</p><p>Две величины <b>обратно пропорциональны</b>, если при увеличении одной в несколько раз другая во столько же раз уменьшается. Пример: скорость и время при движении на одно и то же расстояние.</p><div class=\"table-wrap\"><table><thead><tr><th>Зависимость</th><th>Что постоянно</th></tr></thead><tbody><tr><td>прямая</td><td>отношение величин</td></tr><tr><td>обратная</td><td>произведение величин</td></tr></tbody></table></div><p class=\"example\">За 3 ч автобус едет со скоростью 60 км/ч. За сколько часов проедет тот же путь со скоростью 90 км/ч? Скорость и время обратно пропорциональны: 60 · 3 = 90 · x, откуда x = 2 ч.</p><p class=\"note\">Прежде чем составлять пропорцию, определи, прямая зависимость в задаче или обратная.</p>",
-      "compare": "<p>Отношения, пропорции, масштаб, прямая и обратная пропорциональность входят в программу 6 класса по ФОП ООО. Проценты изучаются в том же разделе программы.</p>"
+      "title": "Основное свойство дроби. Сокращение и приведение к общему знаменателю",
+      "html": "<p>Половина торта и две четверти торта — это одно и то же количество или разное? Нарисуй полоску, раздели на две части и закрась одну; потом раздели такую же полоску на четыре части и закрась две. Закрашенные части одинаковы. Дроби <sup>1</sup>/<sub>2</sub> и <sup>2</sup>/<sub>4</sub> записаны по-разному, но обозначают одно число.</p>\n<h3>Что такое дробь</h3>\n<p>Напомним: в дроби <sup>a</sup>/<sub>b</sub> знаменатель <b>b</b> показывает, на сколько равных частей разделили целое, а числитель <b>a</b> — сколько таких частей взяли. Дробь, у которой числитель меньше знаменателя, называют <b>правильной</b> (она меньше 1). Если числитель не меньше знаменателя, дробь <b>неправильная</b> (она не меньше 1). Число, составленное из целой и дробной частей, называют <b>смешанным</b>: 2<sup>3</sup>/<sub>5</sub> — это 2 целых и <sup>3</sup>/<sub>5</sub>.</p>\n<figure><svg viewBox=\"0 0 360 150\" role=\"img\" aria-label=\"Три одинаковые полоски. В первой закрашена одна из двух частей, во второй две из четырёх, в третьей четыре из восьми: закрашена половина полоски\"><text x=\"18\" y=\"30\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1/2</text><rect x=\"40\" y=\"12\" width=\"300\" height=\"28\" stroke=\"currentColor\" fill=\"none\"/><rect x=\"40\" y=\"12\" width=\"150\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><line x1=\"190\" y1=\"12\" x2=\"190\" y2=\"40\" stroke=\"currentColor\" class=\"thin\"/><text x=\"18\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2/4</text><rect x=\"40\" y=\"58\" width=\"300\" height=\"28\" stroke=\"currentColor\" fill=\"none\"/><rect x=\"40\" y=\"58\" width=\"150\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><line x1=\"115\" y1=\"58\" x2=\"115\" y2=\"86\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"190\" y1=\"58\" x2=\"190\" y2=\"86\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"265\" y1=\"58\" x2=\"265\" y2=\"86\" stroke=\"currentColor\" class=\"thin\"/><text x=\"18\" y=\"122\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4/8</text><rect x=\"40\" y=\"104\" width=\"300\" height=\"28\" stroke=\"currentColor\" fill=\"none\"/><rect x=\"40\" y=\"104\" width=\"150\" height=\"28\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><line x1=\"77.5\" y1=\"104\" x2=\"77.5\" y2=\"132\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"115\" y1=\"104\" x2=\"115\" y2=\"132\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"152.5\" y1=\"104\" x2=\"152.5\" y2=\"132\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"190\" y1=\"104\" x2=\"190\" y2=\"132\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"227.5\" y1=\"104\" x2=\"227.5\" y2=\"132\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"265\" y1=\"104\" x2=\"265\" y2=\"132\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"302.5\" y1=\"104\" x2=\"302.5\" y2=\"132\" stroke=\"currentColor\" class=\"thin\"/></svg><figcaption>Рис. 1. Полоски одинаковой длины: 1/2 = 2/4 = 4/8. Закрашена одна и та же часть.</figcaption></figure>\n<figure><svg viewBox=\"0 0 360 150\" role=\"img\" aria-label=\"Два круга. Первый разделён на 4 части, закрашены 3. Второй разделён на 8 частей, закрашены 6. Закрашена одна и та же часть круга\"><circle cx=\"90\" cy=\"65\" r=\"55\" stroke=\"currentColor\" fill=\"none\"/><path d=\"M90,65 L90,10 A55,55 0 1 1 35.0,65.0 Z\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><line x1=\"90\" y1=\"65\" x2=\"90.0\" y2=\"10.0\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"90\" y1=\"65\" x2=\"145.0\" y2=\"65.0\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"90\" y1=\"65\" x2=\"90.0\" y2=\"120.0\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"90\" y1=\"65\" x2=\"35.0\" y2=\"65.0\" stroke=\"currentColor\" class=\"thin\"/><text x=\"90\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3/4</text><circle cx=\"270\" cy=\"65\" r=\"55\" stroke=\"currentColor\" fill=\"none\"/><path d=\"M270,65 L270,10 A55,55 0 1 1 215.0,65.0 Z\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><line x1=\"270\" y1=\"65\" x2=\"270.0\" y2=\"10.0\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"270\" y1=\"65\" x2=\"308.9\" y2=\"26.1\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"270\" y1=\"65\" x2=\"325.0\" y2=\"65.0\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"270\" y1=\"65\" x2=\"308.9\" y2=\"103.9\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"270\" y1=\"65\" x2=\"270.0\" y2=\"120.0\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"270\" y1=\"65\" x2=\"231.1\" y2=\"103.9\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"270\" y1=\"65\" x2=\"215.0\" y2=\"65.0\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"270\" y1=\"65\" x2=\"231.1\" y2=\"26.1\" stroke=\"currentColor\" class=\"thin\"/><text x=\"270\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6/8</text></svg><figcaption>Рис. 2. Круги: 3/4 = 6/8.</figcaption></figure>\n<h3>Основное свойство дроби</h3>\n<div class=\"rule\">Если числитель и знаменатель дроби умножить или разделить на одно и то же натуральное число, получится равная ей дробь.</div>\n<p class=\"formula\"><sup>a</sup>/<sub>b</sub> = <sup>a · m</sup>/<sub>b · m</sub> &nbsp;&nbsp; <sup>a</sup>/<sub>b</sub> = <sup>a : k</sup>/<sub>b : k</sub></p>\n<h3>Сокращение дробей</h3>\n<p>Деление числителя и знаменателя на общий делитель называют <b>сокращением дроби</b>. Дробь, которую нельзя сократить, — <b>несократимая</b>: числитель и знаменатель у неё взаимно простые. Быстрее всего сократить сразу на НОД.</p>\n<p class=\"example\"><b>Пример 1.</b> Сократи дробь <sup>42</sup>/<sub>56</sub>.<br>Решение. НОД (42; 56) = 14 (42 = 2 · 3 · 7, 56 = 2<sup>3</sup> · 7). Делим числитель и знаменатель на 14: <sup>42</sup>/<sub>56</sub> = <sup>42 : 14</sup>/<sub>56 : 14</sub> = <sup>3</sup>/<sub>4</sub>.<br>Ответ: <sup>3</sup>/<sub>4</sub>.</p>\n<h3>Приведение дробей к общему знаменателю</h3>\n<p>Чтобы сравнивать и складывать дроби с разными знаменателями, их записывают с одинаковым знаменателем. Удобнее взять <b>наименьший общий знаменатель</b> — НОК знаменателей. Число, на которое умножают числитель и знаменатель, называют <b>дополнительным множителем</b>.</p>\n<div class=\"rule\">Чтобы привести дроби к наименьшему общему знаменателю: 1) найди НОК знаменателей; 2) найди дополнительные множители (раздели НОК на знаменатель каждой дроби); 3) умножь на них числитель и знаменатель.</div>\n<p class=\"example\"><b>Пример 2.</b> Приведи к общему знаменателю дроби <sup>5</sup>/<sub>6</sub> и <sup>7</sup>/<sub>15</sub> и сравни их.<br>Решение. НОК (6; 15) = 30. Дополнительные множители: 30 : 6 = 5 и 30 : 15 = 2. <sup>5</sup>/<sub>6</sub> = <sup>5 · 5</sup>/<sub>6 · 5</sub> = <sup>25</sup>/<sub>30</sub>, <sup>7</sup>/<sub>15</sub> = <sup>7 · 2</sup>/<sub>15 · 2</sub> = <sup>14</sup>/<sub>30</sub>. Так как 25 &gt; 14, то <sup>5</sup>/<sub>6</sub> &gt; <sup>7</sup>/<sub>15</sub>.<br>Ответ: <sup>25</sup>/<sub>30</sub> и <sup>14</sup>/<sub>30</sub>; <sup>5</sup>/<sub>6</sub> &gt; <sup>7</sup>/<sub>15</sub>.</p>\n<div class=\"rule\">Из двух дробей с одинаковыми знаменателями больше та, у которой числитель больше. Из двух дробей с одинаковыми числителями больше та, у которой знаменатель меньше.</div>\n<h3>Смешанные числа и неправильные дроби</h3>\n<p>Чтобы превратить неправильную дробь в смешанное число, раздели числитель на знаменатель: частное — целая часть, остаток — числитель дробной части. Обратно: целую часть умножь на знаменатель, прибавь числитель и оставь тот же знаменатель.</p>\n<p class=\"example\"><b>Пример 3.</b> Запиши <sup>17</sup>/<sub>5</sub> в виде смешанного числа, а 2<sup>3</sup>/<sub>7</sub> — в виде неправильной дроби.<br>Решение. 17 : 5 = 3, остаток 2, значит, <sup>17</sup>/<sub>5</sub> = 3<sup>2</sup>/<sub>5</sub>. Для второго: 2 · 7 + 3 = 17, значит, 2<sup>3</sup>/<sub>7</sub> = <sup>17</sup>/<sub>7</sub>.<br>Ответ: 3<sup>2</sup>/<sub>5</sub>; <sup>17</sup>/<sub>7</sub>.</p>\n<p class=\"note\">Проверь себя. В чём состоит основное свойство дроби? Как сократить дробь до несократимой? Как привести к общему знаменателю <sup>3</sup>/<sub>8</sub> и <sup>5</sup>/<sub>12</sub>? Какая дробь больше: <sup>3</sup>/<sub>7</sub> или <sup>3</sup>/<sub>5</sub>?</p>",
+      "exercises": [
+        {
+          "text": "Сократи дробь <sup>18</sup>/<sub>24</sub>.",
+          "answer": "<p>НОД = 6, <sup>18</sup>/<sub>24</sub> = <sup>3</sup>/<sub>4</sub>.</p>"
+        },
+        {
+          "text": "Сократи дробь <sup>45</sup>/<sub>75</sub>.",
+          "answer": "<p>Делим на 15: <sup>3</sup>/<sub>5</sub>.</p>"
+        },
+        {
+          "text": "Приведи к знаменателю 36 дроби <sup>5</sup>/<sub>12</sub> и <sup>7</sup>/<sub>9</sub>.",
+          "answer": "<p><sup>5</sup>/<sub>12</sub> = <sup>15</sup>/<sub>36</sub>, <sup>7</sup>/<sub>9</sub> = <sup>28</sup>/<sub>36</sub>.</p>"
+        },
+        {
+          "text": "Приведи к наименьшему общему знаменателю дроби <sup>3</sup>/<sub>8</sub> и <sup>5</sup>/<sub>12</sub> и сравни их.",
+          "answer": "<p>НОК (8; 12) = 24. <sup>3</sup>/<sub>8</sub> = <sup>9</sup>/<sub>24</sub>, <sup>5</sup>/<sub>12</sub> = <sup>10</sup>/<sub>24</sub>. Значит, <sup>3</sup>/<sub>8</sub> &lt; <sup>5</sup>/<sub>12</sub>.</p>"
+        },
+        {
+          "text": "Сравни <sup>7</sup>/<sub>10</sub> и <sup>4</sup>/<sub>5</sub>.",
+          "answer": "<p><sup>4</sup>/<sub>5</sub> = <sup>8</sup>/<sub>10</sub>, а 7 &lt; 8, поэтому <sup>7</sup>/<sub>10</sub> &lt; <sup>4</sup>/<sub>5</sub>.</p>"
+        },
+        {
+          "text": "Расположи в порядке возрастания дроби <sup>2</sup>/<sub>3</sub>, <sup>5</sup>/<sub>6</sub>, <sup>7</sup>/<sub>12</sub>.",
+          "answer": "<p>Знаменатель 12: <sup>8</sup>/<sub>12</sub>, <sup>10</sup>/<sub>12</sub>, <sup>7</sup>/<sub>12</sub>. Порядок: <sup>7</sup>/<sub>12</sub>, <sup>2</sup>/<sub>3</sub>, <sup>5</sup>/<sub>6</sub>.</p>"
+        },
+        {
+          "text": "Запиши 3<sup>4</sup>/<sub>5</sub> в виде неправильной дроби, а <sup>23</sup>/<sub>6</sub> — в виде смешанного числа.",
+          "answer": "<p>3 · 5 + 4 = 19, то есть <sup>19</sup>/<sub>5</sub>. 23 : 6 = 3, остаток 5, то есть 3<sup>5</sup>/<sub>6</sub>.</p>"
+        },
+        {
+          "text": "Начерти полоску из 12 клеток. Закрась на ней 3/4 полоски, а потом 9/12. Сравни результаты.",
+          "answer": "<p>3/4 от 12 клеток — это 9 клеток, и 9/12 — тоже 9 клеток. Закрашено одно и то же, значит, 3/4 = 9/12.</p>"
+        }
+      ],
+      "compare": "<p>Основное свойство дроби, сокращение, приведение к общему знаменателю и сравнение дробей изучают в 6 классе по ФОП, как и в учебнике Н. Я. Виленкина для 6 класса. В советском издании для 5 класса эта тема шла сразу после делимости чисел.</p>"
     },
     {
-      "title": "Положительные и отрицательные числа",
-      "html": "<p>Чтобы описать температуру ниже нуля, долг или глубину под уровнем моря, натуральных чисел и нуля мало. Вводят <b>отрицательные числа</b> со знаком «−»: −1, −5, −2,5. Числа со знаком «+» или без знака, большие нуля, называют <b>положительными</b>. Ноль не положителен и не отрицателен.</p><h3>Числовая прямая</h3><p>Нарисуем прямую, отметим на ней начало отсчёта — точку 0, направление вправо и единичный отрезок. Положительные числа лежат справа от нуля, отрицательные — слева. Числа −3 и 3 расположены на одинаковом расстоянии от нуля по разные стороны. Их называют <b>противоположными</b>.</p><h3>Модуль числа</h3><div class=\"rule\"><b>Модуль</b> числа — расстояние от нуля до точки с этой координатой. Записывают |a|. Модуль положительного числа равен самому числу, модуль отрицательного — противоположному ему числу, |0| = 0.</div><p class=\"example\">|7| = 7, |−7| = 7, |−2,5| = 2,5.</p><h3>Сравнение чисел</h3><ul><li>Любое положительное число больше нуля и больше любого отрицательного.</li><li>Из двух чисел больше то, которое на числовой прямой расположено правее.</li><li>Из двух отрицательных чисел больше то, у которого модуль меньше: −2 &gt; −5.</li></ul><h3>Сложение</h3><div class=\"rule\">Числа с одинаковыми знаками складывают так: складывают модули и ставят общий знак. Числа с разными знаками: из большего модуля вычитают меньший и ставят знак числа с большим модулем.</div><p class=\"example\">(−4) + (−3) = −7; &nbsp; (−9) + 5 = −4; &nbsp; 8 + (−8) = 0.</p><h3>Вычитание</h3><p>Чтобы вычесть число, к уменьшаемому прибавляют число, противоположное вычитаемому: a − b = a + (−b).</p><p class=\"example\">3 − 7 = 3 + (−7) = −4; &nbsp; −2 − (−6) = −2 + 6 = 4.</p><p class=\"note\">Если перед скобкой стоит знак «−», то вычитание отрицательного числа заменяется сложением положительного.</p><p>Полезно проверять результат на числовой прямой: прибавление положительного числа сдвигает точку вправо, прибавление отрицательного — влево. Так видно, что (−9) + 5 даёт точку левее нуля, ведь сдвиг вправо на 5 не доходит до нуля.</p><p>Целые числа — это натуральные, противоположные им и ноль. Вместе с дробями они образуют <b>рациональные числа</b>.</p>",
-      "compare": "<p>Положительные и отрицательные числа, модуль, числовая прямая, сравнение и сложение с вычитанием рациональных чисел изучаются в 6 классе и по ФОП ООО.</p>"
+      "title": "Сложение и вычитание дробей с разными знаменателями и смешанных чисел",
+      "html": "<p>Туристы в первый день прошли <sup>2</sup>/<sub>5</sub> маршрута, а во второй — <sup>1</sup>/<sub>3</sub>. Какую часть маршрута они прошли за два дня? Дроби имеют разные знаменатели: пятые и третьи доли не сложишь «как есть». Сначала доли нужно сделать одинаковыми.</p>\n<h3>Сложение и вычитание дробей</h3>\n<p>С одинаковыми знаменателями всё просто: складываем (или вычитаем) числители, а знаменатель оставляем: <sup>2</sup>/<sub>7</sub> + <sup>3</sup>/<sub>7</sub> = <sup>5</sup>/<sub>7</sub>. Если знаменатели разные, сначала приводим дроби к общему знаменателю.</p>\n<figure><svg viewBox=\"0 0 360 100\" role=\"img\" aria-label=\"Полоска из шести равных частей. Три части закрашены: это одна вторая. Следующие две части обведены красным: это одна третья. Вместе закрашено пять шестых\"><rect x=\"30\" y=\"20\" width=\"300\" height=\"34\" stroke=\"currentColor\" fill=\"none\"/><rect x=\"30\" y=\"20\" width=\"150\" height=\"34\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><line x1=\"80\" y1=\"20\" x2=\"80\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"130\" y1=\"20\" x2=\"130\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"230\" y1=\"20\" x2=\"230\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"280\" y1=\"20\" x2=\"280\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><rect x=\"180\" y=\"20\" width=\"100\" height=\"34\" stroke=\"currentColor\" fill=\"currentColor\" class=\"red soft\"/><rect x=\"30\" y=\"20\" width=\"300\" height=\"34\" stroke=\"currentColor\" fill=\"none\"/><line x1=\"80\" y1=\"20\" x2=\"80\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"130\" y1=\"20\" x2=\"130\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"230\" y1=\"20\" x2=\"230\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"280\" y1=\"20\" x2=\"280\" y2=\"54\" stroke=\"currentColor\" class=\"thin\"/><text x=\"105\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">1/2</text><text x=\"230\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">1/3</text><text x=\"300\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">ещё 1/6 свободно</text></svg><figcaption>Рис. 1. 1/2 + 1/3 = 3/6 + 2/6 = 5/6.</figcaption></figure>\n<div class=\"rule\">Чтобы сложить или вычесть дроби с разными знаменателями: 1) приведи их к общему знаменателю; 2) сложи (вычти) числители; 3) знаменатель оставь прежним; 4) если можно, сократи результат и выдели целую часть.</div>\n<p class=\"example\"><b>Пример 1.</b> Реши задачу про туристов: <sup>2</sup>/<sub>5</sub> + <sup>1</sup>/<sub>3</sub>.<br>Решение. НОК (5; 3) = 15. <sup>2</sup>/<sub>5</sub> = <sup>6</sup>/<sub>15</sub>, <sup>1</sup>/<sub>3</sub> = <sup>5</sup>/<sub>15</sub>. Складываем: <sup>6</sup>/<sub>15</sub> + <sup>5</sup>/<sub>15</sub> = <sup>11</sup>/<sub>15</sub>. Значит, за два дня пройдено <sup>11</sup>/<sub>15</sub> маршрута, а осталось 1 − <sup>11</sup>/<sub>15</sub> = <sup>4</sup>/<sub>15</sub>.<br>Ответ: <sup>11</sup>/<sub>15</sub>; осталось <sup>4</sup>/<sub>15</sub>.</p>\n<p class=\"example\"><b>Пример 2.</b> Найди <sup>3</sup>/<sub>4</sub> + <sup>5</sup>/<sub>6</sub>.<br>Решение. НОК (4; 6) = 12. <sup>3</sup>/<sub>4</sub> = <sup>9</sup>/<sub>12</sub>, <sup>5</sup>/<sub>6</sub> = <sup>10</sup>/<sub>12</sub>. Сумма <sup>19</sup>/<sub>12</sub> — неправильная дробь, выделим целую часть: 1<sup>7</sup>/<sub>12</sub>.<br>Ответ: 1<sup>7</sup>/<sub>12</sub>.</p>\n<p>Вычитание дроби из единицы начинают с того, что единицу записывают дробью с нужным знаменателем: 1 − <sup>3</sup>/<sub>7</sub> = <sup>7</sup>/<sub>7</sub> − <sup>3</sup>/<sub>7</sub> = <sup>4</sup>/<sub>7</sub>.</p>\n<h3>Смешанные числа</h3>\n<p>Складывая смешанные числа, отдельно складывают целые части и отдельно дробные. Если дробная часть суммы получилась неправильной, из неё выделяют целое и добавляют к целой части. При вычитании сначала приводят дробные части к общему знаменателю. Если дробь вычитаемого больше дроби уменьшаемого, <b>занимают единицу</b>: одно целое превращают в дробь со знаменателем, равным знаменателю дробной части.</p>\n<p class=\"example\"><b>Пример 3.</b> Найди 3<sup>2</sup>/<sub>5</sub> + 1<sup>4</sup>/<sub>15</sub>.<br>Решение. Дробные части к знаменателю 15: <sup>2</sup>/<sub>5</sub> = <sup>6</sup>/<sub>15</sub>. Складываем: целые 3 + 1 = 4, дробные <sup>6</sup>/<sub>15</sub> + <sup>4</sup>/<sub>15</sub> = <sup>10</sup>/<sub>15</sub> = <sup>2</sup>/<sub>3</sub>.<br>Ответ: 4<sup>2</sup>/<sub>3</sub>.</p>\n<p class=\"example\"><b>Пример 4.</b> Найди 5<sup>1</sup>/<sub>6</sub> − 2<sup>3</sup>/<sub>4</sub>.<br>Решение. НОК (6; 4) = 12. 5<sup>1</sup>/<sub>6</sub> = 5<sup>2</sup>/<sub>12</sub>, 2<sup>3</sup>/<sub>4</sub> = 2<sup>9</sup>/<sub>12</sub>. Дробь <sup>2</sup>/<sub>12</sub> меньше <sup>9</sup>/<sub>12</sub>, поэтому занимаем единицу: 5<sup>2</sup>/<sub>12</sub> = 4<sup>14</sup>/<sub>12</sub>. Теперь 4<sup>14</sup>/<sub>12</sub> − 2<sup>9</sup>/<sub>12</sub> = 2<sup>5</sup>/<sub>12</sub>.<br>Ответ: 2<sup>5</sup>/<sub>12</sub>. Проверка: 2<sup>5</sup>/<sub>12</sub> + 2<sup>3</sup>/<sub>4</sub> = 2<sup>5</sup>/<sub>12</sub> + 2<sup>9</sup>/<sub>12</sub> = 4<sup>14</sup>/<sub>12</sub> = 5<sup>2</sup>/<sub>12</sub>.</p>\n<p class=\"formula\"><sup>a</sup>/<sub>c</sub> + <sup>b</sup>/<sub>c</sub> = <sup>a + b</sup>/<sub>c</sub> &nbsp;&nbsp; <sup>a</sup>/<sub>c</sub> − <sup>b</sup>/<sub>c</sub> = <sup>a − b</sup>/<sub>c</sub></p>\n<p class=\"note\">Проверь себя. Почему нельзя сложить <sup>1</sup>/<sub>2</sub> и <sup>1</sup>/<sub>3</sub>, не приводя к общему знаменателю? Как вычесть 1 − <sup>2</sup>/<sub>9</sub>? Что значит «занять единицу» при вычитании смешанных чисел?</p>",
+      "exercises": [
+        {
+          "text": "Вычисли <sup>3</sup>/<sub>8</sub> + <sup>1</sup>/<sub>8</sub>.",
+          "answer": "<p><sup>4</sup>/<sub>8</sub> = <sup>1</sup>/<sub>2</sub>.</p>"
+        },
+        {
+          "text": "Вычисли <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>3</sub>.",
+          "answer": "<p><sup>3</sup>/<sub>6</sub> + <sup>2</sup>/<sub>6</sub> = <sup>5</sup>/<sub>6</sub>.</p>"
+        },
+        {
+          "text": "Вычисли <sup>7</sup>/<sub>10</sub> − <sup>2</sup>/<sub>5</sub>.",
+          "answer": "<p><sup>7</sup>/<sub>10</sub> − <sup>4</sup>/<sub>10</sub> = <sup>3</sup>/<sub>10</sub>.</p>"
+        },
+        {
+          "text": "Вычисли <sup>5</sup>/<sub>6</sub> + <sup>3</sup>/<sub>8</sub>.",
+          "answer": "<p>НОК = 24: <sup>20</sup>/<sub>24</sub> + <sup>9</sup>/<sub>24</sub> = <sup>29</sup>/<sub>24</sub> = 1<sup>5</sup>/<sub>24</sub>.</p>"
+        },
+        {
+          "text": "Вычисли 4<sup>1</sup>/<sub>3</sub> + 2<sup>5</sup>/<sub>6</sub>.",
+          "answer": "<p>4<sup>2</sup>/<sub>6</sub> + 2<sup>5</sup>/<sub>6</sub> = 6<sup>7</sup>/<sub>6</sub> = 7<sup>1</sup>/<sub>6</sub>.</p>"
+        },
+        {
+          "text": "Вычисли 6 − 2<sup>3</sup>/<sub>7</sub>.",
+          "answer": "<p>6 = 5<sup>7</sup>/<sub>7</sub>. 5<sup>7</sup>/<sub>7</sub> − 2<sup>3</sup>/<sub>7</sub> = 3<sup>4</sup>/<sub>7</sub>.</p>"
+        },
+        {
+          "text": "Вычисли 5<sup>1</sup>/<sub>4</sub> − 1<sup>5</sup>/<sub>6</sub>.",
+          "answer": "<p>5<sup>3</sup>/<sub>12</sub> − 1<sup>10</sup>/<sub>12</sub> = 4<sup>15</sup>/<sub>12</sub> − 1<sup>10</sup>/<sub>12</sub> = 3<sup>5</sup>/<sub>12</sub>.</p>"
+        },
+        {
+          "text": "В канистре 12<sup>1</sup>/<sub>2</sub> л бензина. Взяли сначала 4<sup>3</sup>/<sub>10</sub> л, потом 2<sup>3</sup>/<sub>5</sub> л. Сколько литров осталось?",
+          "answer": "<p>Взяли 4<sup>3</sup>/<sub>10</sub> + 2<sup>6</sup>/<sub>10</sub> = 6<sup>9</sup>/<sub>10</sub> л. Осталось 12<sup>5</sup>/<sub>10</sub> − 6<sup>9</sup>/<sub>10</sub> = 11<sup>15</sup>/<sub>10</sub> − 6<sup>9</sup>/<sub>10</sub> = 5<sup>6</sup>/<sub>10</sub> = 5<sup>3</sup>/<sub>5</sub> л.</p>"
+        }
+      ],
+      "compare": "<p>Сложение и вычитание обыкновенных дробей с разными знаменателями и смешанных чисел изучают в 6 классе по ФОП и в учебнике Н. Я. Виленкина для 6 класса. Порядок изложения (сначала дроби с разными знаменателями, затем смешанные числа) в современном учебнике тот же.</p>"
     },
     {
-      "title": "Координатная плоскость",
-      "html": "<p>Положение точки на прямой задаёт одно число — координата. Для точки на плоскости нужны два числа. Для этого проводят две взаимно перпендикулярные числовые прямые с общим началом отсчёта, получая <b>прямоугольную систему координат</b>.</p><h3>Оси и четверти</h3><p>Горизонтальную ось называют <b>осью абсцисс</b> (Ox), вертикальную — <b>осью ординат</b> (Oy). Точка их пересечения O — начало координат. Положительные направления осей: вправо и вверх. Плоскость, на которой задана такая система, называют <b>координатной плоскостью</b>. Оси делят её на четыре <b>координатные четверти</b>, их нумеруют против часовой стрелки.</p><div class=\"table-wrap\"><table><thead><tr><th>Четверть</th><th>Знак x</th><th>Знак y</th></tr></thead><tbody><tr><td>I</td><td>+</td><td>+</td></tr><tr><td>II</td><td>−</td><td>+</td></tr><tr><td>III</td><td>−</td><td>−</td></tr><tr><td>IV</td><td>+</td><td>−</td></tr></tbody></table></div><h3>Координаты точки</h3><div class=\"rule\">Положение точки задаёт пара чисел (x; y), где x — абсцисса (по горизонтали), y — ордината (по вертикали). Порядок важен: сначала x, потом y.</div><p>Чтобы найти координаты точки, проводят из неё перпендикуляры к осям. Основание перпендикуляра на оси Ox даёт абсциссу, на оси Oy — ординату.</p><p class=\"example\">Точка A(3; −2): от начала координат отсчитываем 3 единицы вправо и 2 единицы вниз. Точка лежит в IV четверти.</p><h3>Особые случаи</h3><ul><li>Если y = 0, точка лежит на оси Ox: например, (5; 0).</li><li>Если x = 0, точка лежит на оси Oy: например, (0; −4).</li><li>Начало координат имеет координаты (0; 0).</li></ul><p>Точки (a; b) и (a; −b) расположены симметрично относительно оси Ox, а (a; b) и (−a; b) — относительно оси Oy.</p><h3>Построение фигур</h3><p>Отметив несколько точек и соединив их по порядку, можно получить фигуру. Например, точки (1; 1), (4; 1), (4; 3) и (1; 3) задают прямоугольник со сторонами 3 и 2.</p><p class=\"note\">Единичные отрезки по осям обычно берут одинаковыми, иначе фигура исказится.</p><p>Длину отрезка, параллельного оси, находят по разности координат. Если точки (2; 5) и (2; −1) лежат на одной вертикали, расстояние между ними равно 5 − (−1) = 6 единицам. Это удобно для вычисления сторон и площадей фигур на координатной плоскости.</p>",
-      "compare": "<p>Прямоугольная система координат на плоскости, координаты точки и построение точек по координатам входят в программу 6 класса по ФОП ООО. Графики зависимостей начинают строить позже, в курсе алгебры.</p>"
+      "title": "Умножение дробей. Нахождение дроби от числа",
+      "html": "<p>Бидон вмещает <sup>3</sup>/<sub>4</sub> л молока. Сколько молока в 5 таких бидонах? Это 5 раз по <sup>3</sup>/<sub>4</sub>, то есть <sup>3</sup>/<sub>4</sub> · 5. А как найти <sup>2</sup>/<sub>3</sub> от <sup>3</sup>/<sub>5</sub> л? Здесь умножаются две дроби. Выясним, как это делается.</p>\n<h3>Умножение дроби на натуральное число</h3>\n<p>Умножить дробь на натуральное число — значит сложить её столько раз, сколько указывает число: <sup>3</sup>/<sub>4</sub> · 5 = <sup>3</sup>/<sub>4</sub> + <sup>3</sup>/<sub>4</sub> + <sup>3</sup>/<sub>4</sub> + <sup>3</sup>/<sub>4</sub> + <sup>3</sup>/<sub>4</sub> = <sup>15</sup>/<sub>4</sub>. Видно, что числитель умножился на 5, а знаменатель остался прежним.</p>\n<div class=\"rule\">Чтобы умножить дробь на натуральное число, умножь на него числитель, а знаменатель оставь без изменения: <sup>a</sup>/<sub>b</sub> · n = <sup>a · n</sup>/<sub>b</sub>.</div>\n<h3>Умножение дробей</h3>\n<div class=\"rule\">Чтобы умножить дробь на дробь, перемножь числители и перемножь знаменатели; первое произведение запиши в числителе, второе — в знаменателе.</div>\n<p class=\"formula\"><sup>a</sup>/<sub>b</sub> · <sup>c</sup>/<sub>d</sub> = <sup>a · c</sup>/<sub>b · d</sub></p>\n<p>Результат полезно сокращать. Удобнее всего сокращать <b>до</b> умножения: если в числителе и знаменателе есть общие множители, их сразу зачёркивают. Смешанные числа при умножении записывают неправильными дробями. Натуральное число можно записать дробью со знаменателем 1: 4 = <sup>4</sup>/<sub>1</sub>.</p>\n<p class=\"example\"><b>Пример 1.</b> Найди <sup>5</sup>/<sub>6</sub> · <sup>9</sup>/<sub>10</sub>.<br>Решение. Сокращаем: 5 и 10 делим на 5, получается 1 и 2; 9 и 6 делим на 3, получается 3 и 2. Тогда <sup>1</sup>/<sub>2</sub> · <sup>3</sup>/<sub>2</sub> = <sup>3</sup>/<sub>4</sub>.<br>Ответ: <sup>3</sup>/<sub>4</sub>. Проверка без сокращений: <sup>45</sup>/<sub>60</sub> = <sup>3</sup>/<sub>4</sub>.</p>\n<p class=\"example\"><b>Пример 2.</b> Найди 2<sup>1</sup>/<sub>4</sub> · 1<sup>1</sup>/<sub>3</sub>.<br>Решение. 2<sup>1</sup>/<sub>4</sub> = <sup>9</sup>/<sub>4</sub>, 1<sup>1</sup>/<sub>3</sub> = <sup>4</sup>/<sub>3</sub>. Тогда <sup>9</sup>/<sub>4</sub> · <sup>4</sup>/<sub>3</sub> = <sup>9 · 4</sup>/<sub>4 · 3</sub> = 3.<br>Ответ: 3.</p>\n<p>Умножение дробей обладает теми же свойствами, что и умножение натуральных чисел: от перестановки множителей произведение не меняется, <sup>a</sup>/<sub>b</sub> · <sup>c</sup>/<sub>d</sub> = <sup>c</sup>/<sub>d</sub> · <sup>a</sup>/<sub>b</sub>; произведение на 1 равно самому числу, на 0 равно нулю. Правильную дробь, умножая на другую правильную, мы уменьшаем: произведение двух правильных дробей меньше каждого множителя. Например, <sup>1</sup>/<sub>2</sub> · <sup>1</sup>/<sub>2</sub> = <sup>1</sup>/<sub>4</sub>.</p>\n<h3>Нахождение дроби от числа</h3>\n<p>Задача: в классе 20 учеников, <sup>3</sup>/<sub>4</sub> из них — отличники по чтению. Сколько отличников? Разделим 20 на 4 равные части — по 5 учеников в каждой. Возьмём три части: 5 · 3 = 15.</p>\n<figure><svg viewBox=\"0 0 360 110\" role=\"img\" aria-label=\"Полоска, разделённая на четыре равные части по 5 единиц. Закрашены три части, это 15 из 20\"><rect x=\"30\" y=\"20\" width=\"300\" height=\"40\" stroke=\"currentColor\" fill=\"none\"/><rect x=\"30\" y=\"20\" width=\"225\" height=\"40\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><line x1=\"105\" y1=\"20\" x2=\"105\" y2=\"60\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"60\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"255\" y1=\"20\" x2=\"255\" y2=\"60\" stroke=\"currentColor\" class=\"thin\"/><text x=\"67.5\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><text x=\"142.5\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><text x=\"217.5\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><text x=\"292.5\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><text x=\"142\" y=\"92\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">3/4 от 20 = 15</text></svg><figcaption>Рис. 1. Чтобы найти 3/4 от 20, делим 20 на 4 части (по 5) и берём 3 части.</figcaption></figure>\n<div class=\"rule\">Чтобы найти дробь от числа, надо умножить число на эту дробь.</div>\n<p class=\"formula\"><sup>a</sup>/<sub>b</sub> от числа N = N · <sup>a</sup>/<sub>b</sub></p>\n<p class=\"example\"><b>Пример 3.</b> Путь 40 км. На машине проехали <sup>3</sup>/<sub>5</sub> пути, а из остатка <sup>1</sup>/<sub>4</sub> проехали на автобусе. Сколько километров проехали на автобусе?<br>Решение. 1) На машине: 40 · <sup>3</sup>/<sub>5</sub> = 24 (км). 2) Остаток: 40 − 24 = 16 (км). 3) На автобусе: 16 · <sup>1</sup>/<sub>4</sub> = 4 (км).<br>Ответ: 4 км.</p>\n<p class=\"note\">Проверь себя. Как умножить дробь на дробь? Что значит «найти <sup>2</sup>/<sub>5</sub> от числа 35»? Почему при умножении правильных дробей произведение получается меньше каждого множителя?</p>",
+      "exercises": [
+        {
+          "text": "Вычисли <sup>2</sup>/<sub>3</sub> · <sup>4</sup>/<sub>5</sub>.",
+          "answer": "<p><sup>8</sup>/<sub>15</sub>.</p>"
+        },
+        {
+          "text": "Вычисли <sup>3</sup>/<sub>8</sub> · 4.",
+          "answer": "<p><sup>12</sup>/<sub>8</sub> = <sup>3</sup>/<sub>2</sub> = 1<sup>1</sup>/<sub>2</sub>.</p>"
+        },
+        {
+          "text": "Вычисли <sup>5</sup>/<sub>12</sub> · <sup>9</sup>/<sub>10</sub>.",
+          "answer": "<p><sup>45</sup>/<sub>120</sub> = <sup>3</sup>/<sub>8</sub>.</p>"
+        },
+        {
+          "text": "Вычисли 2<sup>1</sup>/<sub>2</sub> · 1<sup>3</sup>/<sub>5</sub>.",
+          "answer": "<p><sup>5</sup>/<sub>2</sub> · <sup>8</sup>/<sub>5</sub> = <sup>40</sup>/<sub>10</sub> = 4.</p>"
+        },
+        {
+          "text": "Найди 2/5 от числа 35.",
+          "answer": "<p>35 : 5 = 7, 7 · 2 = 14.</p>"
+        },
+        {
+          "text": "Найди <sup>3</sup>/<sub>4</sub> от 2<sup>2</sup>/<sub>3</sub>.",
+          "answer": "<p><sup>3</sup>/<sub>4</sub> · <sup>8</sup>/<sub>3</sub> = <sup>24</sup>/<sub>12</sub> = 2.</p>"
+        },
+        {
+          "text": "Ширина стола <sup>3</sup>/<sub>5</sub> м, а длина в 1<sup>1</sup>/<sub>2</sub> раза больше. Найди площадь стола.",
+          "answer": "<p>Длина <sup>3</sup>/<sub>5</sub> · <sup>3</sup>/<sub>2</sub> = <sup>9</sup>/<sub>10</sub> м. Площадь <sup>3</sup>/<sub>5</sub> · <sup>9</sup>/<sub>10</sub> = <sup>27</sup>/<sub>50</sub> м<sup>2</sup>.</p>"
+        },
+        {
+          "text": "В книге 120 страниц. Миша прочитал <sup>3</sup>/<sub>8</sub> книги, а на следующий день — <sup>1</sup>/<sub>3</sub> остатка. Сколько страниц ему осталось прочитать?",
+          "answer": "<p>Прочитал 120 · <sup>3</sup>/<sub>8</sub> = 45 страниц. Остаток 120 − 45 = 75. На следующий день 75 · <sup>1</sup>/<sub>3</sub> = 25. Осталось 75 − 25 = 50 страниц.</p>"
+        }
+      ],
+      "compare": "<p>Умножение обыкновенных дробей и нахождение дроби от числа изучают в 6 классе, как и в советском учебнике для 5 класса. В ФОП и в учебнике Н. Я. Виленкина для 6 класса умножение и деление дробей объединены в одну главу.</p>"
+    },
+    {
+      "title": "Деление дробей. Нахождение числа по его дроби",
+      "html": "<p>Лента длиной <sup>3</sup>/<sub>4</sub> м разрезана на куски по <sup>1</sup>/<sub>8</sub> м. Сколько получилось кусков? Надо узнать, сколько раз <sup>1</sup>/<sub>8</sub> содержится в <sup>3</sup>/<sub>4</sub>, то есть выполнить деление дробей. Для этого нам понадобятся взаимно обратные числа.</p>\n<h3>Взаимно обратные числа</h3>\n<div class=\"rule\">Два числа, произведение которых равно 1, называют <b>взаимно обратными</b>. Чтобы получить число, обратное дроби, поменяй местами её числитель и знаменатель.</div>\n<p>Например, <sup>3</sup>/<sub>5</sub> · <sup>5</sup>/<sub>3</sub> = 1, значит, числа <sup>3</sup>/<sub>5</sub> и <sup>5</sup>/<sub>3</sub> взаимно обратны. Число, обратное 4, — это <sup>1</sup>/<sub>4</sub>, ведь 4 = <sup>4</sup>/<sub>1</sub>. Для смешанного числа сначала запишем его неправильной дробью: 1<sup>2</sup>/<sub>3</sub> = <sup>5</sup>/<sub>3</sub>, обратное число <sup>3</sup>/<sub>5</sub>. У нуля обратного числа нет.</p>\n<h3>Деление дробей</h3>\n<div class=\"rule\">Чтобы разделить одну дробь на другую, надо делимое умножить на число, обратное делителю.</div>\n<p class=\"formula\"><sup>a</sup>/<sub>b</sub> : <sup>c</sup>/<sub>d</sub> = <sup>a</sup>/<sub>b</sub> · <sup>d</sup>/<sub>c</sub> = <sup>a · d</sup>/<sub>b · c</sub></p>\n<p>Почему так? Деление проверяют умножением: (<sup>a</sup>/<sub>b</sub> · <sup>d</sup>/<sub>c</sub>) · <sup>c</sup>/<sub>d</sub> = <sup>a</sup>/<sub>b</sub>. Значит, <sup>a</sup>/<sub>b</sub> · <sup>d</sup>/<sub>c</sub> и есть частное. Чтобы разделить дробь на натуральное число, его считают дробью со знаменателем 1: <sup>4</sup>/<sub>9</sub> : 8 = <sup>4</sup>/<sub>9</sub> · <sup>1</sup>/<sub>8</sub> = <sup>1</sup>/<sub>18</sub>.</p>\n<p class=\"example\"><b>Пример 1.</b> Реши задачу про ленту: <sup>3</sup>/<sub>4</sub> : <sup>1</sup>/<sub>8</sub>.<br>Решение. <sup>3</sup>/<sub>4</sub> · <sup>8</sup>/<sub>1</sub> = <sup>24</sup>/<sub>4</sub> = 6.<br>Ответ: 6 кусков.</p>\n<p class=\"example\"><b>Пример 2.</b> Найди 2<sup>1</sup>/<sub>2</sub> : 1<sup>1</sup>/<sub>4</sub>.<br>Решение. 2<sup>1</sup>/<sub>2</sub> = <sup>5</sup>/<sub>2</sub>, 1<sup>1</sup>/<sub>4</sub> = <sup>5</sup>/<sub>4</sub>. <sup>5</sup>/<sub>2</sub> : <sup>5</sup>/<sub>4</sub> = <sup>5</sup>/<sub>2</sub> · <sup>4</sup>/<sub>5</sub> = <sup>20</sup>/<sub>10</sub> = 2.<br>Ответ: 2.</p>\n<h3>Нахождение числа по его дроби</h3>\n<p>Три задачи о дробях. Они похожи, но решаются по-разному.</p>\n<div class=\"table-wrap\"><table><thead><tr><th>Что нужно найти</th><th>Как решать</th></tr></thead><tbody><tr><td>Дробь от числа: сколько составляют <sup>3</sup>/<sub>5</sub> от 20?</td><td>Умножить число на дробь: 20 · <sup>3</sup>/<sub>5</sub> = 12</td></tr><tr><td>Число по его дроби: <sup>3</sup>/<sub>5</sub> числа равны 12; найти число.</td><td>Разделить значение на дробь: 12 : <sup>3</sup>/<sub>5</sub> = 20</td></tr><tr><td>Какую часть число a составляет от b: какую часть 12 составляет от 20?</td><td>Разделить a на b: 12 : 20 = <sup>3</sup>/<sub>5</sub></td></tr></tbody></table></div>\n<figure><svg viewBox=\"0 0 360 120\" role=\"img\" aria-label=\"Полоска из пяти равных частей. Три закрашенные части вместе равны 12, значит, каждая часть равна 4, а вся полоска равна 20\"><rect x=\"30\" y=\"20\" width=\"300\" height=\"40\" stroke=\"currentColor\" fill=\"none\"/><rect x=\"30\" y=\"20\" width=\"180\" height=\"40\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent soft\"/><line x1=\"90\" y1=\"20\" x2=\"90\" y2=\"60\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"60\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"210\" y1=\"20\" x2=\"210\" y2=\"60\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"270\" y1=\"20\" x2=\"270\" y2=\"60\" stroke=\"currentColor\" class=\"thin\"/><text x=\"60\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><text x=\"120\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><text x=\"180\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><text x=\"240\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">?</text><text x=\"300\" y=\"52\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">?</text><text x=\"180\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">3/5 числа равны 12, всё число = 20</text></svg><figcaption>Рис. 1. Три части из пяти равны 12. Одна часть равна 12 : 3 = 4, всё число равно 4 · 5 = 20.</figcaption></figure>\n<div class=\"rule\">Чтобы найти число по значению его дроби, надо это значение разделить на дробь.</div>\n<p class=\"example\"><b>Пример 3.</b> Теплоход прошёл <sup>2</sup>/<sub>5</sub> пути, это 84 км. На второй день он прошёл <sup>3</sup>/<sub>7</sub> всего пути. Сколько километров он прошёл на второй день?<br>Решение. 1) Весь путь: 84 : <sup>2</sup>/<sub>5</sub> = 84 · <sup>5</sup>/<sub>2</sub> = 210 (км). 2) Второй день: 210 · <sup>3</sup>/<sub>7</sub> = 90 (км).<br>Ответ: 90 км.</p>\n<p class=\"note\">Проверь себя. Какие числа называют взаимно обратными? Как разделить дробь на дробь? Чем отличаются задачи «найти дробь от числа» и «найти число по его дроби»?</p>",
+      "exercises": [
+        {
+          "text": "Назови числа, обратные числам <sup>5</sup>/<sub>7</sub>, 4 и 1<sup>2</sup>/<sub>3</sub>.",
+          "answer": "<p><sup>7</sup>/<sub>5</sub>; <sup>1</sup>/<sub>4</sub>; <sup>3</sup>/<sub>5</sub>.</p>"
+        },
+        {
+          "text": "Вычисли <sup>3</sup>/<sub>4</sub> : <sup>9</sup>/<sub>8</sub>.",
+          "answer": "<p><sup>3</sup>/<sub>4</sub> · <sup>8</sup>/<sub>9</sub> = <sup>24</sup>/<sub>36</sub> = <sup>2</sup>/<sub>3</sub>.</p>"
+        },
+        {
+          "text": "Вычисли 6 : <sup>3</sup>/<sub>5</sub>.",
+          "answer": "<p>6 · <sup>5</sup>/<sub>3</sub> = 10.</p>"
+        },
+        {
+          "text": "Вычисли <sup>4</sup>/<sub>9</sub> : 8.",
+          "answer": "<p><sup>4</sup>/<sub>9</sub> · <sup>1</sup>/<sub>8</sub> = <sup>4</sup>/<sub>72</sub> = <sup>1</sup>/<sub>18</sub>.</p>"
+        },
+        {
+          "text": "Вычисли 3<sup>1</sup>/<sub>3</sub> : 1<sup>1</sup>/<sub>9</sub>.",
+          "answer": "<p><sup>10</sup>/<sub>3</sub> : <sup>10</sup>/<sub>9</sub> = <sup>10</sup>/<sub>3</sub> · <sup>9</sup>/<sub>10</sub> = 3.</p>"
+        },
+        {
+          "text": "Найди число, <sup>5</sup>/<sub>6</sub> которого равны 35.",
+          "answer": "<p>35 : <sup>5</sup>/<sub>6</sub> = 35 · <sup>6</sup>/<sub>5</sub> = 42.</p>"
+        },
+        {
+          "text": "Какую часть составляют 18 см от 1 м 20 см?",
+          "answer": "<p>1 м 20 см = 120 см. 18 : 120 = <sup>18</sup>/<sub>120</sub> = <sup>3</sup>/<sub>20</sub>.</p>"
+        },
+        {
+          "text": "Миша прочитал 72 страницы, это <sup>3</sup>/<sub>8</sub> книги. Сколько страниц в книге и сколько осталось прочитать?",
+          "answer": "<p>72 : <sup>3</sup>/<sub>8</sub> = 72 · <sup>8</sup>/<sub>3</sub> = 192 страницы. Осталось 192 − 72 = 120 страниц.</p>"
+        },
+        {
+          "text": "Теплоход прошёл <sup>2</sup>/<sub>5</sub> пути, это 84 км. Остальную часть он прошёл в два дня, причём в первый — <sup>3</sup>/<sub>7</sub> всего пути. Сколько километров он прошёл во второй из этих двух дней?",
+          "answer": "<p>Весь путь 84 · <sup>5</sup>/<sub>2</sub> = 210 км. В первый из двух дней 210 · <sup>3</sup>/<sub>7</sub> = 90 км. Остаток после двух частей: 210 − 84 − 90 = 36 км — это во второй день.</p>"
+        }
+      ],
+      "compare": "<p>Деление дробей и задачи на нахождение числа по его дроби изучают в 6 классе, в одной главе с умножением, и в современном учебнике Н. Я. Виленкина, и в советском издании для 5 класса. Три основные задачи на дроби (дробь от числа, число по дроби, часть одного числа от другого) входят в программу и сейчас.</p>"
+    },
+    {
+      "title": "Отношения и пропорции. Прямая и обратная пропорциональность. Масштаб",
+      "html": "<p>Из 5 кг яблок получается 3 л сока. Сколько сока даст 20 кг? Расстояние между двумя городами на карте 4 см. Каково оно на самом деле? В таких задачах величины связаны друг с другом, и сравнивать их удобно с помощью отношений и пропорций.</p>\n<h3>Отношение</h3>\n<div class=\"rule\"><b>Отношением</b> двух чисел называют их частное. Отношение чисел <b>a</b> и <b>b</b> записывают a : b или <sup>a</sup>/<sub>b</sub>.</div>\n<p>Отношение показывает, во сколько раз первое число больше второго, или какую часть первое число составляет от второго. Отношение 12 : 4 = 3: число 12 в 3 раза больше 4. Отношение 4 : 12 = <sup>1</sup>/<sub>3</sub>: число 4 составляет <sup>1</sup>/<sub>3</sub> от 12. Отношение двух величин одного вида (длин, масс) не имеет единицы измерения; величины сначала выражают в одинаковых единицах.</p>\n<h3>Пропорция</h3>\n<div class=\"rule\"><b>Пропорцией</b> называют равенство двух отношений: a : b = c : d, или <sup>a</sup>/<sub>b</sub> = <sup>c</sup>/<sub>d</sub>. Числа <b>a</b> и <b>d</b> — <b>крайние члены</b> пропорции, числа <b>b</b> и <b>c</b> — <b>средние члены</b>.</div>\n<div class=\"rule\"><b>Основное свойство пропорции.</b> Произведение крайних членов равно произведению средних: если a : b = c : d, то a · d = b · c.</div>\n<p>Свойство позволяет находить неизвестный член: неизвестный крайний член равен произведению средних, делённому на известный крайний, и наоборот.</p>\n<p class=\"example\"><b>Пример 1.</b> Реши уравнение x : 6 = 10 : 15.<br>Решение. В записи x : 6 = 10 : 15 крайние члены — x и 15, средние — 6 и 10. Тогда x · 15 = 6 · 10, откуда x = 60 : 15 = 4.<br>Ответ: x = 4. Проверка: 4 : 6 = <sup>2</sup>/<sub>3</sub>, 10 : 15 = <sup>2</sup>/<sub>3</sub>.</p>\n<h3>Прямая и обратная пропорциональность</h3>\n<p>Если цена одного килограмма яблок не меняется, то при покупке 2, 3, 4 кг стоимость тоже увеличивается в 2, 3, 4 раза. Такие величины называют <b>прямо пропорциональными</b>: при увеличении одной в несколько раз другая увеличивается во столько же раз. Отношение таких величин остаётся постоянным (цена за 1 кг).</p>\n<p>Если же работу выполняют несколько человек, то чем их больше, тем меньше времени нужно. Если рабочих станет втрое больше, то времени потребуется втрое меньше. Такие величины называют <b>обратно пропорциональными</b>: при увеличении одной в несколько раз другая во столько же раз уменьшается. Постоянным остаётся их произведение (весь объём работы).</p>\n<p class=\"formula\">Прямая: y : x = k (постоянно). &nbsp; Обратная: x · y = k (постоянно).</p>\n<p class=\"example\"><b>Пример 2.</b> 5 кг яблок стоят 120 рублей. Сколько стоят 8 кг?<br>Решение. Стоимость прямо пропорциональна массе. Составим пропорцию: 5 : 8 = 120 : x. Тогда 5 · x = 8 · 120, x = 960 : 5 = 192.<br>Ответ: 192 рубля.</p>\n<p class=\"example\"><b>Пример 3.</b> Три рабочих выполняют задание за 12 дней. За сколько дней его выполнят 9 рабочих (так же быстро каждый)?<br>Решение. Время обратно пропорционально числу рабочих. Весь объём работы: 3 · 12 = 36 человеко-дней. Тогда 36 : 9 = 4.<br>Ответ: за 4 дня.</p>\n<h3>Масштаб</h3>\n<p>На карте и на чертеже большие расстояния уменьшают в одно и то же число раз. <b>Масштабом</b> называют отношение длины отрезка на карте (чертеже) к длине соответствующего отрезка на местности (в натуре). Масштаб записывают так: 1 : 100 000 или словами: «в 1 см 20 км». Масштаб 1 : 2 000 000 означает, что 1 см на карте соответствует 2 000 000 см = 20 км на местности.</p>\n<figure><svg viewBox=\"0 0 380 160\" role=\"img\" aria-label=\"Схема масштаба. Сверху отрезок на карте с отметками 0, 1, 2, 3 сантиметра. Снизу отрезок на местности с отметками 0, 20, 40, 60 километров. Пунктирные линии соединяют соответствующие отметки\"><line x1=\"40\" y1=\"38\" x2=\"40\" y2=\"52\" stroke=\"currentColor\"/><text x=\"40\" y=\"32\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">0 см</text><line x1=\"40\" y1=\"108\" x2=\"40\" y2=\"122\" stroke=\"currentColor\"/><text x=\"40\" y=\"142\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">0 км</text><line x1=\"40\" y1=\"52\" x2=\"40\" y2=\"108\" stroke=\"currentColor\" class=\"thin dashed\"/><line x1=\"120\" y1=\"38\" x2=\"120\" y2=\"52\" stroke=\"currentColor\"/><text x=\"120\" y=\"32\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">1 см</text><line x1=\"120\" y1=\"108\" x2=\"120\" y2=\"122\" stroke=\"currentColor\"/><text x=\"120\" y=\"142\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">20 км</text><line x1=\"120\" y1=\"52\" x2=\"120\" y2=\"108\" stroke=\"currentColor\" class=\"thin dashed\"/><line x1=\"200\" y1=\"38\" x2=\"200\" y2=\"52\" stroke=\"currentColor\"/><text x=\"200\" y=\"32\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">2 см</text><line x1=\"200\" y1=\"108\" x2=\"200\" y2=\"122\" stroke=\"currentColor\"/><text x=\"200\" y=\"142\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">40 км</text><line x1=\"200\" y1=\"52\" x2=\"200\" y2=\"108\" stroke=\"currentColor\" class=\"thin dashed\"/><line x1=\"280\" y1=\"38\" x2=\"280\" y2=\"52\" stroke=\"currentColor\"/><text x=\"280\" y=\"32\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">3 см</text><line x1=\"280\" y1=\"108\" x2=\"280\" y2=\"122\" stroke=\"currentColor\"/><text x=\"280\" y=\"142\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">60 км</text><line x1=\"280\" y1=\"52\" x2=\"280\" y2=\"108\" stroke=\"currentColor\" class=\"thin dashed\"/><line x1=\"40\" y1=\"45\" x2=\"280\" y2=\"45\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"40\" y1=\"115\" x2=\"280\" y2=\"115\" stroke=\"currentColor\" class=\"red\"/><text x=\"290\" y=\"49\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"muted\">на карте</text><text x=\"290\" y=\"119\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"muted\">на местности</text></svg><figcaption>Рис. 1. Масштаб «в 1 см 20 км»: 1 см на карте соответствует 20 км на местности.</figcaption></figure>\n<p class=\"example\"><b>Пример 4.</b> Масштаб карты 1 : 2 500 000. Расстояние на карте 4 см. Каково расстояние на местности?<br>Решение. 4 · 2 500 000 = 10 000 000 см = 100 000 м = 100 км.<br>Ответ: 100 км.</p>\n<p class=\"example\"><b>Пример 5.</b> Расстояние между двумя посёлками на местности 90 км, а на карте 3 см. Найди масштаб карты.<br>Решение. 90 км = 9 000 000 см. Отношение 3 : 9 000 000 = 1 : 3 000 000.<br>Ответ: 1 : 3 000 000.</p>\n<p class=\"note\">Проверь себя. Что такое отношение и пропорция? Сформулируй основное свойство пропорции. Чем различаются прямая и обратная пропорциональность? Что означает масштаб 1 : 500 000?</p>",
+      "exercises": [
+        {
+          "text": "Найди отношение 36 к 9 и отношение 9 к 36. Что показывает каждое из них?",
+          "answer": "<p>36 : 9 = 4 — число 36 в 4 раза больше 9. 9 : 36 = <sup>1</sup>/<sub>4</sub> — число 9 составляет <sup>1</sup>/<sub>4</sub> от 36.</p>"
+        },
+        {
+          "text": "Реши уравнение x : 6 = 10 : 15.",
+          "answer": "<p>15x = 60, x = 4.</p>"
+        },
+        {
+          "text": "Найди x в пропорции 8 : x = 12 : 9.",
+          "answer": "<p>12x = 72, x = 6.</p>"
+        },
+        {
+          "text": "Верна ли пропорция 6 : 9 = 14 : 21?",
+          "answer": "<p>6 · 21 = 126, 9 · 14 = 126. Произведения равны, пропорция верна.</p>"
+        },
+        {
+          "text": "За 12 тетрадей заплатили 90 рублей. Сколько стоят 20 таких тетрадей?",
+          "answer": "<p>Цена одной 90 : 12 = 7,5 рубля, 20 тетрадей стоят 150 рублей. Пропорция: 12 : 20 = 90 : x, x = 150.</p>"
+        },
+        {
+          "text": "Автомобиль едет со скоростью 60 км/ч и проходит путь за 4 ч. За сколько часов он пройдёт этот путь со скоростью 80 км/ч?",
+          "answer": "<p>Путь 60 · 4 = 240 км. 240 : 80 = 3 ч (скорость и время обратно пропорциональны).</p>"
+        },
+        {
+          "text": "Масштаб карты 1 : 200 000. Расстояние на карте 6 см. Каково расстояние на местности?",
+          "answer": "<p>6 · 200 000 = 1 200 000 см = 12 км.</p>"
+        },
+        {
+          "text": "Расстояние между городами 90 км, на карте оно 3 см. Найди масштаб карты.",
+          "answer": "<p>90 км = 9 000 000 см, масштаб 3 : 9 000 000 = 1 : 3 000 000.</p>"
+        },
+        {
+          "text": "Для сиропа берут сахар и воду по массе в отношении 2 : 5. Сколько сахара нужно на 350 г воды?",
+          "answer": "<p>350 : 5 · 2 = 140 г сахара.</p>"
+        }
+      ],
+      "compare": "<p>Отношения, пропорции, прямая и обратная пропорциональность и масштаб изучают в 6 классе и сейчас: эти темы указаны в ФОП и составляют отдельную главу учебника Н. Я. Виленкина для 6 класса.</p>"
+    },
+    {
+      "title": "Длина окружности и площадь круга. Шар",
+      "html": "<p>Колесо велосипеда делает один оборот. Какое расстояние проедет велосипед? Это ровно длина обода — длина окружности колеса. Чтобы не измерять её нитью, найдём формулу.</p>\n<h3>Окружность и круг</h3>\n<p><b>Окружность</b> — линия, все точки которой одинаково удалены от одной точки — <b>центра</b>. Отрезок, соединяющий центр с точкой окружности, — <b>радиус</b>. Отрезок, соединяющий две точки окружности и проходящий через центр, — <b>диаметр</b>. Отрезок между двумя точками окружности, не обязательно проходящий через центр, — <b>хорда</b>. Диаметр — самая длинная хорда. Часть круга, ограниченную окружностью, называют <b>кругом</b>, а часть окружности — <b>дугой</b>. Окружность чертят циркулем.</p>\n<figure><svg viewBox=\"0 0 380 180\" role=\"img\" aria-label=\"Окружность с центром O. Отрезок OD от центра до точки окружности — радиус. Отрезок BC через центр — диаметр. Отрезок EF между двумя точками окружности, не через центр — хорда\"><circle cx=\"130\" cy=\"100\" r=\"80\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/>\n<line x1=\"50\" y1=\"100\" x2=\"210\" y2=\"100\" stroke=\"currentColor\"/>\n<line x1=\"130\" y1=\"100\" x2=\"170\" y2=\"30.7\" stroke=\"currentColor\" class=\"red\"/>\n<line x1=\"73.4\" y1=\"156.6\" x2=\"186.6\" y2=\"156.6\" stroke=\"currentColor\" class=\"thin\"/>\n<circle cx=\"130\" cy=\"100\" r=\"3\" stroke=\"currentColor\" fill=\"currentColor\"/><text x=\"130\" y=\"118\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">O</text><text x=\"40\" y=\"96\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"220\" y=\"96\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">C</text><text x=\"180\" y=\"30\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">D</text><text x=\"64\" y=\"168\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">E</text><text x=\"198\" y=\"168\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">F</text><text x=\"235\" y=\"50\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">O — центр</text><text x=\"235\" y=\"80\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">OD — радиус</text><text x=\"235\" y=\"110\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">BC — диаметр</text><text x=\"235\" y=\"140\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"muted\">EF — хорда</text></svg><figcaption>Рис. 1. Окружность: центр, радиус, диаметр и хорда.</figcaption></figure>\n<p class=\"formula\">d = 2 · r, &nbsp; r = d : 2</p>\n<h3>Длина окружности и число π</h3>\n<p>Если измерить нитью длину окружности и разделить на диаметр, для любой окружности получится одно и то же число — чуть больше трёх. Его обозначают греческой буквой <b>π</b> (читается «пи»). Приближённо π ≈ 3,14.</p>\n<div class=\"rule\">Длина окружности <b>C</b> равна произведению числа π на диаметр: C = π · d = 2 · π · r.</div>\n<p class=\"example\"><b>Пример 1.</b> Найди длину окружности с радиусом 5 см.<br>Решение. C = 2 · π · r ≈ 2 · 3,14 · 5 = 31,4 (см).<br>Ответ: 31,4 см.</p>\n<p class=\"example\"><b>Пример 2.</b> Диаметр колеса 60 см. Сколько оборотов оно сделает на пути 18,84 м?<br>Решение. Длина обода C ≈ 3,14 · 60 = 188,4 (см) = 1,884 (м). Число оборотов 18,84 : 1,884 = 10.<br>Ответ: 10 оборотов.</p>\n<h3>Площадь круга</h3>\n<p>Площадь круга можно сравнить с квадратом, построенным на радиусе: она примерно в 3,14 раза больше площади такого квадрата.</p>\n<div class=\"rule\">Площадь круга <b>S</b> радиуса <b>r</b> равна S = π · r<sup>2</sup>, то есть S = π · r · r.</div>\n<p class=\"example\"><b>Пример 3.</b> Найди площадь круга радиуса 4 см и радиус круга, площадь которого 78,5 см<sup>2</sup>.<br>Решение. S ≈ 3,14 · 4 · 4 = 50,24 (см<sup>2</sup>). Для второй части: r<sup>2</sup> = 78,5 : 3,14 = 25, значит, r = 5 (см), так как 5 · 5 = 25.<br>Ответ: 50,24 см<sup>2</sup>; 5 см.</p>\n<h3>Шар</h3>\n<p>Тело, у которого все точки поверхности одинаково удалены от центра, называют <b>шаром</b>, а его поверхность — <b>сферой</b>. Центр, радиус и диаметр шара определяют так же, как для круга. Мяч, глобус, арбуз имеют форму, близкую к шару. Сечение шара плоскостью, проходящей через центр, — круг того же радиуса.</p>\n<figure><svg viewBox=\"0 0 360 180\" role=\"img\" aria-label=\"Шар радиуса R: круг с пунктирным экватором-эллипсом, центром O и радиусом OA\"><circle cx=\"110\" cy=\"90\" r=\"70\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><ellipse cx=\"110\" cy=\"90\" rx=\"70\" ry=\"20\" stroke=\"currentColor\" fill=\"none\" class=\"dashed thin\"/><line x1=\"110\" y1=\"90\" x2=\"180\" y2=\"90\" stroke=\"currentColor\" class=\"red\"/><circle cx=\"110\" cy=\"90\" r=\"3\" stroke=\"currentColor\" fill=\"currentColor\"/><text x=\"106\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">O</text><text x=\"182\" y=\"84\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">A</text><text x=\"210\" y=\"60\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">сфера — поверхность</text><text x=\"210\" y=\"80\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">шара, шар — тело</text><text x=\"210\" y=\"105\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">OA — радиус шара</text></svg><figcaption>Рис. 2. Шар. Все точки его поверхности (сферы) одинаково удалены от центра.</figcaption></figure>\n<p class=\"note\">Проверь себя. Чем радиус отличается от диаметра? Чему равно число π? По какой формуле находят длину окружности и площадь круга? Чем шар отличается от сферы?</p>",
+      "exercises": [
+        {
+          "text": "Найди диаметр окружности, если её радиус 7 см.",
+          "answer": "<p>d = 2 · 7 = 14 см.</p>"
+        },
+        {
+          "text": "Найди длину окружности с диаметром 10 см (π ≈ 3,14).",
+          "answer": "<p>C = 3,14 · 10 = 31,4 см.</p>"
+        },
+        {
+          "text": "Найди длину окружности с радиусом 3 м (π ≈ 3,14).",
+          "answer": "<p>C = 2 · 3,14 · 3 = 18,84 м.</p>"
+        },
+        {
+          "text": "Найди площадь круга радиуса 4 см (π ≈ 3,14).",
+          "answer": "<p>S = 3,14 · 16 = 50,24 см<sup>2</sup>.</p>"
+        },
+        {
+          "text": "Длина окружности 15,7 см. Найди диаметр.",
+          "answer": "<p>d = 15,7 : 3,14 = 5 см.</p>"
+        },
+        {
+          "text": "Площадь круга 78,5 м<sup>2</sup>. Найди радиус.",
+          "answer": "<p>r<sup>2</sup> = 78,5 : 3,14 = 25, r = 5 м.</p>"
+        },
+        {
+          "text": "Диаметр колеса 70 см. За сколько оборотов оно проедет 21,98 м?",
+          "answer": "<p>C = 3,14 · 70 = 219,8 см = 2,198 м. 21,98 : 2,198 = 10 оборотов.</p>"
+        },
+        {
+          "text": "В квадрат со стороной 10 см вписан круг (диаметр круга равен стороне квадрата). Найди площадь части квадрата вне круга.",
+          "answer": "<p>Площадь квадрата 100 см<sup>2</sup>. Радиус круга 5 см, S = 3,14 · 25 = 78,5 см<sup>2</sup>. Вне круга 100 − 78,5 = 21,5 см<sup>2</sup>.</p>"
+        }
+      ],
+      "compare": "<p>Длину окружности и площадь круга с приближённым значением π ≈ 3,14 изучают в 6 классе, как и в современном учебнике Н. Я. Виленкина для 6 класса.</p>"
+    },
+    {
+      "title": "Положительные и отрицательные числа. Координатная прямая. Модуль",
+      "html": "<p>Утром на термометре −7 градусов, а днём +3. Какая температура выше? На сколько она изменилась? Чтобы говорить о температуре ниже нуля, о долге, о высоте над уровнем моря и глубине под ним, одних натуральных чисел и дробей недостаточно. Нужны числа, которые меньше нуля.</p>\n<h3>Положительные и отрицательные числа</h3>\n<p>Числа, которые мы использовали до сих пор (натуральные, дроби, десятичные), — это <b>положительные числа</b>. Перед ними иногда пишут знак «плюс»: +5 то же, что 5. Числа со знаком «минус»: −5, −<sup>1</sup>/<sub>2</sub>, −2,7 — <b>отрицательные числа</b>. Число 0 не положительное и не отрицательное.</p>\n<p>Натуральные числа, противоположные им отрицательные числа и нуль вместе называют <b>целыми числами</b>. Целые и дробные числа (положительные и отрицательные) вместе составляют множество <b>рациональных чисел</b>.</p>\n<h3>Координатная прямая</h3>\n<p>Проведём прямую, отметим на ней точку 0 — <b>начало отсчёта</b>, выберем <b>единичный отрезок</b> и <b>направление</b> (обычно вправо). Положительные числа отложим вправо от нуля, отрицательные — влево. Получится <b>координатная прямая</b>. Число, которое соответствует точке, — её <b>координата</b>: A(−3), B(2).</p>\n<figure><svg viewBox=\"0 0 360 130\" role=\"img\" aria-label=\"Координатная прямая с отметками от минус пяти до пяти. Точка A стоит в числе минус три, точка B в числе два. Под прямой показаны расстояния от нуля: 3 для точки A и 2 для точки B\"><defs><marker id=\"arrow-t10\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"currentColor\"/></marker></defs><line x1=\"30\" y1=\"42\" x2=\"30\" y2=\"58\" stroke=\"currentColor\"/><text x=\"30\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−5</text><line x1=\"60\" y1=\"42\" x2=\"60\" y2=\"58\" stroke=\"currentColor\"/><text x=\"60\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−4</text><line x1=\"90\" y1=\"42\" x2=\"90\" y2=\"58\" stroke=\"currentColor\"/><text x=\"90\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−3</text><line x1=\"120\" y1=\"42\" x2=\"120\" y2=\"58\" stroke=\"currentColor\"/><text x=\"120\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−2</text><line x1=\"150\" y1=\"42\" x2=\"150\" y2=\"58\" stroke=\"currentColor\"/><text x=\"150\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−1</text><line x1=\"180\" y1=\"42\" x2=\"180\" y2=\"58\" stroke=\"currentColor\"/><text x=\"180\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">0</text><line x1=\"210\" y1=\"42\" x2=\"210\" y2=\"58\" stroke=\"currentColor\"/><text x=\"210\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1</text><line x1=\"240\" y1=\"42\" x2=\"240\" y2=\"58\" stroke=\"currentColor\"/><text x=\"240\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2</text><line x1=\"270\" y1=\"42\" x2=\"270\" y2=\"58\" stroke=\"currentColor\"/><text x=\"270\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3</text><line x1=\"300\" y1=\"42\" x2=\"300\" y2=\"58\" stroke=\"currentColor\"/><text x=\"300\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><line x1=\"330\" y1=\"42\" x2=\"330\" y2=\"58\" stroke=\"currentColor\"/><text x=\"330\" y=\"76\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><line x1=\"20\" y1=\"50\" x2=\"345\" y2=\"50\" stroke=\"currentColor\" marker-end=\"url(#arrow-t10)\"/><circle cx=\"90\" cy=\"50\" r=\"5\" stroke=\"currentColor\" fill=\"currentColor\" class=\"red\"/><text x=\"90\" y=\"36\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">A</text><circle cx=\"240\" cy=\"50\" r=\"5\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><text x=\"240\" y=\"36\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">B</text><line x1=\"90\" y1=\"98\" x2=\"180\" y2=\"98\" stroke=\"currentColor\" class=\"red\"/><text x=\"135\" y=\"116\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">|−3| = 3</text><line x1=\"180\" y1=\"98\" x2=\"240\" y2=\"98\" stroke=\"currentColor\" class=\"accent\"/><text x=\"210\" y=\"116\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">|2| = 2</text></svg><figcaption>Рис. 1. Координатная прямая. Точка A имеет координату −3, точка B — координату 2. Расстояние от начала отсчёта — модуль числа.</figcaption></figure>\n<h3>Противоположные числа</h3>\n<p>Числа, которые отличаются только знаком, называют <b>противоположными</b>: 4 и −4, −<sup>2</sup>/<sub>3</sub> и <sup>2</sup>/<sub>3</sub>. На координатной прямой они лежат по разные стороны от нуля на одинаковом расстоянии. Число, противоположное 0, — это 0. Запись −(−5) = 5 читается: «число, противоположное −5, равно 5».</p>\n<h3>Модуль числа</h3>\n<div class=\"rule\"><b>Модулем</b> числа называют расстояние от начала отсчёта до точки, изображающей это число. Записывают |a|. Модуль положительного числа равен самому числу, модуль отрицательного — противоположному числу, модуль нуля равен нулю.</div>\n<p class=\"formula\">|7| = 7, &nbsp; |−7| = 7, &nbsp; |0| = 0</p>\n<p>Модуль никогда не отрицателен. Противоположные числа имеют одинаковые модули.</p>\n<h3>Сравнение чисел</h3>\n<div class=\"rule\">Из двух чисел больше то, которое на координатной прямой расположено правее. Любое положительное число больше нуля и больше любого отрицательного. Из двух отрицательных чисел больше то, у которого модуль меньше.</div>\n<p class=\"example\"><b>Пример 1.</b> Сравни −7 и −3.<br>Решение. Оба числа отрицательные. Модули 7 и 3, причём 7 &gt; 3. Значит, −7 &lt; −3 (число −7 лежит левее).<br>Ответ: −7 &lt; −3.</p>\n<p class=\"example\"><b>Пример 2.</b> Расположи в порядке возрастания числа −2, 5, −8, 0, 3.<br>Решение. Сначала отрицательные, от меньшего к большему: −8 (самый большой модуль, самое левое), −2; затем нуль; затем положительные 3, 5.<br>Ответ: −8, −2, 0, 3, 5.</p>\n<p class=\"example\"><b>Пример 3.</b> Найди все целые числа, модуль которых меньше 3.<br>Решение. Расстояние от нуля меньше 3: числа −2, −1, 0, 1, 2.<br>Ответ: −2, −1, 0, 1, 2.</p>\n<p class=\"note\">Проверь себя. Какие числа называют противоположными? Что такое модуль? Что больше: −1 или −100? Чему равны |−9|, |4,5|, |0|?</p>",
+      "exercises": [
+        {
+          "text": "Запиши число, противоположное каждому из чисел: 8, −12, 0, −2,5.",
+          "answer": "<p>−8; 12; 0; 2,5.</p>"
+        },
+        {
+          "text": "Найди модули чисел: −9, 4,5, 0, −<sup>2</sup>/<sub>3</sub>.",
+          "answer": "<p>9; 4,5; 0; <sup>2</sup>/<sub>3</sub>.</p>"
+        },
+        {
+          "text": "Сравни числа: −4 и −9; −1 и 0; 3 и −10; −0,5 и −0,2.",
+          "answer": "<p>−4 &gt; −9; −1 &lt; 0; 3 &gt; −10; −0,5 &lt; −0,2.</p>"
+        },
+        {
+          "text": "Расположи в порядке возрастания: −3, 2, −7, 0, −1, 5.",
+          "answer": "<p>−7, −3, −1, 0, 2, 5.</p>"
+        },
+        {
+          "text": "Выпиши все целые числа, которые больше −4 и меньше 3.",
+          "answer": "<p>−3, −2, −1, 0, 1, 2.</p>"
+        },
+        {
+          "text": "Утром температура была −7 °C, а днём +5 °C. На сколько градусов она повысилась?",
+          "answer": "<p>От −7 до 0 это 7 градусов, от 0 до 5 ещё 5. Всего 12 градусов.</p>"
+        },
+        {
+          "text": "Найди все числа, модуль которых равен 6.",
+          "answer": "<p>6 и −6.</p>"
+        },
+        {
+          "text": "Отметь на координатной прямой точки A(−4), B(3), C(−1,5) (единичный отрезок 1 см). Найди расстояние от A до B.",
+          "answer": "<p>Расстояние AB равно 4 + 3 = 7 единичных отрезков, то есть 7 см.</p>"
+        }
+      ],
+      "compare": "<p>Положительные и отрицательные числа, координатная прямая, противоположные числа, модуль и сравнение рациональных чисел изучают в 6 классе по ФОП и в учебнике Н. Я. Виленкина для 6 класса, как и в советском учебнике для 5 класса.</p>"
+    },
+    {
+      "title": "Сложение, вычитание, умножение и деление положительных и отрицательных чисел",
+      "html": "<p>Утром было −9 °C, а к полудню потеплело на 4 градуса. Сколько градусов стало? Мы двигаемся по координатной прямой: от −9 вправо на 4 шага и приходим к −5. Теперь запишем правила так, чтобы считать, не рисуя прямую.</p>\n<h3>Сложение</h3>\n<p>Сложить числа — значит сдвинуться от первого числа на второе: вправо, если оно положительное, и влево, если отрицательное.</p>\n<figure><svg viewBox=\"0 0 320 125\" role=\"img\" aria-label=\"Числовая прямая. От нуля стрелка влево на 9 единиц до числа минус девять, затем стрелка вправо на 4 единицы до числа минус пять\"><defs><marker id=\"arrow-t11\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"currentColor\"/></marker></defs><line x1=\"25\" y1=\"60\" x2=\"25\" y2=\"70\" stroke=\"currentColor\"/><text x=\"25\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−9</text><line x1=\"50\" y1=\"60\" x2=\"50\" y2=\"70\" stroke=\"currentColor\"/><text x=\"50\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−8</text><line x1=\"75\" y1=\"60\" x2=\"75\" y2=\"70\" stroke=\"currentColor\"/><text x=\"75\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−7</text><line x1=\"100\" y1=\"60\" x2=\"100\" y2=\"70\" stroke=\"currentColor\"/><text x=\"100\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−6</text><line x1=\"125\" y1=\"60\" x2=\"125\" y2=\"70\" stroke=\"currentColor\"/><text x=\"125\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−5</text><line x1=\"150\" y1=\"60\" x2=\"150\" y2=\"70\" stroke=\"currentColor\"/><text x=\"150\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−4</text><line x1=\"175\" y1=\"60\" x2=\"175\" y2=\"70\" stroke=\"currentColor\"/><text x=\"175\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−3</text><line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"70\" stroke=\"currentColor\"/><text x=\"200\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−2</text><line x1=\"225\" y1=\"60\" x2=\"225\" y2=\"70\" stroke=\"currentColor\"/><text x=\"225\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−1</text><line x1=\"250\" y1=\"60\" x2=\"250\" y2=\"70\" stroke=\"currentColor\"/><text x=\"250\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">0</text><line x1=\"275\" y1=\"60\" x2=\"275\" y2=\"70\" stroke=\"currentColor\"/><text x=\"275\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1</text><line x1=\"300\" y1=\"60\" x2=\"300\" y2=\"70\" stroke=\"currentColor\"/><text x=\"300\" y=\"88\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2</text><line x1=\"12\" y1=\"65\" x2=\"290\" y2=\"65\" stroke=\"currentColor\" marker-end=\"url(#arrow-t11)\"/><path d=\"M250,58 Q137.5,-10 25,58\" stroke=\"currentColor\" fill=\"none\" class=\"accent\" marker-end=\"url(#arrow-t11)\"/><text x=\"137\" y=\"22\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">−9</text><path d=\"M25,58 Q75,20 125,58\" stroke=\"currentColor\" fill=\"none\" class=\"red\" marker-end=\"url(#arrow-t11)\"/><text x=\"75\" y=\"36\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">+4</text><circle cx=\"150\" cy=\"65\" r=\"0\" stroke=\"currentColor\" fill=\"none\"/><text x=\"150\" y=\"112\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">(−9) + 4 = −5</text></svg><figcaption>Рис. 1. (−9) + 4 = −5: сначала 9 шагов влево от нуля, потом 4 шага вправо.</figcaption></figure>\n<div class=\"rule\"><b>Складывая числа с одинаковыми знаками</b>, складывают их модули и ставят общий знак. <b>Складывая числа с разными знаками</b>, из большего модуля вычитают меньший и ставят знак того слагаемого, у которого модуль больше. Сумма противоположных чисел равна 0. Прибавление нуля не меняет числа.</div>\n<p class=\"example\"><b>Пример 1.</b> Найди (−7) + (−5) и (−9) + 4.<br>Решение. Знаки одинаковые: 7 + 5 = 12, знак «минус», получаем −12. Во втором случае знаки разные: 9 − 4 = 5, больший модуль у −9, значит, знак «минус»: −5.<br>Ответ: −12; −5.</p>\n<h3>Вычитание</h3>\n<div class=\"rule\">Чтобы вычесть число, надо прибавить число, противоположное вычитаемому: a − b = a + (−b).</div>\n<p class=\"example\"><b>Пример 2.</b> Найди 3 − 8 и (−6) − (−10).<br>Решение. 3 − 8 = 3 + (−8) = −5. (−6) − (−10) = (−6) + 10 = 4.<br>Ответ: −5; 4.</p>\n<h3>Умножение</h3>\n<p>Умножение — это повторное сложение: 3 · (−2) = (−2) + (−2) + (−2) = −6. Модуль произведения равен произведению модулей. Знак определяют по правилу.</p>\n<div class=\"rule\"><b>Правило знаков.</b> Произведение двух чисел с одинаковыми знаками положительно, с разными знаками — отрицательно. Произведение любого числа и нуля равно нулю.</div>\n<div class=\"table-wrap\"><table><thead><tr><th>Множители</th><th>Знак произведения (частного)</th><th>Пример</th></tr></thead><tbody><tr><td>+ и +</td><td>+</td><td>4 · 3 = 12</td></tr><tr><td>− и −</td><td>+</td><td>(−4) · (−3) = 12</td></tr><tr><td>+ и −</td><td>−</td><td>4 · (−3) = −12</td></tr><tr><td>− и +</td><td>−</td><td>(−4) · 3 = −12</td></tr></tbody></table></div>\n<h3>Деление</h3>\n<div class=\"rule\">Правила знаков для деления те же, что и для умножения: частное двух чисел с одинаковыми знаками положительно, с разными — отрицательно. Нуль, делённый на любое число, не равное нулю, равен нулю. На нуль делить нельзя.</div>\n<p class=\"example\"><b>Пример 3.</b> Найди (−48) : (−8), 36 : (−9), (−<sup>3</sup>/<sub>4</sub>) : <sup>1</sup>/<sub>2</sub>.<br>Решение. Модули делим как обычно: 48 : 8 = 6, знаки одинаковые, ответ +6. 36 : 9 = 4, знаки разные, ответ −4. <sup>3</sup>/<sub>4</sub> : <sup>1</sup>/<sub>2</sub> = <sup>3</sup>/<sub>4</sub> · 2 = <sup>3</sup>/<sub>2</sub>, знаки разные, ответ −<sup>3</sup>/<sub>2</sub> = −1<sup>1</sup>/<sub>2</sub>.<br>Ответ: 6; −4; −1<sup>1</sup>/<sub>2</sub>.</p>\n<p class=\"example\"><b>Пример 4.</b> Вычисли (−3) · (−4) − 5 · (−2).<br>Решение. Сначала умножение: (−3) · (−4) = 12, 5 · (−2) = −10. Получили 12 − (−10) = 12 + 10 = 22.<br>Ответ: 22.</p>\n<p>Порядок действий остаётся таким же: сначала скобки, потом умножение и деление, затем сложение и вычитание. Законы сложения и умножения (переместительный, сочетательный, распределительный) верны для всех рациональных чисел.</p>\n<p class=\"note\">Проверь себя. Как сложить числа с разными знаками? Как заменить вычитание сложением? Каков знак произведения двух отрицательных чисел? Почему нельзя делить на нуль?</p>",
+      "exercises": [
+        {
+          "text": "Вычисли (−8) + (−7).",
+          "answer": "<p>−15.</p>"
+        },
+        {
+          "text": "Вычисли (−12) + 5 и 6 + (−10).",
+          "answer": "<p>−7 и −4.</p>"
+        },
+        {
+          "text": "Вычисли (−5) − (−9) и 4 − 11.",
+          "answer": "<p>(−5) + 9 = 4; 4 + (−11) = −7.</p>"
+        },
+        {
+          "text": "Вычисли (−6) · (−7) и (−9) · 5.",
+          "answer": "<p>42 и −45.</p>"
+        },
+        {
+          "text": "Вычисли (−48) : (−8), 36 : (−9) и 0 : (−5).",
+          "answer": "<p>6; −4; 0.</p>"
+        },
+        {
+          "text": "Вычисли (−<sup>2</sup>/<sub>3</sub>) + <sup>1</sup>/<sub>6</sub>.",
+          "answer": "<p>−<sup>4</sup>/<sub>6</sub> + <sup>1</sup>/<sub>6</sub> = −<sup>3</sup>/<sub>6</sub> = −<sup>1</sup>/<sub>2</sub>.</p>"
+        },
+        {
+          "text": "Вычисли (−<sup>1</sup>/<sub>2</sub>) · (−<sup>2</sup>/<sub>3</sub>).",
+          "answer": "<p>Знаки одинаковые, результат положителен: <sup>2</sup>/<sub>6</sub> = <sup>1</sup>/<sub>3</sub>.</p>"
+        },
+        {
+          "text": "Вычисли (−3) · (−4) − 5 · (−2).",
+          "answer": "<p>12 − (−10) = 22.</p>"
+        },
+        {
+          "text": "Вычисли 0,5 · (−8) + (−6) : (−3).",
+          "answer": "<p>−4 + 2 = −2.</p>"
+        },
+        {
+          "text": "В 6 утра температура была −11 °C. К 14 часам она повысилась на 8 градусов, а к 22 часам понизилась на 5. Какая температура в 22 часа?",
+          "answer": "<p>−11 + 8 = −3; −3 − 5 = −8. Температура −8 °C.</p>"
+        }
+      ],
+      "compare": "<p>Правила действий с положительными и отрицательными числами (правила знаков, замена вычитания сложением с противоположным числом) изучают в 6 классе по ФОП и в учебнике Н. Я. Виленкина для 6 класса, как и в советском издании для 5 класса. Деление на нуль не определено — это правило такое же, как и тогда.</p>"
+    },
+    {
+      "title": "Координатная плоскость. Перпендикулярные и параллельные прямые",
+      "html": "<p>В кинотеатре на билете написано: «ряд 5, место 12». Два числа точно указывают место в зале. Так же два числа задают положение точки на плоскости. Но сначала вспомним, как могут быть расположены на плоскости две прямые.</p>\n<h3>Перпендикулярные прямые</h3>\n<p>Две прямые, пересекающиеся под прямым углом (90°), называют <b>перпендикулярными</b>. Пишут: a ⊥ b. Прямой угол проверяют угольником, на чертеже его отмечают маленьким квадратиком. Перпендикулярными бывают и отрезки, и лучи, если лежат на перпендикулярных прямых. Через любую точку плоскости можно провести ровно одну прямую, перпендикулярную данной.</p>\n<h3>Параллельные прямые</h3>\n<p>Две прямые на плоскости, которые не пересекаются, называют <b>параллельными</b>. Пишут: c ∥ d. Расстояние между параллельными прямыми везде одинаково, как расстояние между рельсами. Через точку, не лежащую на данной прямой, можно провести только одну прямую, параллельную данной.</p>\n<figure><svg viewBox=\"0 0 360 160\" role=\"img\" aria-label=\"Слева две перпендикулярные прямые a и b, пересекаются под прямым углом, отмеченным квадратиком. Справа две параллельные прямые c и d, которые не пересекаются\"><line x1=\"20\" y1=\"85\" x2=\"160\" y2=\"85\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"90\" y1=\"20\" x2=\"90\" y2=\"150\" stroke=\"currentColor\" class=\"red\"/><polyline points=\"102,85 102,73 90,73\" stroke=\"currentColor\" fill=\"none\"/><text x=\"165\" y=\"80\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"accent\">a</text><text x=\"98\" y=\"24\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">b</text><text x=\"90\" y=\"152\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">a ⊥ b</text><line x1=\"200\" y1=\"115\" x2=\"340\" y2=\"55\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"200\" y1=\"145\" x2=\"340\" y2=\"85\" stroke=\"currentColor\" class=\"red\"/><text x=\"344\" y=\"56\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"accent\">c</text><text x=\"344\" y=\"90\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">d</text><text x=\"270\" y=\"150\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">c ∥ d</text></svg><figcaption>Рис. 2. Перпендикулярные прямые a и b (прямой угол отмечен значком) и параллельные прямые c и d.</figcaption></figure>\n<div class=\"rule\">Две прямые, перпендикулярные третьей, параллельны друг другу. Прямая, перпендикулярная одной из двух параллельных прямых, перпендикулярна и другой.</div>\n<p>Как построить такие прямые? Чтобы провести перпендикуляр к прямой a через точку P, приложи одну сторону прямого угла угольника к прямой a, второй стороной скользи до точки P и проведи линию. Параллельную прямую через точку M проводят так: один из катетов угольника прикладывают к a, к другому приставляют линейку, а угольник сдвигают вдоль линейки до точки M и проводят прямую.</p>\n<h3>Координатная плоскость</h3>\n<p>Проведём две взаимно перпендикулярные координатные прямые с общим началом отсчёта O. Горизонтальную называют <b>осью абсцисс</b> (ось x), вертикальную — <b>осью ординат</b> (ось y). Вместе они образуют <b>систему координат</b>, а плоскость называют <b>координатной плоскостью</b>. Оси делят плоскость на четыре <b>координатные четверти</b>, их нумеруют против часовой стрелки.</p>\n<figure><svg viewBox=\"0 0 340 290\" role=\"img\" aria-label=\"Координатная плоскость с осями x и y и сеткой. Отмечены точки A(2; 3) в первой четверти, B(−3; 2) во второй, C(−2; −3) в третьей, D(3; −2) в четвёртой\"><defs><marker id=\"arrow-t12\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"currentColor\"/></marker></defs><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"50\" y1=\"270\" x2=\"290\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><text x=\"50\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">−4</text><text x=\"160\" y=\"275\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\" class=\"muted\">−4</text><line x1=\"80\" y1=\"30\" x2=\"80\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"50\" y1=\"240\" x2=\"290\" y2=\"240\" stroke=\"currentColor\" class=\"thin\"/><text x=\"80\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">−3</text><text x=\"160\" y=\"245\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\" class=\"muted\">−3</text><line x1=\"110\" y1=\"30\" x2=\"110\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"50\" y1=\"210\" x2=\"290\" y2=\"210\" stroke=\"currentColor\" class=\"thin\"/><text x=\"110\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">−2</text><text x=\"160\" y=\"215\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\" class=\"muted\">−2</text><line x1=\"140\" y1=\"30\" x2=\"140\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"50\" y1=\"180\" x2=\"290\" y2=\"180\" stroke=\"currentColor\" class=\"thin\"/><text x=\"140\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">−1</text><text x=\"160\" y=\"185\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\" class=\"muted\">−1</text><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"50\" y1=\"120\" x2=\"290\" y2=\"120\" stroke=\"currentColor\" class=\"thin\"/><text x=\"200\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">1</text><text x=\"160\" y=\"125\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\" class=\"muted\">1</text><line x1=\"230\" y1=\"30\" x2=\"230\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"50\" y1=\"90\" x2=\"290\" y2=\"90\" stroke=\"currentColor\" class=\"thin\"/><text x=\"230\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">2</text><text x=\"160\" y=\"95\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\" class=\"muted\">2</text><line x1=\"260\" y1=\"30\" x2=\"260\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"50\" y1=\"60\" x2=\"290\" y2=\"60\" stroke=\"currentColor\" class=\"thin\"/><text x=\"260\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">3</text><text x=\"160\" y=\"65\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\" class=\"muted\">3</text><line x1=\"290\" y1=\"30\" x2=\"290\" y2=\"270\" stroke=\"currentColor\" class=\"thin\"/><line x1=\"50\" y1=\"30\" x2=\"290\" y2=\"30\" stroke=\"currentColor\" class=\"thin\"/><text x=\"290\" y=\"166\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">4</text><text x=\"160\" y=\"35\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\" class=\"muted\">4</text><line x1=\"40\" y1=\"150\" x2=\"320\" y2=\"150\" stroke=\"currentColor\" marker-end=\"url(#arrow-t12)\"/><line x1=\"170\" y1=\"280\" x2=\"170\" y2=\"10\" stroke=\"currentColor\" marker-end=\"url(#arrow-t12)\"/><text x=\"318\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">x</text><text x=\"185\" y=\"14\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">y</text><text x=\"158\" y=\"166\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">O</text><circle cx=\"230\" cy=\"60\" r=\"4\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><text x=\"242\" y=\"54\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"accent\">A(2; 3)</text><circle cx=\"80\" cy=\"90\" r=\"4\" stroke=\"currentColor\" fill=\"currentColor\" class=\"red\"/><text x=\"92\" y=\"84\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">B(−3; 2)</text><circle cx=\"110\" cy=\"240\" r=\"4\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><text x=\"122\" y=\"234\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"accent\">C(−2; −3)</text><circle cx=\"260\" cy=\"210\" r=\"4\" stroke=\"currentColor\" fill=\"currentColor\" class=\"red\"/><text x=\"272\" y=\"204\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">D(3; −2)</text><text x=\"262\" y=\"48\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">I</text><text x=\"78\" y=\"48\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">II</text><text x=\"78\" y=\"262\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">III</text><text x=\"262\" y=\"262\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">IV</text></svg><figcaption>Рис. 1. Координатная плоскость, четверти I–IV и точки A(2; 3), B(−3; 2), C(−2; −3), D(3; −2).</figcaption></figure>\n<div class=\"rule\">Положение точки задают двумя числами — <b>координатами</b>: A(x; y). Первое число <b>x</b> — <b>абсцисса</b>, она показывает, сколько единиц надо пройти от O вдоль оси x (вправо, если x &gt; 0, влево, если x &lt; 0). Второе число <b>y</b> — <b>ордината</b>, показывающая сдвиг вверх (y &gt; 0) или вниз (y &lt; 0). Порядок важен: A(2; 3) и (3; 2) — разные точки.</div>\n<div class=\"table-wrap\"><table><thead><tr><th>Четверть</th><th>Знак x</th><th>Знак y</th></tr></thead><tbody><tr><td>I</td><td>+</td><td>+</td></tr><tr><td>II</td><td>−</td><td>+</td></tr><tr><td>III</td><td>−</td><td>−</td></tr><tr><td>IV</td><td>+</td><td>−</td></tr></tbody></table></div>\n<p>У точки на оси x ордината равна 0: (4; 0). У точки на оси y абсцисса равна 0: (0; −3). Начало отсчёта имеет координаты (0; 0).</p>\n<p class=\"example\"><b>Пример 1.</b> Определи координаты точек A, B, C, D на рисунке 1.<br>Решение. Точка A: 2 единицы вправо и 3 вверх. Точка B: 3 влево и 2 вверх. Точка C: 2 влево и 3 вниз. Точка D: 3 вправо и 2 вниз.<br>Ответ: A(2; 3), B(−3; 2), C(−2; −3), D(3; −2).</p>\n<p class=\"example\"><b>Пример 2.</b> Построй точки (1; 1), (5; 1), (5; 3), (1; 3) и найди площадь получившегося четырёхугольника.<br>Решение. Первые две точки лежат на высоте 1, их расстояние 5 − 1 = 4. Вторая пара на высоте 3. Стороны горизонтальны или вертикальны, поэтому фигура — прямоугольник со сторонами 4 и 3 − 1 = 2. S = 4 · 2 = 8 клеток.<br>Ответ: прямоугольник площадью 8 квадратных единиц.</p>\n<p class=\"note\">Проверь себя. Как называют две прямые, пересекающиеся под прямым углом? Что такое абсцисса и ордината? В какой четверти лежит точка (−5; 7)? Какие координаты имеет точка на оси ординат?</p>",
+      "exercises": [
+        {
+          "text": "В какой четверти лежат точки (4; −1), (−2; −6), (−3; 5), (7; 2)?",
+          "answer": "<p>(4; −1) — IV; (−2; −6) — III; (−3; 5) — II; (7; 2) — I.</p>"
+        },
+        {
+          "text": "Точка M имеет координаты (0; −4). На какой оси она лежит?",
+          "answer": "<p>Абсцисса равна 0, поэтому точка лежит на оси ординат (оси y), на 4 единицы ниже начала отсчёта.</p>"
+        },
+        {
+          "text": "Начерти координатную плоскость (единичный отрезок 1 клетка). Отметь точки A(−4; 0), B(0; 3), C(2; −2). Какие из них лежат на осях?",
+          "answer": "<p>A лежит на оси абсцисс (y = 0), B лежит на оси ординат (x = 0). C не лежит ни на одной из осей, она в IV четверти.</p>"
+        },
+        {
+          "text": "Отметь точки A(1; 1), B(5; 1), C(1; 4), D(5; 4). Начерти отрезки AB и CD. Как они расположены?",
+          "answer": "<p>Оба отрезка горизонтальны (ординаты 1 и 4 постоянны), значит, прямые AB и CD параллельны. Длины по 4.</p>"
+        },
+        {
+          "text": "Точки E(2; 1) и F(2; 5) соединены отрезком. Какова его длина? Как он расположен относительно оси x?",
+          "answer": "<p>Абсциссы одинаковы, отрезок вертикальный, его длина 5 − 1 = 4. Он перпендикулярен оси x.</p>"
+        },
+        {
+          "text": "Построй квадрат с вершинами (0; 0), (3; 0), (3; 3), (0; 3). Найди периметр и площадь.",
+          "answer": "<p>Сторона 3. Периметр 4 · 3 = 12, площадь 3 · 3 = 9.</p>"
+        },
+        {
+          "text": "Найди координаты точек, симметричных точке M(−3; 4) относительно оси x и относительно оси y.",
+          "answer": "<p>Относительно оси x меняется знак ординаты: (−3; −4). Относительно оси y меняется знак абсциссы: (3; 4).</p>"
+        },
+        {
+          "text": "Объясни, как провести через точку P, не лежащую на прямой a, прямую, перпендикулярную a, и прямую, параллельную a.",
+          "answer": "<p>Перпендикуляр: приложи угольник одним катетом к a, сдвинь по прямой, пока другой катет не пройдёт через P, проведи линию. Параллельная: приложи катет угольника к a, к другому катету линейку, сдвинь угольник вдоль линейки до точки P и проведи линию.</p>"
+        }
+      ],
+      "compare": "<p>Координатная плоскость, ось абсцисс и ось ординат, координатные четверти, перпендикулярные и параллельные прямые изучают в 6 классе по ФОП и в учебнике Н. Я. Виленкина для 6 класса. В современном учебнике Виленкина эта тема стоит в конце курса 6 класса.</p>"
     }
   ],
   "quiz": [
     {
-      "topic": 0,
-      "type": "theory",
-      "kind": "single",
-      "question": "Какой делитель есть у любого натурального числа и при этом является наименьшим?",
-      "options": ["0", "2", "1", "само число"],
-      "answer": 2,
-      "explanation": "Единица делит любое число и является наименьшим делителем. Наибольший делитель — само число."
-    },
-    {
-      "topic": 0,
-      "type": "practice",
       "kind": "multiple",
-      "question": "Какие числа из списка делятся на 3 без остатка?",
-      "options": ["123", "124", "129", "200", "135"],
-      "answers": [0, 2, 4],
-      "explanation": "Признак делимости на 3: сумма цифр делится на 3. У 123, 129 и 135 сумма цифр 6, 12 и 9. У 124 она равна 7, у 200 — 2."
-    },
-    {
-      "topic": 1,
       "type": "theory",
-      "kind": "single",
-      "question": "Как складывают дроби с одинаковыми знаменателями?",
-      "options": ["складывают и числители, и знаменатели", "знаменатель сохраняют, числители складывают", "знаменатели перемножают", "числители перемножают"],
-      "answer": 1,
-      "explanation": "Например, 3/7 + 2/7 = 5/7: знаменатель 7 остаётся, числители складываются."
+      "topic": 0,
+      "question": "Какие из утверждений о признаках делимости верны?",
+      "options": [
+        "На 10 делятся числа, которые оканчиваются на 0",
+        "На 3 делится число, сумма цифр которого делится на 3",
+        "На 9 делится любое число, которое делится на 3",
+        "На 2 делятся числа, которые оканчиваются на 5"
+      ],
+      "answers": [0, 1],
+      "explanation": "На 10 делятся числа с последней цифрой 0, на 3 — если сумма цифр делится на 3. Число 12 делится на 3, но не на 9. На 2 делятся чётные числа, а не числа, оканчивающиеся на 5."
     },
     {
-      "topic": 1,
-      "type": "practice",
       "kind": "input",
-      "question": "Чему равна сумма 1/2 + 1/4? Ответ запиши обыкновенной или десятичной дробью.",
-      "answers": ["3/4", "0,75", "0.75"],
-      "explanation": "Приводим 1/2 к знаменателю 4: 1/2 = 2/4. Тогда 2/4 + 1/4 = 3/4 = 0,75."
+      "type": "practice",
+      "topic": 1,
+      "question": "Сколько простых множителей (с повторениями) в разложении числа 180?",
+      "answers": ["5", "5 множителей", "5 простых множителей", "пять"],
+      "explanation": "180 : 2 = 90, 90 : 2 = 45, 45 : 3 = 15, 15 : 3 = 5, 5 : 5 = 1. Множители 2, 2, 3, 3, 5 — их пять. 180 = 2² · 3² · 5."
     },
     {
+      "kind": "single",
+      "type": "practice",
       "topic": 2,
-      "type": "practice",
-      "kind": "input",
-      "question": "Вычисли 3/4 : 2/5. Ответ запиши обыкновенной дробью, смешанным числом или десятичной дробью.",
-      "answers": ["15/8", "1 7/8", "1,875", "1.875"],
-      "explanation": "Делим на дробь, умножая на обратную: 3/4 · 5/2 = 15/8 = 1 7/8 = 1,875."
-    },
-    {
-      "topic": 3,
-      "type": "theory",
-      "kind": "single",
-      "question": "Как называются числа a и d в пропорции a : b = c : d?",
-      "options": ["средние члены", "крайние члены", "слагаемые", "множители"],
+      "question": "Чему равно НОК (9; 12)?",
+      "options": ["3", "36", "108", "21"],
       "answer": 1,
-      "explanation": "В пропорции a : b = c : d числа a и d — крайние члены, b и c — средние."
+      "explanation": "9 = 3², 12 = 2² · 3. Для НОК берём каждый множитель с наибольшей степенью: 2² · 3² = 36. Число 108 — произведение 9 · 12, а не наименьшее общее кратное."
     },
     {
-      "topic": 3,
-      "type": "practice",
-      "kind": "input",
-      "question": "Реши пропорцию x : 6 = 10 : 15. Чему равно x?",
-      "answers": ["4", "равно 4"],
-      "explanation": "По основному свойству пропорции 15x = 6 · 10 = 60, значит x = 4."
-    },
-    {
-      "topic": 4,
-      "type": "practice",
-      "kind": "input",
-      "question": "Вычисли (−9) + 5.",
-      "answers": ["-4", "−4"],
-      "explanation": "Знаки слагаемых разные: 9 − 5 = 4, знак берём у числа с большим модулем, то есть минус. Получаем −4."
-    },
-    {
-      "topic": 4,
-      "type": "practice",
       "kind": "multiple",
-      "question": "Какие из утверждений верны?",
-      "options": ["−2 > −5", "−7 < 0", "0 > 3", "|−2,5| = 2,5", "−3 > 1"],
-      "answers": [0, 1, 3],
-      "explanation": "Из двух отрицательных больше то, у которого модуль меньше: −2 > −5. Отрицательное число меньше нуля, модуль −2,5 равен 2,5. Утверждения 0 > 3 и −3 > 1 неверны."
-    },
-    {
-      "topic": 5,
       "type": "theory",
-      "kind": "single",
-      "question": "В каком порядке записывают координаты точки (x; y)?",
-      "options": ["сначала y, потом x", "сначала x, потом y", "порядок не важен", "сначала модуль, потом знак"],
-      "answer": 1,
-      "explanation": "Первое число — абсцисса x (по горизонтали), второе — ордината y (по вертикали)."
+      "topic": 3,
+      "question": "Какие дроби равны дроби 3/4?",
+      "options": ["6/8", "9/12", "4/3", "12/16", "3/5"],
+      "answers": [0, 1, 3],
+      "explanation": "По основному свойству дроби числитель и знаменатель можно умножить на одно и то же число: 3/4 = 6/8 = 9/12 = 12/16. Дроби 4/3 и 3/5 с ним не равны."
     },
     {
-      "topic": 5,
-      "type": "practice",
       "kind": "input",
-      "question": "Найди длину отрезка между точками (2; 5) и (2; −1), если единичный отрезок равен 1 см.",
-      "answers": ["6", "6 см", "6 сантиметров"],
-      "explanation": "Точки лежат на одной вертикали, длина равна 5 − (−1) = 6 единицам, то есть 6 см."
+      "type": "practice",
+      "topic": 4,
+      "question": "Вычисли 5/6 + 3/8.",
+      "answers": ["29/24", "1 5/24"],
+      "explanation": "НОК (6; 8) = 24: 5/6 = 20/24, 3/8 = 9/24. Сумма 29/24 = 1 5/24."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
+      "topic": 5,
+      "question": "Вычисли 2/3 · 9/8.",
+      "answers": ["3/4", "0,75", "0.75"],
+      "explanation": "Сокращаем заранее: 9 и 3 делим на 3, 2 и 8 делим на 2. Получаем 1 · 3 / (1 · 4) = 3/4."
+    },
+    {
+      "kind": "single",
+      "type": "theory",
+      "topic": 6,
+      "question": "Как разделить одну дробь на другую?",
+      "options": [
+        "Сложить числители и сложить знаменатели",
+        "Умножить делимое на дробь, обратную делителю",
+        "Умножить числители и знаменатели",
+        "Поменять местами делимое и делитель"
+      ],
+      "answer": 1,
+      "explanation": "a/b : c/d = a/b · d/c. Например, 3/4 : 1/8 = 3/4 · 8 = 6."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
+      "topic": 7,
+      "question": "Масштаб карты 1 : 200 000. Какое расстояние на местности соответствует 6 см на карте? Ответ дай в километрах.",
+      "answers": ["12", "12 км", "12 километров"],
+      "explanation": "6 · 200 000 = 1 200 000 см = 12 000 м = 12 км."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
+      "topic": 8,
+      "question": "Найди длину окружности радиуса 6 см. Возьми π ≈ 3,14.",
+      "answers": ["37,68", "37,68 см", "37,68 сантиметров"],
+      "explanation": "C = 2 · π · r = 2 · 3,14 · 6 = 37,68 (см)."
+    },
+    {
+      "kind": "single",
+      "type": "theory",
+      "topic": 9,
+      "question": "Чему равен модуль числа −12?",
+      "options": ["−12", "12", "0", "1/12"],
+      "answer": 1,
+      "explanation": "Модуль — расстояние от начала отсчёта до точки. До −12 двенадцать единиц, значит, |−12| = 12."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
+      "topic": 10,
+      "question": "Вычисли (−5/6) + 1/3.",
+      "answers": ["-1/2", "−1/2", "-0,5", "−0,5", "-0.5"],
+      "explanation": "Знаки разные: из 5/6 вычитаем 1/3 = 2/6, получаем −3/6 = −1/2, то есть −0,5."
+    },
+    {
+      "kind": "multiple",
+      "type": "theory",
+      "topic": 11,
+      "question": "Какие утверждения о параллельных и перпендикулярных прямых верны?",
+      "options": [
+        "Параллельные прямые не пересекаются",
+        "Через точку вне прямой можно провести две прямые, параллельные ей",
+        "Две прямые, перпендикулярные третьей, параллельны между собой",
+        "Параллельные прямые пересекаются под прямым углом"
+      ],
+      "answers": [0, 2],
+      "explanation": "Через точку, не лежащую на прямой, можно провести только одну прямую, параллельную ей. Параллельные прямые не пересекаются, а прямые, перпендикулярные одной и той же прямой, параллельны."
     }
   ],
   "control": [
     {
       "topic": 0,
+      "text": "Какую цифру нужно поставить вместо звёздочки в числе 2*5, чтобы оно делилось на 9? Ответ — цифра.",
       "points": 2,
-      "text": "Найди наименьшее общее кратное чисел 12 и 18.",
-      "answers": ["36", "равно 36"],
-      "solution": "<p>Раскладываем на простые множители: 12 = 2 · 2 · 3, 18 = 2 · 3 · 3.</p><p>Берём разложение 12 и добавляем недостающую тройку из 18: 2 · 2 · 3 · 3 = 36.</p><p>Ответ: 36.</p>"
+      "answers": ["2", "цифра 2"],
+      "solution": "<p>Число делится на 9, если сумма его цифр делится на 9. Сумма известных цифр 2 + 5 = 7, значит, 7 + * должно равняться 9 или 18. Цифра не больше 9, поэтому подходит только 9: * = 2.</p><p>Проверка: 225 = 9 · 25.</p><p>Ответ: 2.</p>"
     },
     {
       "topic": 1,
-      "points": 3,
-      "text": "Сократи дробь 84/126 до несократимой.",
-      "answers": ["2/3", "2 / 3"],
-      "solution": "<p>НОД чисел 84 и 126 равен 42: 84 = 2 · 2 · 3 · 7, 126 = 2 · 3 · 3 · 7, общие множители 2, 3 и 7.</p><p>Делим числитель и знаменатель на 42: 84 : 42 = 2, 126 : 42 = 3.</p><p>Ответ: 2/3.</p>"
-    },
-    {
-      "topic": 1,
+      "text": "Найди наибольшее простое число, которое меньше 100 и при делении на 4 даёт остаток 3.",
       "points": 4,
-      "text": "Вычисли 5/6 + 3/8 и запиши ответ смешанным числом с несократимой дробной частью.",
-      "answers": ["1 5/24", "1 и 5/24"],
-      "solution": "<p>Наименьший общий знаменатель — НОК(6, 8) = 24. Дополнительные множители: 24 : 6 = 4, 24 : 8 = 3.</p><p>5/6 + 3/8 = 20/24 + 9/24 = 29/24 = 1 5/24.</p><p>Ответ: 1 5/24.</p>"
+      "answers": ["83", "число 83"],
+      "solution": "<p>Проверяем простые числа по убыванию, начиная с 97. Числа 97 и 89 при делении на 4 дают остаток 1. Число 83 = 4 · 20 + 3, остаток 3. Оно простое: √83 меньше 10, и 83 не делится на 2, 3, 5 и 7.</p><p>Ответ: 83.</p>"
     },
     {
       "topic": 2,
+      "text": "Две ленты длиной 36 м и 48 м нужно без остатка разрезать на равные куски наибольшей возможной длины. Сколько кусков получится всего?",
       "points": 5,
-      "text": "Вычисли (2/3 + 1/6) · 4/5.",
-      "answers": ["2/3", "2 / 3"],
-      "solution": "<p>Сначала скобка: 2/3 = 4/6, поэтому 2/3 + 1/6 = 4/6 + 1/6 = 5/6.</p><p>Затем умножаем: 5/6 · 4/5 = (5 · 4)/(6 · 5) = 20/30 = 2/3.</p><p>Ответ: 2/3.</p>"
-    },
-    {
-      "topic": 3,
-      "points": 5,
-      "text": "Карта выполнена в масштабе 1 : 500 000. Расстояние между двумя пунктами на карте равно 7 см. Каково расстояние на местности в километрах?",
-      "answers": ["35", "35 км", "35 километров"],
-      "solution": "<p>Масштаб 1 : 500 000 значит, что 1 см на карте соответствует 500 000 см на местности.</p><p>7 · 500 000 = 3 500 000 см. В одном километре 100 000 см, поэтому 3 500 000 : 100 000 = 35 км.</p><p>Ответ: 35 км.</p>"
+      "answers": ["7", "7 кусков", "7 частей"],
+      "solution": "<p>Длина куска должна делить и 36, и 48 без остатка и быть наибольшей, то есть равняться НОД (36; 48). 36 = 2² · 3², 48 = 2⁴ · 3, НОД = 2² · 3 = 12 (м).</p><p>С первой ленты получится 36 : 12 = 3 куска, со второй 48 : 12 = 4 куска. Всего 3 + 4 = 7 кусков.</p><p>Ответ: 7 кусков.</p>"
     },
     {
       "topic": 4,
-      "points": 6,
-      "text": "Вычисли значение выражения −2,5 − (−4) + (−3).",
-      "answers": ["-1,5", "−1,5", "-1.5", "−1.5", "-3/2", "−3/2"],
-      "solution": "<p>Вычитание отрицательного числа заменяем сложением: −2,5 + 4 − 3.</p><p>−2,5 + 4 = 1,5; 1,5 − 3 = −1,5.</p><p>Ответ: −1,5.</p>"
+      "text": "Вычисли 3 1/4 − 1 5/6.",
+      "points": 5,
+      "answers": ["1 5/12", "17/12"],
+      "solution": "<p>Приводим дробные части к знаменателю 12: 3 1/4 = 3 3/12, 1 5/6 = 1 10/12. Дробь 3/12 меньше 10/12, поэтому занимаем единицу: 3 3/12 = 2 15/12.</p><p>2 15/12 − 1 10/12 = 1 5/12 = 17/12.</p><p>Ответ: 1 5/12.</p>"
     },
     {
-      "topic": 5,
-      "points": 8,
-      "text": "Точки A(−4; 3), B(2; 3), C(2; −5) и D(−4; −5) — вершины прямоугольника ABCD. Найди его площадь в квадратных единицах.",
-      "answers": ["48", "48 кв. ед.", "48 квадратных единиц"],
-      "solution": "<p>Стороны прямоугольника находим по разности координат: AB = 2 − (−4) = 6, BC = 3 − (−5) = 8.</p><p>S = 6 · 8 = 48.</p><p>Ответ: 48.</p>"
+      "topic": 6,
+      "text": "Велосипедист проехал 3/5 всего пути, что составило 24 км. Затем он проехал 5/8 оставшейся части пути. Сколько километров он проехал на этом участке?",
+      "points": 7,
+      "answers": ["10", "10 км", "10 километров"],
+      "solution": "<p>Весь путь: 24 : 3/5 = 24 · 5/3 = 40 (км). Оставшаяся часть: 40 − 24 = 16 (км). Последний участок: 16 · 5/8 = 10 (км).</p><p>Ответ: 10 км.</p>"
+    },
+    {
+      "topic": 10,
+      "text": "Вычисли (−2/3) · (−9/4) − 5 · (−1/2) + (−7).",
+      "points": 6,
+      "answers": ["-3", "−3"],
+      "solution": "<p>(−2/3) · (−9/4) = 18/12 = 3/2. 5 · (−1/2) = −5/2. Получаем 3/2 − (−5/2) + (−7) = 3/2 + 5/2 − 7 = 4 − 7 = −3.</p><p>Ответ: −3.</p>"
+    },
+    {
+      "topic": 11,
+      "text": "Отмечены точки A(−3; 2), B(5; 2), C(5; −4). Найди площадь треугольника ABC в квадратных единицах.",
+      "points": 4,
+      "answers": ["24", "24 кв. ед.", "24 квадратных единицы"],
+      "solution": "<p>Отрезок AB горизонтален (ординаты 2 и 2): AB = 5 − (−3) = 8. Отрезок BC вертикален (абсциссы 5 и 5): BC = 2 − (−4) = 6. Значит, угол B прямой, и треугольник прямоугольный с катетами 8 и 6.</p><p>S = 8 · 6 / 2 = 24.</p><p>Ответ: 24.</p>"
     }
   ]
 }

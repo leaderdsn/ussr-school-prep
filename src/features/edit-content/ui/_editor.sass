@@ -1,0 +1,80 @@
+@use "@/shared/styles" as ds
+
+.editor-card
+  display: grid
+  gap: ds.$space-3
+  min-width: 0
+  margin: 0
+  padding: ds.$space-4
+  border: 1px solid var(--p-content-border-color)
+  border-radius: ds.$radius-md
+  background: var(--app-card)
+
+  &__legend
+    padding-inline: ds.$space-2
+    color: var(--app-link)
+    font-weight: 700
+
+  &__row
+    display: grid
+    gap: ds.$space-3
+
+    +ds.media(md)
+      grid-template-columns: 12rem 10rem minmax(0, 1fr)
+
+  > .p-button
+    justify-self: start
+
+.editor-field
+  display: grid
+  gap: ds.$space-1
+  min-width: 0
+
+  > span
+    color: var(--p-text-muted-color)
+    font-size: ds.$font-size-xs
+    font-weight: 600
+
+  > .p-button
+    justify-self: start
+
+.editor-options
+  display: grid
+  gap: ds.$space-2
+  margin: 0
+  padding: 0
+  list-style: none
+
+  &__item
+    display: grid
+    grid-template-columns: auto minmax(0, 1fr) auto
+    gap: ds.$space-2
+    align-items: center
+
+    input[type="radio"],
+    input[type="checkbox"]
+      width: 1.125rem
+      height: 1.125rem
+      accent-color: var(--app-link)
+
+.editor-code
+  font-family: ds.$font-family-mono
+  font-size: ds.$font-size-sm
+
+.editor-preview
+  display: grid
+  gap: ds.$space-2
+  padding: ds.$space-3
+  border: 1px dashed var(--p-content-border-color)
+  border-radius: ds.$radius-sm
+
+  &__label
+    color: var(--p-text-muted-color)
+    font-size: ds.$font-size-xs
+    font-weight: 600
+
+  &__issues
+    margin: 0
+    padding-left: ds.$space-5
+    color: var(--app-bad)
+    font-size: ds.$font-size-sm

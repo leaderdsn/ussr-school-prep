@@ -7,21 +7,46 @@ import { normalizeAnswer } from './answer.ts'
 import type { Grade, GradeNumber, GradeSummary, Subject } from '../model/types'
 
 export const CONTENT_LIMITS = {
-  topics: { min: 4, max: 6 },
-  topicWords: { min: 250, max: 500 },
+  topics: { min: 4, max: 12 },
+  topicWords: { min: 300, max: 1500 },
+  exercises: { min: 3, max: 10 },
   quiz: { min: 10, max: 12 },
   control: { min: 5, max: 7 },
   points: { min: 1, max: 10 },
 } as const
 
-export const ALLOWED_CLASSES: readonly string[] = ['rule', 'example', 'formula', 'note', 'table-wrap']
+/**
+ * Text classes, plus classes for drawings: `accent` (subject colour), `red` (teacher's pen),
+ * `muted`, `thin`, `dashed`, `soft` (light fill). Colours of drawings come only from these classes,
+ * so figures follow the light and dark themes.
+ */
+export const ALLOWED_CLASSES: readonly string[] = [
+  'rule', 'example', 'formula', 'note', 'table-wrap',
+  'accent', 'red', 'muted', 'thin', 'dashed', 'soft',
+]
 
 export const ALLOWED_TAGS: readonly string[] = [
   'p', 'h3', 'h4', 'b', 'strong', 'i', 'em', 'u', 'br', 'sup', 'sub', 'small', 'span', 'div',
   'ul', 'ol', 'li', 'table', 'thead', 'tbody', 'tr', 'th', 'td',
+  // Figures: <figure><svg viewBox="…" role="img" aria-label="…">…</svg><figcaption>…</figcaption></figure>
+  'figure', 'figcaption',
+  'svg', 'g', 'defs', 'marker', 'line', 'polyline', 'polygon', 'rect', 'circle', 'ellipse', 'path', 'text', 'tspan',
 ]
 
-const ALLOWED_ATTRIBUTES: readonly string[] = ['class', 'colspan', 'rowspan']
+const ALLOWED_ATTRIBUTES: readonly string[] = [
+  'class', 'colspan', 'rowspan',
+  'viewbox', 'role', 'aria-label', 'id',
+  'x', 'y', 'x1', 'y1', 'x2', 'y2', 'cx', 'cy', 'r', 'rx', 'ry', 'width', 'height', 'points', 'd', 'transform',
+  'stroke', 'fill', 'stroke-width', 'stroke-dasharray', 'stroke-linecap', 'stroke-linejoin',
+  'font-size', 'font-style', 'font-weight', 'text-anchor', 'dominant-baseline', 'dx', 'dy',
+  'marker-start', 'marker-end', 'refx', 'refy', 'markerwidth', 'markerheight', 'orient', 'markerunits',
+]
+
+/** Explicit colours would break the dark theme: stroke and fill may only be none or currentColor. */
+const COLOR_ATTRIBUTES: readonly string[] = ['stroke', 'fill']
+const ALLOWED_COLORS: readonly string[] = ['none', 'currentcolor']
+const MARKER_LINK = /^url\(#[\w-]+\)$/
+const ATTRIBUTE = /\s([^\s=/"'>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>]+)))?/g
 
 const SUBJECT_ID = /^[a-z][a-z0-9-]*$/
 
@@ -76,7 +101,10 @@ export function checkHtml(html: string, path: string): Issues {
     }
     if (closing) continue
 
-    for (const [, attrName, , value = ''] of attrs!.matchAll(/([a-zA-Z-:]+)(\s*=\s*"([^"]*)")?/g)) {
+    // An attribute is a name after whitespace with an optional value in double, single or no quotes;
+    // values are consumed whole, so their contents (minus signs, words) are never read as names.
+    for (const [, attrName, doubleQuoted, singleQuoted, unquoted] of attrs!.matchAll(ATTRIBUTE)) {
+      const value = doubleQuoted ?? singleQuoted ?? unquoted ?? ''
       const attr = attrName!.toLowerCase()
       if (!ALLOWED_ATTRIBUTES.includes(attr)) {
         issues.push(`${path}: атрибут «${attr}» в <${name}> не разрешён`)
@@ -84,7 +112,15 @@ export function checkHtml(html: string, path: string): Issues {
         for (const cls of value.split(/\s+/).filter(Boolean)) {
           if (!ALLOWED_CLASSES.includes(cls)) issues.push(`${path}: класс «${cls}» не разрешён`)
         }
+      } else if (COLOR_ATTRIBUTES.includes(attr) && !ALLOWED_COLORS.includes(value.toLowerCase())) {
+        issues.push(`${path}: ${attr}="${value}" — цвет задавайте классом (accent, red, muted, soft)`)
+      } else if (/url\(/i.test(value) && !MARKER_LINK.test(value)) {
+        issues.push(`${path}: в «${attr}» допустима только ссылка на маркер url(#id)`)
       }
+    }
+    if (name === 'svg') {
+      if (!/\bviewbox\s*=/i.test(attrs!)) issues.push(`${path}: у <svg> нужен viewBox`)
+      if (!/\baria-label\s*=\s*"[^"]+"/i.test(attrs!)) issues.push(`${path}: у <svg> нужен aria-label с описанием рисунка`)
     }
   }
   return issues
@@ -131,6 +167,27 @@ export function validateSubjects(data: unknown): Issues {
   return issues
 }
 
+function validateExercises(raw: unknown, path: string, issues: Issues) {
+  const { exercises } = CONTENT_LIMITS
+  const count = Array.isArray(raw) ? raw.length : 0
+  if (!Array.isArray(raw) || !inRange(count, exercises)) {
+    issues.push(`${path}: нужно ${exercises.min}–${exercises.max} заданий в тетрадь, сейчас ${count}`)
+    return
+  }
+  raw.forEach((exercise, index) => {
+    const at = `${path}[${index}]`
+    if (!isRecord(exercise)) {
+      issues.push(`${at}: ожидается объект`)
+      return
+    }
+    for (const field of ['text', 'answer'] as const) {
+      const value = exercise[field]
+      if (typeof value === 'string') issues.push(...checkHtml(value, `${at}.${field}`))
+      else issues.push(`${at}.${field}: ожидается строка`)
+    }
+  })
+}
+
 function validateTopics(raw: unknown, issues: Issues): number {
   if (!Array.isArray(raw)) {
     issues.push('topics: ожидается массив')
@@ -158,6 +215,8 @@ function validateTopics(raw: unknown, issues: Issues): number {
     } else {
       issues.push(`${path}.html: ожидается строка`)
     }
+
+    validateExercises(topic.exercises, `${path}.exercises`, issues)
 
     if (typeof topic.compare === 'string') issues.push(...checkHtml(topic.compare, `${path}.compare`))
     else issues.push(`${path}.compare: ожидается строка`)

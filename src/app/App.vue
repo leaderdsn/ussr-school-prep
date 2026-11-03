@@ -2,7 +2,7 @@
 import { useSyncStore } from '@/features/sync-progress'
 import { useThemeStore } from '@/features/toggle-theme'
 import { useActivityTracker } from '@/features/track-activity'
-import { APP_VERSION, env } from '@/shared/config'
+import { APP_VERSION, env, ROUTE_NAMES } from '@/shared/config'
 import { AppHeader } from '@/widgets/app-header'
 
 // Initializes theme (reads saved choice and applies the dark-mode class) before first paint.
@@ -21,6 +21,7 @@ useActivityTracker()
   <footer class="app-footer">
     <span>{{ env.appTitle }} · v{{ APP_VERSION }}</span>
     <span>Объяснения написаны по программе и логике учебников, тексты учебников не копируются</span>
+    <RouterLink class="app-footer__link" :to="{ name: ROUTE_NAMES.admin }">Редактор</RouterLink>
   </footer>
 </template>
 

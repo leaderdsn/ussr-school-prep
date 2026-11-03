@@ -88,3 +88,57 @@
 
     tr:last-child td
       border-bottom: 0
+
+  // Drawings: inline SVG inside <figure>. Shapes draw with currentColor, so colour classes only set `color`
+  // and figures follow the light and dark themes. CSS here must not set stroke/fill of shapes:
+  // it would override the attributes the drawing relies on.
+  figure
+    display: grid
+    gap: tokens.$space-2
+    justify-items: center
+    margin: 0
+    padding: tokens.$space-3
+    border: 1px solid var(--p-content-border-color)
+    border-radius: tokens.$radius-md
+    background: var(--app-card)
+
+    svg
+      width: 100%
+      max-width: 28rem
+      height: auto
+      overflow: visible
+      color: var(--p-text-color)
+      font-family: var(--app-font-body)
+      font-size: 14px
+      stroke-width: 2
+      stroke-linecap: round
+      stroke-linejoin: round
+
+    text
+      fill: currentColor
+      stroke: none
+
+  figcaption
+    color: var(--p-text-muted-color)
+    font-size: tokens.$font-size-sm
+    font-style: italic
+    text-align: center
+
+  // Colour and line classes for drawings and text
+  .accent
+    color: var(--app-link)
+
+  .red
+    color: var(--app-ink-red)
+
+  .muted
+    color: var(--p-text-muted-color)
+
+  .thin
+    stroke-width: 1
+
+  .dashed
+    stroke-dasharray: 5 4
+
+  .soft
+    fill: color-mix(in srgb, currentColor 14%, transparent)

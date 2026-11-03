@@ -41,6 +41,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/pages/family').then((m) => m.FamilyPage),
   },
   {
+    path: '/admin',
+    name: ROUTE_NAMES.admin,
+    component: () => import('@/pages/admin').then((m) => m.AdminPage),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: ROUTE_NAMES.notFound,
     component: () => import('@/pages/not-found').then((m) => m.NotFoundPage),

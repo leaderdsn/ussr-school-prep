@@ -9,6 +9,7 @@ import { QuizRunner } from '@/features/run-quiz'
 import { CONTROL_STEP, ROUTE_NAMES, TEST_STEP } from '@/shared/config'
 
 import GradeRail from './GradeRail.vue'
+import TopicExercises from './TopicExercises.vue'
 
 import type { Grade } from '@/entities/subject'
 import type { GradeStep } from '@/shared/config'
@@ -142,6 +143,7 @@ function goTo(target: GradeStep) {
             <h2 class="lesson__title">{{ current }}. {{ topic.title }}</h2>
             <!-- eslint-disable-next-line vue/no-v-html -- trusted HTML bundled with the app -->
             <article class="content" v-html="topic.html" />
+            <TopicExercises :exercises="topic.exercises" :topic-key="`${gradeId}:${current}`" />
             <aside class="compare" :class="`compare--${summary.subject.era}`" aria-labelledby="compare-title">
               <h3 id="compare-title" class="compare__title">
                 <i class="pi pi-arrow-right-arrow-left" aria-hidden="true" />

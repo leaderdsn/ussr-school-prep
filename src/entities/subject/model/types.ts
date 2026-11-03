@@ -23,10 +23,23 @@ export type Subject = {
   gradeDescriptions: Partial<Record<`${GradeNumber}`, string>>
 }
 
+/** A notebook exercise after a topic, as in a textbook: the child solves it in the exercise book. */
+export type Exercise = {
+  /** Trusted HTML of the task (may contain a figure). */
+  text: string
+  /** Trusted HTML of the answer for self-check, shown on request. */
+  answer: string
+}
+
 export type Topic = {
   title: string
-  /** Trusted HTML: allowed classes are rule, example, formula, note, table-wrap. */
+  /**
+   * Trusted HTML of the textbook paragraph: explanation, worked examples, figures (inline SVG in a `figure`).
+   * Allowed classes and tags are listed in lib/validate.ts.
+   */
   html: string
+  /** At least three exercises for the notebook, solved before the test. */
+  exercises: Exercise[]
   /** HTML of the comparison block: "Сейчас в российской школе" (ussr) or "А как было в СССР" (rf). */
   compare: string
 }

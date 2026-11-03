@@ -51,6 +51,37 @@ describe('checkHtml', () => {
   })
 })
 
+describe('checkHtml: рисунки', () => {
+  const svg = (inner: string, attrs = 'viewBox="0 0 100 50" role="img" aria-label="Отрезок AB"') =>
+    `<figure><svg ${attrs}>${inner}</svg><figcaption>Рис. 1</figcaption></figure>`
+
+  it('пропускает чертёж, раскрашенный классами', () => {
+    const html = svg(
+      '<defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>' +
+        '<line x1="10" y1="25" x2="90" y2="25" class="accent" stroke="currentColor" marker-end="url(#arrow)"/>' +
+        '<text x="10" y="45" text-anchor="middle">A</text>',
+    )
+    expect(checkHtml(html, 'x')).toEqual([])
+  })
+
+  it('разбирает имена атрибутов с цифрами и отрицательные значения', () => {
+    expect(checkHtml(svg('<line x1="-20" y1="5" x2="-3.5" y2="40" stroke="currentColor"/>'), 'x')).toEqual([])
+  })
+
+  it.each([
+    [svg('<line stroke="#ff0000"/>'), 'цвет задавайте классом'],
+    [svg('<line/>', 'role="img" aria-label="A"'), 'нужен viewBox'],
+    [svg('<line/>', 'viewBox="0 0 1 1"'), 'нужен aria-label'],
+    [svg('<path d="M0 0" marker-end="url(http://x)"/>'), 'ссылка на маркер'],
+    [svg('<image href="a.png"/>'), 'тег <image>'],
+    [svg('<line onclick="x()"/>'), 'атрибут «onclick»'],
+    [svg('<line onclick=x()/>'), 'атрибут «onclick»'],
+    [svg("<line stroke='#f00'/>"), 'цвет задавайте классом'],
+  ])('ловит ошибку в рисунке %#', (html, message) => {
+    expect(checkHtml(html, 'x').join(' ')).toContain(message)
+  })
+})
+
 describe('countWords', () => {
   it('считает слова видимого текста без тегов, тире и сущностей', () => {
     expect(countWords('<p>Один <b>два</b> три — 4 &gt; 3</p>')).toBe(5)
@@ -73,6 +104,15 @@ describe('validateGrade', () => {
     expect(issues).toContain('quiz: нужно 10–12 вопросов')
     expect(issues).toContain('нет ни одного вопроса вида "multiple"')
     expect(issues).toContain('control: нужно 5–7 заданий')
+  })
+
+  it('требует не меньше трёх заданий в тетрадь у каждой темы', () => {
+    const topics = base.topics.map((topic, index) =>
+      index === 0 ? { ...topic, exercises: topic.exercises.slice(0, 2) } : topic,
+    )
+    const issues = validateGrade({ ...base, topics }, SUBJECTS, 'math-1').join('\n')
+
+    expect(issues).toContain('topics[0].exercises: нужно 3–10 заданий в тетрадь, сейчас 2')
   })
 
   it('требует gradeDescriptions для нового класса и ссылки вопросов на существующие темы', () => {

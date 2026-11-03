@@ -1,0 +1,82 @@
+@use "@/shared/styles" as ds
+
+// "Do it in your exercise book": numbered tasks like the exercises after a textbook paragraph.
+.exercises
+  display: grid
+  gap: ds.$space-3
+  margin-top: ds.$space-8
+  padding-top: ds.$space-5
+  border-top: 2px solid var(--app-link)
+
+  &__title
+    display: flex
+    align-items: center
+    gap: ds.$space-2
+    margin: 0
+    color: var(--app-link)
+    font-family: ds.$font-family-heading
+    font-size: ds.$font-size-lg
+
+  &__hint
+    margin: 0
+    color: var(--p-text-muted-color)
+    font-size: ds.$font-size-sm
+
+  &__list
+    display: grid
+    gap: ds.$space-4
+    margin: 0
+    padding: 0
+    list-style: none
+
+.exercise
+  display: grid
+  grid-template-columns: 2rem minmax(0, 1fr)
+  gap: ds.$space-3
+  align-items: start
+
+  &__number
+    display: grid
+    place-items: center
+    width: 2rem
+    height: 2rem
+    border: 2px solid var(--app-link)
+    border-radius: ds.$radius-sm
+    color: var(--app-link)
+    font-weight: 700
+    font-variant-numeric: tabular-nums
+
+  &__body
+    display: grid
+    gap: ds.$space-2
+    justify-items: start
+    min-width: 0
+
+    > .content
+      width: 100%
+
+  &__toggle
+    display: inline-flex
+    align-items: center
+    gap: ds.$space-2
+    padding: 0
+    border: 0
+    background: none
+    color: var(--app-link)
+    font: inherit
+    font-size: ds.$font-size-sm
+    text-decoration: underline
+    cursor: pointer
+
+    &:focus-visible
+      +ds.focus-ring
+
+  // Checked by the teacher's red pen
+  &__answer
+    width: 100%
+    padding: ds.$space-2 ds.$space-3
+    border-left: 3px solid var(--app-ink-red)
+    color: var(--app-ink-red)
+    font-family: ds.$font-family-hand
+    font-size: 1.25rem
+    line-height: 1.35

@@ -2,6 +2,7 @@ export const ROUTE_NAMES = {
   home: 'home',
   grade: 'grade',
   family: 'family',
+  admin: 'admin',
   notFound: 'not-found',
 } as const
 

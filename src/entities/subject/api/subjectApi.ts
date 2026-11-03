@@ -1,6 +1,10 @@
 import gradesIndex from '../data/grades-index.json'
 import subjects from '../data/subjects.json'
 
+import { fetchPublicData } from '@/shared/lib'
+
+import { applyOverride, contentPath, parseOverride } from './overrides'
+
 import type { Grade, GradeSummary, Subject } from '../model/types'
 
 export const SUBJECTS = subjects as Subject[]
@@ -27,8 +31,15 @@ export function gradeId(subjectId: string, grade: number): string {
   return `${subjectId}-${grade}`
 }
 
-export async function fetchGrade(id: string): Promise<Grade> {
+/** The grade as bundled with the app, without edits from the admin panel. */
+export async function fetchBundledGrade(id: string): Promise<Grade> {
   const load = gradeModules[`../data/grades/${id}.json`]
   if (!load) throw new Error(`Класс «${id}» не найден`)
   return load()
+}
+
+/** The grade with the test and control work edited in the admin panel, if any (offline: the bundled one). */
+export async function fetchGrade(id: string): Promise<Grade> {
+  const [grade, override] = await Promise.all([fetchBundledGrade(id), fetchPublicData(contentPath(id))])
+  return applyOverride(grade, parseOverride(override), SUBJECTS)
 }

@@ -2,6 +2,8 @@ import { mount } from '@vue/test-utils'
 import { createPinia, setActivePinia } from 'pinia'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
+import { useSessionStore } from '@/entities/session'
+
 import { useSyncStore } from '../model/syncStore'
 
 import SyncButton from './SyncButton.vue'
@@ -50,7 +52,7 @@ describe('SyncButton', () => {
     const wrapper = mount(SyncButton)
     const sync = useSyncStore()
 
-    sync.user = { name: 'Иван Петров', email: 'ivan@example.com', photoUrl: null }
+    useSessionStore().user = { uid: 'u1', name: 'Иван Петров', email: 'ivan@example.com', photoUrl: null }
     sync.status = 'online'
     await wrapper.vm.$nextTick()
     const button = wrapper.find('button')

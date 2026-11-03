@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
+import { findGrade } from '@/entities/subject'
+
 import { activityDays, formatDuration, gradeRows, mistakeDetail, mistakeGroups, reportTotals } from './report'
 
 import type { AttemptRecord, ChildProgress } from '@/entities/progress'
@@ -64,7 +66,8 @@ describe('отчёт для родителя', () => {
 
     expect(groups).toHaveLength(1)
     expect(groups[0]!.attempt.id).toBe('2')
-    expect(groups[0]!.topics).toEqual([{ index: 1, title: 'Сложение и вычитание в пределах 10' }])
+    // The title comes from the catalog, so the test does not break when the textbook is rewritten.
+    expect(groups[0]!.topics).toEqual([{ index: 1, title: findGrade('math-1')!.grade.topicTitles[1] }])
   })
 
   it('достаёт текст вопроса и правильный ответ', () => {

@@ -5,256 +5,478 @@
   "textbook": "М. И. Моро и др. «Математика. 3 класс»",
   "topics": [
     {
-      "title": "Табличное умножение и деление",
-      "html": "<p><b>Умножение</b> — это сложение одинаковых слагаемых. Если в трёх коробках по 4 карандаша, то всего 4 + 4 + 4 = 12. Короче это записывают так: 4 · 3 = 12. Первое число показывает, что повторяют, второе — сколько раз.</p><h3>Названия чисел</h3><p class=\"formula\">4 · 3 = 12</p><p>Числа 4 и 3 называют <b>множителями</b>, число 12 — <b>произведением</b>. Запись 4 · 3 тоже называют произведением.</p><h3>Деление</h3><p><b>Деление</b> показывает, сколько получится, если 12 карандашей разложить поровну в 3 коробки, или сколько коробок понадобится, если класть по 4 карандаша. Записывают: 12 : 3 = 4.</p><p class=\"formula\">12 : 3 = 4</p><p>Здесь 12 — <b>делимое</b>, 3 — <b>делитель</b>, 4 — <b>частное</b>.</p><h3>Переместительное свойство и связь действий</h3><div class=\"rule\">От перестановки множителей произведение не изменяется: 4 · 3 = 3 · 4.</div><p>Это почти вдвое сокращает работу над таблицей: если знаешь 3 · 8, то знаешь и 8 · 3.</p><div class=\"rule\">Деление проверяют умножением, а неизвестный множитель находят делением: произведение делят на известный множитель.</div><p class=\"example\">Из 6 · 7 = 42 получаем два примера на деление: 42 : 6 = 7 и 42 : 7 = 6.</p><h3>Умножение на 0 и на 1</h3><p>Умножить число на 1 — значит взять его один раз, поэтому число не меняется: 8 · 1 = 8. Умножить на 0 — значит взять ноль раз, то есть не взять ничего: 8 · 0 = 0. Ноль, делённый на любое число, кроме нуля, тоже даёт ноль.</p><div class=\"note\">На ноль делить нельзя: такое действие не имеет смысла.</div><h3>Таблица умножения</h3><p>Теперь нужно уверенно знать столбцы для 4, 5, 6, 7, 8 и 9. Выучить их проще, если искать опору.</p><div class=\"table-wrap\"><table><thead><tr><th>Приём</th><th>Пример</th></tr></thead><tbody><tr><td>Умножение на 5 — половина от умножения на 10</td><td>5 · 6 = 30</td></tr><tr><td>Прибавляем ещё одно слагаемое</td><td>6 · 7 = 6 · 6 + 6 = 42</td></tr><tr><td>Переставляем множители</td><td>9 · 3 = 3 · 9 = 27</td></tr><tr><td>Умножение на 9: от десятка отнимаем множитель</td><td>9 · 4 = 40 − 4 = 36</td></tr></tbody></table></div><p>Самые трудные случаи — 6 · 7 = 42, 6 · 8 = 48, 7 · 8 = 56, 7 · 9 = 63, 8 · 9 = 72. Их стоит повторять отдельно.</p><p class=\"note\">Таблицу умножения нужно знать наизусть: на ней держатся и деление, и все вычисления в следующих классах. Чтобы вспомнить забытое произведение, можно сложить одинаковые слагаемые.</p>",
-      "compare": "<p>По ФОП НОО смысл умножения и деления и таблицу умножения начинают изучать во 2 классе, а в 3 классе их применяют и расширяют. Названия компонентов — множитель, произведение, делимое, делитель, частное — сохраняются.</p>"
+      "title": "Таблица умножения и деления на 4–9. Связь умножения и деления",
+      "html": "<p>В школьной столовой накрыли 6 столов, и за каждым сидят по 4 человека. Сколько ребят обедает? Можно складывать: 4 + 4 + 4 + 4 + 4 + 4 = 24. А можно быстрее: 4 · 6 = 24. Таблица умножения нужна, чтобы такие ответы приходили сразу, без долгого сложения. В этом параграфе мы повторим умножение и деление и дойдём до чисел 4–9.</p>\n<h3>Что такое умножение и деление</h3>\n<p><b>Умножение</b> — это сложение одинаковых слагаемых. Первое число показывает, что повторяют, второе — сколько раз. Числа, которые умножают, называются <b>множителями</b>, а результат — <b>произведением</b>.</p>\n<p class=\"formula\">4 · 6 = 24 &nbsp; (4 и 6 — множители, 24 — произведение)</p>\n<p><b>Деление</b> — действие, обратное умножению. Мы делим 24 ребят на столы по 4 человека или на 6 равных групп. Число, которое делят (24), называют <b>делимым</b>, число, на которое делят (4), — <b>делителем</b>, а результат (6) — <b>частным</b>.</p>\n<h3>Таблица умножения</h3>\n<figure><svg viewBox=\"0 0 300 300\" role=\"img\" aria-label=\"Таблица умножения: числа от 1 до 9 по строкам и по столбцам, на пересечении стоит произведение. Клетки 6 на 8 и 8 на 6 обведены красным: в обеих стоит 48\"><rect x=\"0\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">×</text><rect x=\"30\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"45\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">1</text><rect x=\"60\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"75\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">2</text><rect x=\"90\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"105\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">3</text><rect x=\"120\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"135\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">4</text><rect x=\"150\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"165\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">5</text><rect x=\"180\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"195\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">6</text><rect x=\"210\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"225\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">7</text><rect x=\"240\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"255\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">8</text><rect x=\"270\" y=\"0\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"285\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">9</text><rect x=\"0\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">1</text><rect x=\"30\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"60\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"90\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"120\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"150\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"180\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"210\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"240\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"270\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"0\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">2</text><rect x=\"30\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"60\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"90\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"120\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"150\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"180\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12</text><rect x=\"210\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">14</text><rect x=\"240\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">16</text><rect x=\"270\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">18</text><rect x=\"0\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">3</text><rect x=\"30\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"60\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"90\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"120\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12</text><rect x=\"150\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">15</text><rect x=\"180\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">18</text><rect x=\"210\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">21</text><rect x=\"240\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">24</text><rect x=\"270\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">27</text><rect x=\"0\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">4</text><rect x=\"30\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"60\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"90\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12</text><rect x=\"120\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">16</text><rect x=\"150\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">20</text><rect x=\"180\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">24</text><rect x=\"210\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">28</text><rect x=\"240\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">32</text><rect x=\"270\" y=\"120\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">36</text><rect x=\"0\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">5</text><rect x=\"30\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"60\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"90\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">15</text><rect x=\"120\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">20</text><rect x=\"150\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">25</text><rect x=\"180\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">30</text><rect x=\"210\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">35</text><rect x=\"240\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">40</text><rect x=\"270\" y=\"150\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"170\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">45</text><rect x=\"0\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">6</text><rect x=\"30\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"60\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12</text><rect x=\"90\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">18</text><rect x=\"120\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">24</text><rect x=\"150\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">30</text><rect x=\"180\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">36</text><rect x=\"210\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">42</text><rect x=\"240\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">48</text><rect x=\"270\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"200\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">54</text><rect x=\"0\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">7</text><rect x=\"30\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"60\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">14</text><rect x=\"90\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">21</text><rect x=\"120\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">28</text><rect x=\"150\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">35</text><rect x=\"180\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">42</text><rect x=\"210\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">49</text><rect x=\"240\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">56</text><rect x=\"270\" y=\"210\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"230\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">63</text><rect x=\"0\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">8</text><rect x=\"30\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"60\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">16</text><rect x=\"90\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">24</text><rect x=\"120\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">32</text><rect x=\"150\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">40</text><rect x=\"180\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">48</text><rect x=\"210\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">56</text><rect x=\"240\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">64</text><rect x=\"270\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"260\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">72</text><rect x=\"0\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"15\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">9</text><rect x=\"30\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"45\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"60\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"75\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">18</text><rect x=\"90\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"105\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">27</text><rect x=\"120\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"135\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">36</text><rect x=\"150\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"165\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">45</text><rect x=\"180\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"195\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">54</text><rect x=\"210\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"225\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">63</text><rect x=\"240\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"255\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">72</text><rect x=\"270\" y=\"270\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><text x=\"285\" y=\"290\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">81</text><rect x=\"240\" y=\"180\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"red\"/><rect x=\"180\" y=\"240\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"red\"/></svg><figcaption>Рис. 1. Таблица умножения. Ищи первый множитель в левом столбце, второй — в верхней строке, произведение — на пересечении. Красным обведены 6 · 8 и 8 · 6.</figcaption></figure>\n<p>Таблица на рисунке 1 похожа на карту. Чтобы найти 7 · 8, иди по строке 7 и по столбцу 8, на пересечении стоит 56. Заметь: таблица <b>симметрична</b>. Клетки 6 · 8 и 8 · 6 содержат одно число. Это не случайность.</p>\n<div class=\"rule\"><b>Переместительное свойство умножения:</b> от перестановки множителей произведение не меняется. a · b = b · a.</div>\n<p>Поэтому выучить придётся примерно вдвое меньше: если ты знаешь 3 · 9 = 27, то знаешь и 9 · 3 = 27.</p>\n<p>Вот приёмы, которые помогают вспомнить забытый случай.</p>\n<ul>\n<li>Умножить на 4 — значит дважды удвоить число: 7 · 4 = 14 + 14 = 28.</li>\n<li>Умножить на 5 — половина от умножения на 10: 8 · 5 = 80 : 2 = 40.</li>\n<li>Умножить на 9 — взять десять раз и вычесть само число: 7 · 9 = 70 − 7 = 63.</li>\n<li>Следующий случай — предыдущий плюс одно число: 6 · 7 = 6 · 6 + 6 = 36 + 6 = 42.</li>\n</ul>\n<h3>Связь умножения и деления</h3>\n<figure><svg viewBox=\"0 0 340 130\" role=\"img\" aria-label=\"Четыре ряда по шесть кружков, всего 24. Рядом четыре равенства: два на умножение и два на деление\"><circle cx=\"30\" cy=\"25\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"58\" cy=\"25\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"86\" cy=\"25\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"114\" cy=\"25\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"142\" cy=\"25\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"170\" cy=\"25\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"30\" cy=\"53\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"58\" cy=\"53\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"86\" cy=\"53\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"114\" cy=\"53\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"142\" cy=\"53\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"170\" cy=\"53\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"30\" cy=\"81\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"58\" cy=\"81\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"86\" cy=\"81\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"114\" cy=\"81\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"142\" cy=\"81\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"170\" cy=\"81\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"30\" cy=\"109\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"58\" cy=\"109\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"86\" cy=\"109\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"114\" cy=\"109\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"142\" cy=\"109\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"170\" cy=\"109\" r=\"9\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><text x=\"220\" y=\"45\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">4 · 6 = 24</text><text x=\"220\" y=\"70\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">6 · 4 = 24</text><text x=\"220\" y=\"95\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">24 : 4 = 6</text><text x=\"220\" y=\"120\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">24 : 6 = 4</text></svg><figcaption>Рис. 2. В 4 рядах по 6 кружков. Одна картинка даёт четыре равенства.</figcaption></figure>\n<p>Посмотри на рисунок 2. В 4 рядах по 6 кружков, то есть 24. Если считать по рядам, получаем 4 · 6, если по столбцам — 6 · 4. А если узнать, сколько кружков в одном ряду, нужно 24 разделить на 4 ряда, а если сколько рядов по 6 — разделить 24 на 6.</p>\n<div class=\"rule\">Если знаешь одно равенство на умножение, знаешь и два равенства на деление: из 4 · 6 = 24 следует 24 : 4 = 6 и 24 : 6 = 4. Чтобы разделить, подбирай число, которое при умножении на делитель даёт делимое.</div>\n<p class=\"example\"><b>Пример 1.</b> Раздели 56 на 7. <br>Решение. Какое число при умножении на 7 даёт 56? Вспоминаем таблицу: 7 · 8 = 56. <br>Ответ: 56 : 7 = 8.</p>\n<p class=\"example\"><b>Пример 2.</b> В пачке 6 тетрадей. Сколько пачек нужно для 48 тетрадей? <br>Решение. Тетради раскладывают по 6, значит, делим: 48 : 6. Подбираем: 6 · 8 = 48. <br>Проверка: 6 · 8 = 48, всё верно. <br>Ответ: 8 пачек.</p>\n<p class=\"example\"><b>Пример 3.</b> Найди неизвестный множитель: x · 7 = 42. <br>Решение. Чтобы найти неизвестный множитель, произведение делим на известный множитель: x = 42 : 7 = 6. <br>Ответ: 6.</p>\n<p class=\"note\">Проверь себя. Как называются числа при умножении и при делении? Почему 7 · 9 равно 9 · 7? Какие два деления можно составить из равенства 8 · 5 = 40? Как найти неизвестный множитель?</p>",
+      "exercises": [
+        {
+          "text": "Вычисли: 4 · 7, 5 · 6, 8 · 3, 9 · 4.",
+          "answer": "<p>28, 30, 24, 36.</p>"
+        },
+        {
+          "text": "Вычисли: 6 · 8, 7 · 7, 9 · 8, 6 · 9.",
+          "answer": "<p>48, 49, 72, 54.</p>"
+        },
+        {
+          "text": "Вычисли: 36 : 4, 45 : 5, 56 : 7, 72 : 9.",
+          "answer": "<p>9, 9, 8, 8. Проверь умножением: 4 · 9 = 36, 5 · 9 = 45, 7 · 8 = 56, 9 · 8 = 72.</p>"
+        },
+        {
+          "text": "Сравни, поставь знак &gt;, &lt; или =: 6 · 4 … 5 · 5; 9 · 3 … 3 · 9; 8 · 7 … 7 · 7.",
+          "answer": "<p>24 &lt; 25; 27 = 27; 56 &gt; 49.</p>"
+        },
+        {
+          "text": "По равенству 7 · 6 = 42 запиши ещё три равенства: одно на умножение и два на деление.",
+          "answer": "<p>6 · 7 = 42; 42 : 7 = 6; 42 : 6 = 7.</p>"
+        },
+        {
+          "text": "Найди x: x · 8 = 64; 9 · x = 54; x : 6 = 7; 63 : x = 9.",
+          "answer": "<p>x = 64 : 8 = 8; x = 54 : 9 = 6; x = 7 · 6 = 42; x = 63 : 9 = 7.</p>"
+        },
+        {
+          "text": "В 4 вазах по 9 цветов. Все цветы переставили в вазы по 6 цветов. Сколько ваз понадобилось?",
+          "answer": "<p>Цветов 4 · 9 = 36. Ваз 36 : 6 = 6. Ответ: 6 ваз.</p>"
+        }
+      ],
+      "compare": "<p>Таблицу умножения и деления изучают в начальной школе и сейчас. Учебник М. И. Моро и соавторов входит в комплект «Школа России» и используется в современных школах.</p>"
     },
     {
-      "title": "Внетабличное умножение и деление в пределах 100",
-      "html": "<p>Внетабличными называют случаи, которых нет в таблице умножения, например 14 · 3 или 48 : 4. Для них нужны свойства действий.</p><h3>Умножение суммы на число</h3><div class=\"rule\">Чтобы умножить сумму на число, можно умножить на это число каждое слагаемое и сложить результаты: (a + b) · c = a · c + b · c.</div><p class=\"example\">Найдём 14 · 3. Разложим 14 на 10 и 4: (10 + 4) · 3 = 10 · 3 + 4 · 3 = 30 + 12 = 42.</p><p>Это называют умножением по разрядам: сначала десятки, потом единицы. Число раскладывают на удобные слагаемые, чаще всего на круглые десятки и единицы.</p><p class=\"example\">23 · 4 = (20 + 3) · 4 = 20 · 4 + 3 · 4 = 80 + 12 = 92.</p><h3>Деление суммы на число</h3><div class=\"rule\">Чтобы разделить сумму на число, можно разделить на него каждое слагаемое и сложить частные, если оба слагаемых делятся на это число.</div><p class=\"example\">Найдём 48 : 4. Число 48 разложим на 40 и 8: оба делятся на 4. 40 : 4 = 10, 8 : 4 = 2, значит 48 : 4 = 12.</p><p>Бывает, что 48 нужно раскладывать иначе. Для 96 : 6 удобно взять 60 и 36: 60 : 6 = 10, 36 : 6 = 6, всего 16. Слагаемые подбирают так, чтобы каждое было в таблице или было круглым десятком.</p><h3>Деление двузначного числа на однозначное</h3><p>Если двузначное число не разбить на удобные слагаемые, делят «по шагам»: сначала десятки, потом остаток десятков и единицы вместе.</p><p class=\"example\">78 : 3. В 7 десятках по 3 содержится 2 десятка: 2 · 3 = 6. Осталось 7 − 6 = 1 десяток, то есть 10 единиц, и ещё 8 единиц: 18. 18 : 3 = 6. Частное: 20 + 6 = 26.</p><h3>Проверка</h3><p>Результат умножения проверяют делением, а деления — умножением: 26 · 3 = 78.</p><div class=\"table-wrap\"><table><thead><tr><th>Случай</th><th>Как считать</th></tr></thead><tbody><tr><td>Число · число (двузначное · однозначное)</td><td>раскладываем двузначное на десятки и единицы</td></tr><tr><td>Круглые десятки : число</td><td>считаем десятки: 60 : 3 = 20, потому что 6 дес. : 3 = 2 дес.</td></tr><tr><td>Двузначное : однозначное</td><td>подбираем удобные слагаемые или делим по шагам</td></tr></tbody></table></div><p class=\"note\">Порядок действий: сначала действия в скобках, потом умножение и деление слева направо, потом сложение и вычитание.</p>",
-      "compare": "<p>Внетабличное умножение и деление в пределах 100 по ФОП НОО входит в программу 3 класса. Приёмы вычислений опираются на те же свойства: умножение и деление суммы на число.</p>"
+      "title": "Умножение и деление с числами 1 и 0",
+      "html": "<p>В каждой из трёх коробок лежит по одному карандашу. Сколько карандашей всего? А если в пяти коробках лежит по нулю карандашей, то есть они пусты? В этом параграфе мы узнаем, что получается, когда одно из чисел — 1 или 0, и почему на нуль делить нельзя.</p>\n<h3>Умножение на 1</h3>\n<figure><svg viewBox=\"0 0 360 125\" role=\"img\" aria-label=\"Слева три коробки по одному кружку, всего три кружка. Справа четыре пустые коробки: кружков нет совсем\"><rect x=\"20\" y=\"15\" width=\"50\" height=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><circle cx=\"45\" cy=\"35\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><rect x=\"80\" y=\"15\" width=\"50\" height=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><circle cx=\"105\" cy=\"35\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><rect x=\"140\" y=\"15\" width=\"50\" height=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><circle cx=\"165\" cy=\"35\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><text x=\"110\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3 · 1 = 3</text><rect x=\"200\" y=\"15\" width=\"30\" height=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"muted\"/><rect x=\"236\" y=\"15\" width=\"30\" height=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"muted\"/><rect x=\"272\" y=\"15\" width=\"30\" height=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"muted\"/><rect x=\"308\" y=\"15\" width=\"30\" height=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"muted\"/><text x=\"272\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">4 · 0 = 0</text><text x=\"110\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">по одному кружку</text><text x=\"272\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">коробки пусты</text></svg><figcaption>Рис. 1. Три раза по 1 — три. Четыре раза по 0 — ноль.</figcaption></figure>\n<p>Умножение — это сложение одинаковых слагаемых. 1 + 1 + 1 = 3, значит, 1 · 3 = 3. А если число 5 взять только один раз, получим 5 · 1 = 5.</p>\n<div class=\"rule\">Если любое число умножить на 1 или 1 умножить на любое число, получится то же самое число: a · 1 = a, 1 · a = a.</div>\n<h3>Умножение на 0</h3>\n<p>Выражение 4 · 0 означает 0 + 0 + 0 + 0. Сколько ни складывай нулей, получится нуль. Переставим множители: 0 · 4 — это нуль, взятый 4 раза, он тоже равен 0 (так подсказывает переместительное свойство).</p>\n<div class=\"rule\">Если любое число умножить на 0 или 0 умножить на любое число, получится 0: a · 0 = 0, 0 · a = 0.</div>\n<h3>Деление с 1 и с 0</h3>\n<p>Деление связано с умножением. Так как 7 · 1 = 7, то 7 : 1 = 7. Так как 7 · 1 = 7, то и 7 : 7 = 1.</p>\n<div class=\"rule\">Число, делённое на 1, не меняется: a : 1 = a. Число, делённое само на себя (кроме 0), равно 1: a : a = 1. Нуль, делённый на любое число (кроме 0), равен 0: 0 : a = 0.</div>\n<p>Почему 0 : 5 = 0? Потому что 0 · 5 = 0. Ответ подходит. А вот <b>на нуль делить нельзя</b>. Попробуем 6 : 0. Нужно число, которое при умножении на 0 даёт 6. Но при умножении на 0 всегда получается 0, а не 6. Такого числа нет. Значит, деление на 0 невозможно. Запомни это как закон.</p>\n<div class=\"rule\"><b>На нуль делить нельзя!</b></div>\n<h3>Порядок действий</h3>\n<p>Если в выражении нет скобок и только умножение и деление, действия выполняют слева направо. Если есть скобки, сначала делают действия в них. Умножение и деление выполняют раньше сложения и вычитания.</p>\n<p class=\"example\"><b>Пример 1.</b> Вычисли: 8 · 1 + 0 · 5. <br>Решение. Сначала умножение: 8 · 1 = 8, 0 · 5 = 0. Потом сложение: 8 + 0 = 8. <br>Ответ: 8.</p>\n<p class=\"example\"><b>Пример 2.</b> Вычисли: (9 − 9) · 6 + 12 : 12. <br>Решение. Действие в скобках: 9 − 9 = 0. Дальше: 0 · 6 = 0 и 12 : 12 = 1. Складываем: 0 + 1 = 1. <br>Ответ: 1.</p>\n<p class=\"example\"><b>Пример 3.</b> Можно ли вычислить 5 : (4 − 4)? <br>Решение. В скобках получится 0, и придётся делить на нуль, а на нуль делить нельзя. <br>Ответ: нельзя, выражение не имеет смысла.</p>\n<p class=\"note\">Проверь себя. Чему равно 15 · 1, 15 · 0, 0 : 15, 15 : 15, 15 : 1? Какое деление запрещено? Почему?</p>",
+      "exercises": [
+        {
+          "text": "Вычисли: 7 · 1, 1 · 9, 6 · 0, 0 · 8, 5 : 1, 0 : 4.",
+          "answer": "<p>7, 9, 0, 0, 5, 0.</p>"
+        },
+        {
+          "text": "Вычисли: 12 : 12, 1 · 1, 0 · 0, 0 : 1.",
+          "answer": "<p>1, 1, 0, 0.</p>"
+        },
+        {
+          "text": "Найди x: x · 1 = 9; x · 6 = 0; x : 1 = 4; x · 5 = 5.",
+          "answer": "<p>x = 9; x = 0; x = 4; x = 1.</p>"
+        },
+        {
+          "text": "Сравни: 6 · 1 … 6 + 0; 0 · 9 … 0 + 9; 4 · 1 … 4 · 0.",
+          "answer": "<p>6 = 6; 0 &lt; 9; 4 &gt; 0.</p>"
+        },
+        {
+          "text": "Вычисли: 3 · 0 + 4 · 1; (9 − 9) · 6 + 2; 8 : 1 − 8 : 8.",
+          "answer": "<p>0 + 4 = 4; 0 + 2 = 2; 8 − 1 = 7.</p>"
+        },
+        {
+          "text": "Можно ли вычислить 7 : 0? Объясни своими словами.",
+          "answer": "<p>Нельзя. Нет числа, которое при умножении на 0 даёт 7: при умножении на 0 всегда получается 0.</p>"
+        },
+        {
+          "text": "В 5 коробках нет ни одного карандаша. Сколько карандашей в коробках всего? Запиши действием.",
+          "answer": "<p>5 · 0 = 0. Ответ: ни одного.</p>"
+        }
+      ],
+      "compare": "<p>Правила умножения и деления с числами 1 и 0 и запрет деления на нуль изучаются и в современной начальной школе по учебникам «Школы России»; содержание правил с тех пор не изменилось.</p>"
+    },
+    {
+      "title": "Площадь. Квадратный сантиметр. Площадь прямоугольника",
+      "html": "<p>Хозяин хочет покрасить две стены: одна широкая и низкая, другая узкая и высокая. Какую покрасить дольше? Длину отрезка измеряют сантиметрами, а чтобы сравнить размеры самих стен, нужна другая величина. Это <b>площадь</b>, то есть то, сколько места занимает фигура на плоскости.</p>\n<h3>Единица площади — квадратный сантиметр</h3>\n<p>Для измерения длины берут отрезок в 1 см. Для площади берут квадрат со стороной 1 см. Его площадь называют <b>квадратным сантиметром</b> и пишут 1 см². Чтобы узнать площадь фигуры, смотрят, сколько таких квадратиков в неё поместится.</p>\n<figure><svg viewBox=\"0 0 370 170\" role=\"img\" aria-label=\"Прямоугольник 5 на 3 клетки на сетке. Одна клетка со стороной 1 см закрашена и подписана 1 квадратный сантиметр. Всего 15 клеток\"><rect x=\"40\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"red soft\"/><rect x=\"70\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"100\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"130\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"160\" y=\"30\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"40\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"70\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"100\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"130\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"160\" y=\"60\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"40\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"70\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"100\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"130\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"160\" y=\"90\" width=\"30\" height=\"30\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"40\" y=\"30\" width=\"150\" height=\"90\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"115\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5 см</text><text x=\"25\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3 см</text><text x=\"55\" y=\"155\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">1 см²</text><text x=\"260\" y=\"70\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">S = 5 · 3</text><text x=\"260\" y=\"95\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">= 15 см²</text></svg><figcaption>Рис. 1. Прямоугольник 5 см на 3 см покрыт 15 квадратиками по 1 см². Его площадь 15 см².</figcaption></figure>\n<p>Посчитаем квадратики на рисунке 1: в каждом из 3 рядов по 5 квадратиков, значит, всего 5 · 3 = 15. Площадь этого прямоугольника — 15 см².</p>\n<h3>Площадь прямоугольника</h3>\n<p>Считать квадратики по одному долго. Но ряды одинаковые, поэтому можно умножать: число квадратиков в ряду равно длине стороны в сантиметрах, число рядов — длине другой стороны.</p>\n<div class=\"rule\">Чтобы найти площадь прямоугольника, надо его длину умножить на ширину (обе стороны выразить в одних и тех же единицах).</div>\n<p class=\"formula\">S = a · b</p>\n<p>Здесь S — площадь, a — длина, b — ширина. У <b>квадрата</b> все стороны равны, поэтому его площадь S = a · a.</p>\n<figure><svg viewBox=\"0 0 340 125\" role=\"img\" aria-label=\"Два прямоугольника разной формы: 6 на 2 клетки и 4 на 3 клетки. В каждом по 12 клеток\"><rect x=\"20\" y=\"30\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"44\" y=\"30\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"68\" y=\"30\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"92\" y=\"30\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"116\" y=\"30\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"140\" y=\"30\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"20\" y=\"54\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"44\" y=\"54\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"68\" y=\"54\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"92\" y=\"54\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"116\" y=\"54\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"140\" y=\"54\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"20\" y=\"30\" width=\"144\" height=\"48\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><rect x=\"200\" y=\"20\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"224\" y=\"20\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"248\" y=\"20\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"272\" y=\"20\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"200\" y=\"44\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"224\" y=\"44\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"248\" y=\"44\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"272\" y=\"44\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"200\" y=\"68\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"224\" y=\"68\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"248\" y=\"68\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"272\" y=\"68\" width=\"24\" height=\"24\" stroke=\"currentColor\" fill=\"none\" class=\"thin\"/><rect x=\"200\" y=\"20\" width=\"96\" height=\"72\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"92\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6 · 2 = 12 см²</text><text x=\"248\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4 · 3 = 12 см²</text></svg><figcaption>Рис. 2. Разные по форме фигуры могут иметь одинаковую площадь.</figcaption></figure>\n<p>Не путай площадь и периметр. Периметр — это сумма длин всех сторон, он измеряется в сантиметрах. Площадь измеряется в квадратных сантиметрах. На рисунке 2 фигуры разные, а площадь у них одна, 12 см². Если фигуру разрезать на части и сложить по-другому, площадь не изменится.</p>\n<h3>Другие единицы площади</h3>\n<p>Для больших поверхностей берут и большие квадраты: <b>квадратный дециметр</b> (1 дм²) — квадрат со стороной 1 дм, и <b>квадратный метр</b> (1 м²) — квадрат со стороной 1 м. В квадратном дециметре помещается 10 рядов по 10 квадратных сантиметров. Поэтому:</p>\n<p class=\"formula\">1 дм² = 100 см² &nbsp;&nbsp; 1 м² = 100 дм²</p>\n<p class=\"example\"><b>Пример 1.</b> Длина прямоугольника 8 см, ширина 4 см. Найди периметр и площадь. <br>Решение. Площадь: S = 8 · 4 = 32 (см²). Периметр: P = (8 + 4) · 2 = 24 (см). <br>Ответ: 32 см² и 24 см.</p>\n<p class=\"example\"><b>Пример 2.</b> Площадь прямоугольника 24 см², длина 8 см. Найди ширину. <br>Решение. S = a · b, значит, неизвестный множитель b = S : a = 24 : 8 = 3 (см). Проверка: 8 · 3 = 24. <br>Ответ: 3 см.</p>\n<p class=\"example\"><b>Пример 3.</b> Пол в комнате имеет длину 5 м и ширину 4 м. Найди его площадь. <br>Решение. 5 · 4 = 20 (м²). <br>Ответ: 20 м².</p>\n<p class=\"note\">Проверь себя. Что такое 1 см²? По какому правилу находят площадь прямоугольника? Чем площадь отличается от периметра? Сколько квадратных сантиметров в 1 дм²?</p>",
+      "exercises": [
+        {
+          "text": "Найди площадь прямоугольника со сторонами 7 см и 3 см.",
+          "answer": "<p>S = 7 · 3 = 21 (см²).</p>"
+        },
+        {
+          "text": "Найди площадь квадрата со стороной 5 дм.",
+          "answer": "<p>S = 5 · 5 = 25 (дм²).</p>"
+        },
+        {
+          "text": "Прямоугольник имеет стороны 6 см и 4 см. Найди его периметр и площадь.",
+          "answer": "<p>P = (6 + 4) · 2 = 20 см; S = 6 · 4 = 24 см².</p>"
+        },
+        {
+          "text": "Площадь прямоугольника 36 см², одна сторона 9 см. Найди другую сторону.",
+          "answer": "<p>36 : 9 = 4 (см).</p>"
+        },
+        {
+          "text": "Сколько квадратных сантиметров в 3 дм²?",
+          "answer": "<p>3 · 100 = 300 см².</p>"
+        },
+        {
+          "text": "Начерти в тетради два прямоугольника разной формы, площадь каждого 12 см².",
+          "answer": "<p>Например, 6 см на 2 см и 4 см на 3 см (также 12 см на 1 см).</p>"
+        },
+        {
+          "text": "Сравни площадь и периметр прямоугольника со сторонами 8 см и 2 см и квадрата со стороной 4 см.",
+          "answer": "<p>Площади: 8 · 2 = 16 см² и 4 · 4 = 16 см², они равны. Периметры: (8 + 2) · 2 = 20 см и 4 · 4 = 16 см, у прямоугольника периметр больше.</p>"
+        }
+      ],
+      "compare": "<p>Площадь, квадратный сантиметр и правило вычисления площади прямоугольника входят в программу 3 класса и в современной начальной школе.</p>"
+    },
+    {
+      "title": "Внетабличное умножение и деление",
+      "html": "<p>Мама купила 6 пачек печенья, в каждой по 14 штук. Сколько печенья? Умножение 14 · 6 в таблице не найти: таблица заканчивается на 9 · 9. Значит, нужен способ, который позволяет считать «вне таблицы» (отсюда и название — <b>внетабличное умножение</b>). Секрет в том, чтобы разбить трудное число на удобные части.</p>\n<h3>Умножение суммы на число</h3>\n<figure><svg viewBox=\"0 0 270 140\" role=\"img\" aria-label=\"Прямоугольник высотой 6 разделён на две части: шириной 10 и шириной 4. Площади частей 60 и 24, вместе 84\"><rect x=\"30\" y=\"30\" width=\"150\" height=\"70\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><rect x=\"180\" y=\"30\" width=\"60\" height=\"70\" stroke=\"currentColor\" fill=\"none\" class=\"red\"/><text x=\"105\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">10</text><text x=\"210\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><text x=\"18\" y=\"70\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6</text><text x=\"105\" y=\"70\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">10 · 6 = 60</text><text x=\"210\" y=\"70\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4 · 6 = 24</text><text x=\"135\" y=\"125\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">14 · 6 = 60 + 24 = 84</text></svg><figcaption>Рис. 1. Прямоугольник 14 на 6 разрезан на два: 10 на 6 и 4 на 6.</figcaption></figure>\n<p>Посмотри на рисунок 1. Большой прямоугольник 14 на 6 разрезан на два: 10 на 6 и 4 на 6. Площадь целого равна сумме площадей частей.</p>\n<div class=\"rule\">Чтобы умножить сумму на число, можно умножить на это число каждое слагаемое и сложить результаты: (a + b) · c = a · c + b · c.</div>\n<p class=\"example\"><b>Пример 1.</b> Найди 14 · 6. <br>Решение. Представим 14 = 10 + 4. Тогда 14 · 6 = (10 + 4) · 6 = 10 · 6 + 4 · 6 = 60 + 24 = 84. <br>Ответ: 84 печенья.</p>\n<p class=\"example\"><b>Пример 2.</b> Найди 23 · 4. <br>Решение. 23 = 20 + 3. Считаем: 20 · 4 = 80 (2 десятка умножить на 4 — 8 десятков), 3 · 4 = 12. Складываем: 80 + 12 = 92. <br>Ответ: 92.</p>\n<p>Круглые числа умножаем по десяткам: 30 · 2 — это 3 десятка · 2 = 6 десятков, то есть 60.</p>\n<h3>Деление суммы на число</h3>\n<p>Деление можно выполнять так же. Разложим делимое на удобные слагаемые, каждое из которых делится на делитель без остатка.</p>\n<div class=\"rule\">Чтобы разделить сумму на число, можно каждое слагаемое разделить на это число и сложить результаты: (a + b) : c = a : c + b : c.</div>\n<p class=\"example\"><b>Пример 3.</b> Найди 78 : 3. <br>Решение. Какие числа в 78 удобно делить на 3? 78 = 60 + 18. Тогда 60 : 3 = 20 и 18 : 3 = 6. Складываем: 20 + 6 = 26. <br>Проверка умножением: 26 · 3 = 60 + 18 = 78. <br>Ответ: 26.</p>\n<p class=\"example\"><b>Пример 4.</b> Найди 96 : 4. <br>Решение. 96 = 80 + 16. Тогда 80 : 4 = 20, 16 : 4 = 4, 20 + 4 = 24. <br>Проверка: 24 · 4 = 96. <br>Ответ: 24.</p>\n<p>Как подбирать слагаемые? Бери самое большое круглое число, которое делится на делитель: для деления на 4 подойдёт 80 (8 : 4), для деления на 3 — 60.</p>\n<h3>Порядок действий</h3>\n<p>В выражениях с несколькими действиями помни порядок. Сначала действия в скобках. Затем умножение и деление слева направо. И только в конце — сложение и вычитание.</p>\n<p class=\"example\"><b>Пример 5.</b> Вычисли: 60 − 4 · 7 + 10 : 2. <br>Решение. Умножение: 4 · 7 = 28. Деление: 10 : 2 = 5. Теперь 60 − 28 = 32, а 32 + 5 = 37. <br>Ответ: 37.</p>\n<p class=\"note\">Проверь себя. Как умножить 17 на 3, разбив число? Как разделить 84 на 6? Как проверить деление? Какие действия выполняют первыми в выражении без скобок?</p>",
+      "exercises": [
+        {
+          "text": "Вычисли: 12 · 4, 15 · 3, 21 · 4, 17 · 5.",
+          "answer": "<p>12 · 4 = 40 + 8 = 48; 15 · 3 = 30 + 15 = 45; 21 · 4 = 80 + 4 = 84; 17 · 5 = 50 + 35 = 85.</p>"
+        },
+        {
+          "text": "Вычисли: 96 : 3, 68 : 2, 84 : 7, 75 : 5.",
+          "answer": "<p>96 : 3 = 90 : 3 + 6 : 3 = 32; 68 : 2 = 34; 84 : 7 = 70 : 7 + 14 : 7 = 12; 75 : 5 = 50 : 5 + 25 : 5 = 15.</p>"
+        },
+        {
+          "text": "Вычисли: 13 · 6 и проверь результат делением.",
+          "answer": "<p>13 · 6 = 60 + 18 = 78. Проверка: 78 : 6 = 13.</p>"
+        },
+        {
+          "text": "Найди значение выражений: 50 − 6 · 4; (50 − 6) · 4; 40 + 36 : 6.",
+          "answer": "<p>50 − 24 = 26; 44 · 4 = 176; 40 + 6 = 46.</p>"
+        },
+        {
+          "text": "Найди x: x : 4 = 21; 52 : x = 4; x · 3 = 69.",
+          "answer": "<p>x = 21 · 4 = 84; x = 52 : 4 = 13; x = 69 : 3 = 23.</p>"
+        },
+        {
+          "text": "Сравни: 17 · 3 … 50; 90 : 6 … 16.",
+          "answer": "<p>51 &gt; 50; 15 &lt; 16.</p>"
+        },
+        {
+          "text": "В 4 пакетах по 15 яблок. Сколько яблок всего? Их разложили в корзины по 6 яблок. Сколько корзин нужно?",
+          "answer": "<p>Яблок 15 · 4 = 60. Корзин 60 : 6 = 10. Ответ: 60 яблок, 10 корзин.</p>"
+        }
+      ],
+      "compare": "<p>Внетабличное умножение и деление в пределах 100 в современной программе тоже изучают в 3 классе. Приём разбиения на удобные слагаемые, как и в советском учебнике Моро, опирается на свойства умножения и деления суммы на число.</p>"
     },
     {
       "title": "Деление с остатком",
-      "html": "<p>Не всякое число делится на другое нацело. Если разложить 14 яблок поровну на 4 тарелки, на каждую придётся по 3 яблока, а 2 яблока останутся лишними. Такое деление называют <b>делением с остатком</b>.</p><p class=\"formula\">14 : 4 = 3 (ост. 2)</p><h3>Как найти частное и остаток</h3><p>Нужно найти наибольшее число, которое при умножении на делитель не превышает делимое. Для 14 : 4 смотрим таблицу на 4: 4 · 3 = 12, 4 · 4 = 16. Шестнадцать больше 14, значит, берём 12. Частное — 3, а остаток — разность 14 − 12 = 2.</p><div class=\"rule\">Остаток всегда меньше делителя.</div><p>Если остаток получился равным делителю или больше, значит, в частном можно взять больше. Например, 14 : 4 = 2 (ост. 6) — неверно, потому что 6 &gt; 4.</p><h3>Какие остатки возможны</h3><p>Остаток при делении на 4 может быть только 0, 1, 2 или 3. Остаток 0 означает, что деление выполнено нацело. Вообще при делении на число остатки бывают от 0 до этого числа без единицы.</p><h3>Проверка</h3><div class=\"rule\">Чтобы проверить деление с остатком, частное умножают на делитель и прибавляют остаток. Должно получиться делимое.</div><p class=\"example\">17 : 5 = 3 (ост. 2). Проверка: 3 · 5 + 2 = 15 + 2 = 17. Верно.</p><h3>Как решать задачи с остатком</h3><p class=\"example\">В автобус помещается 8 человек. Сколько автобусов нужно для 30 человек? 30 : 8 = 3 (ост. 6). В трёх автобусах поедут 24 человека, ещё 6 тоже нужно перевезти, значит, потребуется 4 автобуса.</p><p>Иногда остаток отбрасывают, иногда прибавляют к частному одну единицу. Нужно думать, о чём спрашивает задача.</p><div class=\"table-wrap\"><table><thead><tr><th>Пример</th><th>Запись</th><th>Проверка</th></tr></thead><tbody><tr><td>19 : 6</td><td>3 (ост. 1)</td><td>3 · 6 + 1 = 19</td></tr><tr><td>25 : 7</td><td>3 (ост. 4)</td><td>3 · 7 + 4 = 25</td></tr><tr><td>40 : 9</td><td>4 (ост. 4)</td><td>4 · 9 + 4 = 40</td></tr></tbody></table></div><p class=\"note\">Приём для быстрого подбора: найди в таблице умножения ближайшее произведение, которое не больше делимого. Оно и подскажет частное.</p>",
-      "compare": "<p>Деление с остатком по ФОП НОО входит в программу 3 класса. Правило «остаток меньше делителя» и проверка умножением с прибавлением остатка изучаются в тех же рамках.</p>"
+      "html": "<p>На тарелке 17 яблок. Их надо разложить в корзины по 5 яблок. Сколько корзин заполнится? Разделить 17 на 5 нацело нельзя: в таблице умножения на 5 нет числа 17. Но корзины заполнить мы всё равно можем. Это и есть <b>деление с остатком</b>.</p>\n<h3>Как это выглядит</h3>\n<figure><svg viewBox=\"0 0 350 140\" role=\"img\" aria-label=\"Семнадцать кружков: три рамки по пять кружков и ещё два кружка вне рамок. Запись: 17 разделить на 5 равно 3, остаток 2\"><rect x=\"20\" y=\"15\" width=\"120\" height=\"32\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><circle cx=\"40\" cy=\"31\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"62\" cy=\"31\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"84\" cy=\"31\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"106\" cy=\"31\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"128\" cy=\"31\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><rect x=\"20\" y=\"55\" width=\"120\" height=\"32\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><circle cx=\"40\" cy=\"71\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"62\" cy=\"71\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"84\" cy=\"71\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"106\" cy=\"71\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"128\" cy=\"71\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><rect x=\"20\" y=\"95\" width=\"120\" height=\"32\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><circle cx=\"40\" cy=\"111\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"62\" cy=\"111\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"84\" cy=\"111\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"106\" cy=\"111\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"128\" cy=\"111\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><circle cx=\"200\" cy=\"31\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"red\"/><circle cx=\"224\" cy=\"31\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" class=\"red\"/><text x=\"212\" y=\"60\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">остаток: 2</text><text x=\"212\" y=\"95\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">17 : 5 = 3 (ост. 2)</text><text x=\"212\" y=\"120\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5 · 3 + 2 = 17</text></svg><figcaption>Рис. 1. 17 кружков разложили по 5. Получилось 3 полные группы, 2 кружка остались.</figcaption></figure>\n<p>На рисунке 1 три корзины заполнены, а два яблока не вошли ни в одну. Мы выполнили деление и записали его так:</p>\n<p class=\"formula\">17 : 5 = 3 (ост. 2)</p>\n<p>Число 17 — <b>делимое</b>, 5 — <b>делитель</b>, 3 — <b>неполное частное</b> (оно показывает, сколько раз 5 поместилось в 17), 2 — <b>остаток</b>.</p>\n<h3>Как делить с остатком</h3>\n<ol>\n<li>Найди в таблице умножения на делитель наибольшее число, которое не больше делимого. Для 17 и 5 это 15 (5 · 3).</li>\n<li>Число, на которое умножали (3), — неполное частное.</li>\n<li>Вычти найденное число из делимого: 17 − 15 = 2. Это остаток.</li>\n</ol>\n<div class=\"rule\"><b>Остаток всегда меньше делителя.</b> Если остаток получился не меньше делителя, значит, ты взял слишком маленькое частное и деление можно продолжить.</div>\n<p>При делении на 5 остаток может быть только 0, 1, 2, 3 или 4. Если остаток равен 0, деление выполняется без остатка, «нацело».</p>\n<h3>Проверка деления с остатком</h3>\n<div class=\"rule\">Чтобы проверить деление с остатком, умножь неполное частное на делитель и прибавь остаток. Должно получиться делимое: делитель · частное + остаток = делимое.</div>\n<p class=\"example\"><b>Пример 1.</b> Раздели 38 на 6. <br>Решение. В таблице на 6 наибольшее число, не большее 38, — это 36 = 6 · 6. Значит, неполное частное 6. Остаток: 38 − 36 = 2. <br>Проверка: 6 · 6 + 2 = 36 + 2 = 38. <br>Ответ: 38 : 6 = 6 (ост. 2).</p>\n<p class=\"example\"><b>Пример 2.</b> Раздели 43 на 7. <br>Решение. 7 · 6 = 42, а 7 · 7 = 49 — уже больше 43. Значит, частное 6. Остаток: 43 − 42 = 1. <br>Проверка: 7 · 6 + 1 = 43. <br>Ответ: 6 (ост. 1).</p>\n<p class=\"example\"><b>Пример 3 (задача).</b> На прогулку едут 30 человек. В каждой машине 4 места. Сколько машин нужно заказать? <br>Решение. Делим: 30 : 4 = 7 (ост. 2). Семь машин заберут 28 человек, и двое останутся. Им нужна ещё одна машина. <br>Ответ: 8 машин.</p>\n<p>Последняя задача напоминает: иногда нужно думать о смысле остатка. Он говорит, что ещё остались предметы, а значит, одна «порция» нужна дополнительно.</p>\n<p>Если делимое меньше делителя, то делитель в нём не помещается ни разу: 3 : 5 = 0 (ост. 3). Проверка: 5 · 0 + 3 = 3.</p>\n<p class=\"note\">Проверь себя. Как записывается деление с остатком? Может ли при делении на 6 получиться остаток 6? Какие остатки возможны при делении на 4? Как проверить деление с остатком?</p>",
+      "exercises": [
+        {
+          "text": "Выполни деление с остатком: 23 : 4, 40 : 6, 50 : 7, 29 : 5.",
+          "answer": "<p>23 : 4 = 5 (ост. 3); 40 : 6 = 6 (ост. 4); 50 : 7 = 7 (ост. 1); 29 : 5 = 5 (ост. 4).</p>"
+        },
+        {
+          "text": "Какие остатки могут получиться при делении на 5? А при делении на 3?",
+          "answer": "<p>На 5: 0, 1, 2, 3, 4. На 3: 0, 1, 2. Остаток всегда меньше делителя.</p>"
+        },
+        {
+          "text": "Ученик записал: 31 : 8 = 4 (ост. 3). Проверь. Если неверно, исправь.",
+          "answer": "<p>Проверка: 8 · 4 + 3 = 35, а не 31. Неверно. Правильно: 31 : 8 = 3 (ост. 7), так как 8 · 3 + 7 = 31.</p>"
+        },
+        {
+          "text": "Раздели с остатком: 17 : 3, 25 : 9, 3 : 7.",
+          "answer": "<p>17 : 3 = 5 (ост. 2); 25 : 9 = 2 (ост. 7); 3 : 7 = 0 (ост. 3).</p>"
+        },
+        {
+          "text": "45 пирожков разложили на тарелки по 6. Сколько тарелок заполнили и сколько пирожков осталось?",
+          "answer": "<p>45 : 6 = 7 (ост. 3). Ответ: 7 тарелок, остался 3 пирожка.</p>"
+        },
+        {
+          "text": "В лодку помещается 5 человек. Сколько лодок нужно для 34 человек?",
+          "answer": "<p>34 : 5 = 6 (ост. 4). Шесть лодок вмещают 30 человек, ещё 4 человека — нужна седьмая. Ответ: 7 лодок.</p>"
+        },
+        {
+          "text": "Найди делимое, если делитель 7, неполное частное 4, остаток 5.",
+          "answer": "<p>7 · 4 + 5 = 33.</p>"
+        }
+      ],
+      "compare": "<p>Деление с остатком изучают и сейчас в 3 классе, запись «ост.» используется так же. Правило «остаток меньше делителя» и проверка умножением с прибавлением остатка в советском учебнике и в современной программе совпадают.</p>"
+    },
+    {
+      "title": "Доли. Половина, треть, четверть",
+      "html": "<p>Две сестры делят пополам яблоко. Три друга делят один арбуз поровну. Каждому достаётся не целое, а только <b>часть</b>. Как назвать и записать такую часть? Об этом наш параграф.</p>\n<h3>Что такое доля</h3>\n<p>Разделим квадрат на две <b>равные</b> части. Каждая из них — <b>половина</b>, или одна вторая доля. Если разделить на четыре равные части, каждая будет <b>четвертью</b> (одной четвёртой). Если на три — <b>третью</b>.</p>\n<div class=\"rule\"><b>Доля</b> — одна из равных частей, на которые разделено целое. Слово «равных» главное: части с разной площадью долями не считаются.</div>\n<figure><svg viewBox=\"0 0 330 130\" role=\"img\" aria-label=\"Три квадрата: целый; квадрат, разделённый на две равные части с закрашенной одной частью, одна вторая; квадрат, разделённый на четыре равные части с закрашенной одной частью, одна четвёртая\"><rect x=\"20\" y=\"20\" width=\"70\" height=\"70\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"55\" y=\"112\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">целое</text><rect x=\"130\" y=\"20\" width=\"70\" height=\"70\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><rect x=\"130\" y=\"20\" width=\"35\" height=\"70\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><rect x=\"130\" y=\"20\" width=\"70\" height=\"70\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"165\" y=\"112\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1/2</text><rect x=\"240\" y=\"20\" width=\"70\" height=\"70\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><rect x=\"240\" y=\"20\" width=\"35\" height=\"35\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><line x1=\"275\" y1=\"20\" x2=\"275\" y2=\"90\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"240\" y1=\"55\" x2=\"310\" y2=\"55\" stroke=\"currentColor\" class=\"accent\"/><rect x=\"240\" y=\"20\" width=\"70\" height=\"70\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"275\" y=\"112\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1/4</text></svg><figcaption>Рис. 1. Квадрат целиком, его половина и его четверть.</figcaption></figure>\n<p>Доли записывают дробной чертой. Число под чертой показывает, на сколько равных частей разделили целое. Число над чертой — сколько частей взяли. У нас берут одну часть, поэтому над чертой 1.</p>\n<p class=\"formula\"><sup>1</sup>/<sub>2</sub> — одна вторая (половина) &nbsp; <sup>1</sup>/<sub>3</sub> — одна третья (треть) &nbsp; <sup>1</sup>/<sub>4</sub> — одна четвёртая (четверть) &nbsp; <sup>1</sup>/<sub>5</sub> — одна пятая</p>\n<figure><svg viewBox=\"0 0 380 140\" role=\"img\" aria-label=\"Три круга: разделённый на две равные части, на три равные части и на четыре равные части; в каждом закрашена одна часть\"><path d=\"M70 15 A40 40 0 0 1 70 95 Z\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><circle cx=\"70\" cy=\"55\" r=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><line x1=\"70\" y1=\"15\" x2=\"70\" y2=\"95\" stroke=\"currentColor\" class=\"accent\"/><text x=\"70\" y=\"125\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1/2</text><path d=\"M190 55 L190.0 15.0 A40 40 0 0 1 224.6 75.0 Z\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><circle cx=\"190\" cy=\"55\" r=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><line x1=\"190\" y1=\"55\" x2=\"190.0\" y2=\"15.0\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"190\" y1=\"55\" x2=\"224.6\" y2=\"75.0\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"190\" y1=\"55\" x2=\"155.4\" y2=\"75.0\" stroke=\"currentColor\" class=\"accent\"/><text x=\"190\" y=\"125\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1/3</text><path d=\"M310 55 L310 15 A40 40 0 0 1 350 55 Z\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><circle cx=\"310\" cy=\"55\" r=\"40\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><line x1=\"310\" y1=\"15\" x2=\"310\" y2=\"95\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"270\" y1=\"55\" x2=\"350\" y2=\"55\" stroke=\"currentColor\" class=\"accent\"/><text x=\"310\" y=\"125\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1/4</text></svg><figcaption>Рис. 2. Круг, разделённый на 2, 3 и 4 равные части: половина, треть и четверть.</figcaption></figure>\n<p>На рисунке 2 круг разделён на 2, 3 и 4 равные части. Можно делить и предметы, и числа, и отрезки: половина от 10 см — это 5 см.</p>\n<h3>Сравнение долей</h3>\n<p>Сравни на рисунках половину и четверть круга. Половина занимает больше места. Чем на большее число равных частей разделили целое, тем <b>меньше</b> каждая часть.</p>\n<div class=\"rule\">Из двух долей одного целого больше та, у которой число под чертой меньше: <sup>1</sup>/<sub>2</sub> &gt; <sup>1</sup>/<sub>3</sub> &gt; <sup>1</sup>/<sub>4</sub> &gt; <sup>1</sup>/<sub>5</sub>.</div>\n<h3>Нахождение доли числа</h3>\n<p>Чтобы найти долю числа, надо разделить число на столько равных частей, какая это доля.</p>\n<p class=\"example\"><b>Пример 1.</b> В классе 24 ученика, <sup>1</sup>/<sub>4</sub> из них идут в поход. Сколько учеников идут в поход? <br>Решение. Найти четверть — значит разделить на 4. 24 : 4 = 6. <br>Ответ: 6 учеников.</p>\n<p class=\"example\"><b>Пример 2.</b> Найди <sup>1</sup>/<sub>5</sub> от 35. <br>Решение. 35 : 5 = 7. <br>Ответ: 7.</p>\n<h3>Нахождение числа по его доле</h3>\n<p>Бывает и обратная задача. Мы знаем, чему равна доля, и хотим узнать целое. Если одна часть известна, целое получится умножением на число частей.</p>\n<p class=\"example\"><b>Пример 3.</b> Маша прочитала <sup>1</sup>/<sub>3</sub> книги, это 12 страниц. Сколько страниц в книге? <br>Решение. Книга разделена на 3 равные части, одна часть — 12 страниц. Всего: 12 · 3 = 36. <br>Проверка: 36 : 3 = 12. <br>Ответ: 36 страниц.</p>\n<p class=\"note\">Проверь себя. Что такое доля? Как называют <sup>1</sup>/<sub>2</sub>, <sup>1</sup>/<sub>3</sub>, <sup>1</sup>/<sub>4</sub>? Какая доля больше: <sup>1</sup>/<sub>3</sub> или <sup>1</sup>/<sub>8</sub>? Как найти четверть числа 20? Как найти число, если известна его треть?</p>",
+      "exercises": [
+        {
+          "text": "Найди: половину от 18, треть от 15, четверть от 24, шестую часть от 30.",
+          "answer": "<p>18 : 2 = 9; 15 : 3 = 5; 24 : 4 = 6; 30 : 6 = 5.</p>"
+        },
+        {
+          "text": "Начерти квадрат со стороной 4 см и раздели его на 4 равные части двумя разными способами.",
+          "answer": "<p>Первый способ: две линии через середины противоположных сторон (получатся 4 квадрата 2 на 2 см). Второй: провести три линии, параллельные стороне, через 1 см (4 полоски 1 на 4 см). У всех частей площадь 4 см².</p>"
+        },
+        {
+          "text": "Сравни доли: 1/3 и 1/5; 1/2 и 1/8; 1/4 и 1/4.",
+          "answer": "<p>1/3 &gt; 1/5; 1/2 &gt; 1/8; 1/4 = 1/4.</p>"
+        },
+        {
+          "text": "В классе 28 учеников, четверть из них отличники. Сколько отличников?",
+          "answer": "<p>28 : 4 = 7.</p>"
+        },
+        {
+          "text": "Маша прочитала треть книги, это 12 страниц. Сколько страниц в книге?",
+          "answer": "<p>12 · 3 = 36 страниц.</p>"
+        },
+        {
+          "text": "Длина верёвки 40 м. Найди восьмую часть длины верёвки.",
+          "answer": "<p>40 : 8 = 5 (м).</p>"
+        },
+        {
+          "text": "Найди половину от половины числа 20. Какую долю числа 20 ты получил?",
+          "answer": "<p>Половина от 20 — 10, половина от 10 — 5. 5 — это четверть числа 20.</p>"
+        }
+      ],
+      "compare": "<p>Доли (половина, треть, четверть) и нахождение доли числа изучают в современной начальной школе, в том числе в 3 классе.</p>"
     },
     {
       "title": "Нумерация чисел от 1 до 1000",
-      "html": "<p>Когда считают сотнями, получают новые числа. Десять десятков — это одна <b>сотня</b>. Десять сотен составляют <b>тысячу</b>. Первые числа третьей сотни считают так: 200, 201, 202…</p><h3>Разряды и классы</h3><p>В записи трёхзначного числа каждая цифра стоит на своём месте — в своём <b>разряде</b>. Справа налево идут разряды единиц, десятков и сотен.</p><div class=\"rule\">Число, записанное тремя цифрами, называют трёхзначным. Первая цифра слева — сотни, вторая — десятки, третья — единицы.</div><div class=\"table-wrap\"><table><thead><tr><th>Число</th><th>Сотни</th><th>Десятки</th><th>Единицы</th></tr></thead><tbody><tr><td>347</td><td>3</td><td>4</td><td>7</td></tr><tr><td>508</td><td>5</td><td>0</td><td>8</td></tr><tr><td>620</td><td>6</td><td>2</td><td>0</td></tr></tbody></table></div><p>Нуль в записи нужен, чтобы показать, что разряд пустой: 508 — это 5 сотен и 8 единиц, десятков нет. Если нуль убрать, получится совсем другое число — 58.</p><h3>Разрядные слагаемые</h3><p>Любое трёхзначное число можно записать суммой разрядных слагаемых:</p><p class=\"formula\">347 = 300 + 40 + 7</p><p class=\"example\">Число из 6 сотен и 5 единиц записывают так: 605 = 600 + 5.</p><h3>Как называют числа</h3><p>Для круглых сотен есть особые названия: двести, триста, четыреста, пятьсот, шестьсот, семьсот, восемьсот, девятьсот. Остальные числа читают по порядку: триста сорок семь.</p><h3>Сравнение</h3><p>Сначала сравнивают число цифр. Из двух чисел то больше, где разрядов больше. Если разрядов поровну, сравнивают сотни, потом десятки, потом единицы.</p><p class=\"example\">538 &gt; 529, потому что сотен поровну, а десятков 3 &gt; 2. И 302 &lt; 320 — десятков меньше.</p><h3>Соседи числа и счёт</h3><p>Число, следующее за 599, — 600, а предыдущее перед 700 — 699. Числа можно считать по 10 и по 100: 120, 130, 140… или 300, 400, 500…</p><h3>Тысяча в величинах</h3><p>Тысяча встречается и в единицах измерения: 1 м = 100 см, а 1 кг = 1000 г. К массе мы вернёмся в последней теме.</p><p class=\"note\">Читая число, называй сначала сотни, потом десятки, потом единицы. 1000 — самое маленькое четырёхзначное число, оно следует за 999.</p>",
-      "compare": "<p>Нумерация чисел в пределах 1000 — разряды, разрядные слагаемые, сравнение — по ФОП НОО изучается в 3 классе.</p>"
+      "html": "<p>В библиотеке 346 книг, в школе 520 учеников, в книге 128 страниц. Мы уже умеем считать до ста. Но числа нужны и побольше. В этом параграфе мы узнаем, как они называются и как устроена их запись.</p>\n<h3>Сотня и сотни</h3>\n<p>Десять десятков составляют одну <b>сотню</b>: 10 дес. = 1 сот. = 100. Считать сотнями можно так же, как десятками: сто, двести, триста, четыреста, пятьсот, шестьсот, семьсот, восемьсот, девятьсот. Десять сотен — это <b>тысяча</b>: 10 сот. = 1000.</p>\n<p>Числа от 100 до 999 состоят из сотен, десятков и единиц и называются <b>трёхзначными</b>, потому что записываются тремя цифрами.</p>\n<h3>Разряды</h3>\n<figure><svg viewBox=\"0 0 330 155\" role=\"img\" aria-label=\"Разрядная таблица с тремя столбцами: сотни, десятки, единицы. В числе 346 три сотни, четыре десятка и шесть единиц\"><rect x=\"30\" y=\"15\" width=\"90\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"75\" y=\"35\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">сотни</text><rect x=\"30\" y=\"45\" width=\"90\" height=\"45\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"75\" y=\"77\" font-size=\"28\" text-anchor=\"middle\" fill=\"currentColor\">3</text><text x=\"75\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">3 · 100</text><rect x=\"120\" y=\"15\" width=\"90\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"165\" y=\"35\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">десятки</text><rect x=\"120\" y=\"45\" width=\"90\" height=\"45\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"165\" y=\"77\" font-size=\"28\" text-anchor=\"middle\" fill=\"currentColor\">4</text><text x=\"165\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">4 · 10</text><rect x=\"210\" y=\"15\" width=\"90\" height=\"30\" stroke=\"currentColor\" fill=\"currentColor\" class=\"soft\"/><text x=\"255\" y=\"35\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">единицы</text><rect x=\"210\" y=\"45\" width=\"90\" height=\"45\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"255\" y=\"77\" font-size=\"28\" text-anchor=\"middle\" fill=\"currentColor\">6</text><text x=\"255\" y=\"110\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">6 · 1</text><text x=\"165\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">346 = 300 + 40 + 6</text></svg><figcaption>Рис. 1. Разрядная таблица. Число 346: 3 сотни, 4 десятка, 6 единиц.</figcaption></figure>\n<p>Каждая цифра в записи числа стоит на своём месте — в своём <b>разряде</b>. Первый справа разряд — единицы, второй — десятки, третий — сотни. Цифра показывает, сколько единиц этого разряда в числе.</p>\n<div class=\"rule\">Любое трёхзначное число можно записать суммой <b>разрядных слагаемых</b>: 346 = 300 + 40 + 6. Если какого-то разряда нет, на его месте пишут 0: 305 = 300 + 5, 340 = 300 + 40, 300 = 300.</div>\n<p>Нуль нужен, чтобы не перепутать числа. Без него 305 стало бы 35.</p>\n<p class=\"example\"><b>Пример 1.</b> Запиши число, в котором 5 сотен, 0 десятков и 7 единиц. <br>Решение. Сотни пишем первыми: 5. Десятков нет — пишем 0. Единицы — 7. <br>Ответ: 507.</p>\n<p class=\"example\"><b>Пример 2.</b> Разложи число 482 на разрядные слагаемые и скажи, сколько всего десятков в этом числе. <br>Решение. 482 = 400 + 80 + 2. Десятков: в 400 их 40, ещё 8, всего 48. <br>Ответ: 482 = 400 + 80 + 2; всего 48 десятков.</p>\n<h3>Сравнение чисел</h3>\n<div class=\"rule\">Из двух трёхзначных чисел больше то, у которого больше сотен. Если сотни равны, сравнивают десятки, если и десятки равны — единицы.</div>\n<p class=\"example\"><b>Пример 3.</b> Сравни 478 и 487. <br>Решение. Сотен поровну: 4 и 4. Сравниваем десятки: у 478 их 7, у 487 — 8. Значит, 478 &lt; 487. <br>Ответ: 478 &lt; 487.</p>\n<p>Если одно число трёхзначное, а другое двузначное, трёхзначное всегда больше: 100 &gt; 99.</p>\n<h3>Следующее и предыдущее число</h3>\n<p>Следующее число на 1 больше, предыдущее на 1 меньше. После 399 идёт 400, перед 700 стоит 699. После 999 идёт 1000, самое маленькое четырёхзначное число.</p>\n<h3>Единицы длины и числа до 1000</h3>\n<p>Знание сотен помогает с мерами длины. В 1 метре 100 сантиметров, в 1 километре 1000 метров. Поэтому 3 м = 300 см, а 2 км = 2000 м.</p>\n<p class=\"note\">Проверь себя. Сколько сотен в числе 1000? Какое число состоит из 6 сотен и 3 единиц? Сколько всего десятков в числе 350? Как сравнивать трёхзначные числа? Какое число следует за 899?</p>",
+      "exercises": [
+        {
+          "text": "Запиши числом: 4 сот. 2 дес. 9 ед.; 7 сот. 0 дес. 5 ед.; 6 сот.",
+          "answer": "<p>429; 705; 600.</p>"
+        },
+        {
+          "text": "Запиши в виде суммы разрядных слагаемых: 538, 460, 802.",
+          "answer": "<p>538 = 500 + 30 + 8; 460 = 400 + 60; 802 = 800 + 2.</p>"
+        },
+        {
+          "text": "Сколько сотен, десятков и единиц в числе 614? Сколько всего десятков в нём?",
+          "answer": "<p>6 сотен, 1 десяток, 4 единицы. Всего десятков 61 (60 в сотнях и ещё 1).</p>"
+        },
+        {
+          "text": "Сравни: 345 … 354; 600 … 599; 280 … 208.",
+          "answer": "<p>345 &lt; 354; 600 &gt; 599; 280 &gt; 208.</p>"
+        },
+        {
+          "text": "Запиши числа в порядке возрастания: 407, 470, 74, 704, 740.",
+          "answer": "<p>74, 407, 470, 704, 740.</p>"
+        },
+        {
+          "text": "Назови предыдущее и следующее число для чисел 399, 700, 999.",
+          "answer": "<p>398 и 400; 699 и 701; 998 и 1000.</p>"
+        },
+        {
+          "text": "Составь из цифр 3, 0, 5 все трёхзначные числа (цифры не повторяются). Какое из них наименьшее?",
+          "answer": "<p>305, 350, 503, 530. Числа, начинающиеся с 0, трёхзначными не считаются. Наименьшее — 305.</p>"
+        },
+        {
+          "text": "Сколько сантиметров в 7 м? Сколько метров в 4 км?",
+          "answer": "<p>7 · 100 = 700 см; 4 · 1000 = 4000 м.</p>"
+        }
+      ],
+      "compare": "<p>Нумерацию чисел в пределах 1000 в современной школе изучают в 3 классе, как и в советском учебнике Моро для 3 класса. Разряды, разрядные слагаемые и правило сравнения по разрядам в обоих случаях одинаковы.</p>"
     },
     {
-      "title": "Сложение и вычитание в пределах 1000",
-      "html": "<p>Большие числа складывают и вычитают <b>письменно</b>, в столбик. Записывают числа друг под другом так, чтобы единицы стояли под единицами, десятки под десятками, сотни под сотнями.</p><h3>Сложение</h3><div class=\"rule\">Складывать начинают с единиц. Если в каком-то разряде получилось 10 или больше, десять единиц этого разряда заменяют одной единицей следующего.</div><p class=\"example\">Сложим 268 + 457.<br>Единицы: 8 + 7 = 15 — пишем 5, запоминаем 1 десяток.<br>Десятки: 6 + 5 + 1 = 12 — пишем 2, запоминаем 1 сотню.<br>Сотни: 2 + 4 + 1 = 7.<br>Ответ: 725.</p><p>Каждый раз в разряде записывают только одну цифру. Следует следить, чтобы лишний десяток или сотня не потерялись.</p><h3>Вычитание</h3><div class=\"rule\">Вычитать тоже начинают с единиц. Если единиц в уменьшаемом не хватает, занимают один десяток, то есть добавляют 10 единиц.</div><p class=\"example\">Найдём 503 − 278.<br>Единицы: 3 меньше 8, а десятков нет. Занимаем 1 сотню: остаётся 4 сотни, в разряде десятков становится 10. Из них занимаем 1 десяток: остаётся 9, а единиц теперь 13.<br>Единицы: 13 − 8 = 5. Десятки: 9 − 7 = 2. Сотни: 4 − 2 = 2.<br>Ответ: 225.</p><h3>Проверка</h3><p>Сложение проверяют вычитанием: из суммы вычитают одно слагаемое и ждут второе. 725 − 457 = 268. Вычитание проверяют сложением: 225 + 278 = 503.</p><div class=\"table-wrap\"><table><thead><tr><th>Пример</th><th>Ответ</th><th>Проверка</th></tr></thead><tbody><tr><td>346 + 285</td><td>631</td><td>631 − 285 = 346</td></tr><tr><td>700 − 156</td><td>544</td><td>544 + 156 = 700</td></tr><tr><td>489 + 111</td><td>600</td><td>600 − 111 = 489</td></tr></tbody></table></div><h3>Устные приёмы</h3><p>Если числа круглые, считают по разрядам: 300 + 400 = 700, 90 + 60 = 150 (десятки: 9 + 6 = 15). Прибавить 99 удобно так: прибавить 100 и вычесть 1.</p><p>Если слагаемых несколько, их складывают по очереди или в одном столбце, снизу вверх по разрядам, не забывая переносить десятки и сотни. Разность двух трёхзначных чисел может быть и двузначной, например 305 − 289 = 16.</p><p class=\"note\">Столбик помогает не сбиться. Но сначала прикинь ответ: 268 + 457 — это около 300 + 450 = 750. Если получилось 52 или 2000, ищи ошибку.</p>",
-      "compare": "<p>Письменное сложение и вычитание в пределах 1000 по ФОП НОО относится к 3 классу. В учебнике Моро оно следует за нумерацией трёхзначных чисел.</p>"
+      "title": "Письменное сложение и вычитание в пределах 1000",
+      "html": "<p>В магазине на полке 358 книг, а на складе ещё 267. Сколько книг всего? Складывать такие числа в уме трудно. Поэтому с давних пор люди придумали способ вычислять <b>письменно</b>, «в столбик». Он работает с любыми числами.</p>\n<h3>Сложение столбиком</h3>\n<figure><svg viewBox=\"0 0 380 160\" role=\"img\" aria-label=\"Сложение столбиком 358 плюс 267. Над десятками и сотнями красные единицы переноса. Результат 625\"><text x=\"110\" y=\"35\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">1</text><text x=\"150\" y=\"35\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">1</text><text x=\"110\" y=\"60\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3</text><text x=\"150\" y=\"60\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><text x=\"190\" y=\"60\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">8</text><text x=\"70\" y=\"90\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">+</text><text x=\"110\" y=\"90\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2</text><text x=\"150\" y=\"90\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6</text><text x=\"190\" y=\"90\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">7</text><line x1=\"60\" y1=\"100\" x2=\"215\" y2=\"100\" stroke=\"currentColor\"/><text x=\"110\" y=\"125\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">6</text><text x=\"150\" y=\"125\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">2</text><text x=\"190\" y=\"125\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">5</text><text x=\"250\" y=\"45\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">красная 1 —</text><text x=\"250\" y=\"65\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\" class=\"red\">перенос</text><text x=\"250\" y=\"105\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">8 + 7 = 15</text><text x=\"250\" y=\"125\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">5 + 6 + 1 = 12</text><text x=\"250\" y=\"145\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">3 + 2 + 1 = 6</text></svg><figcaption>Рис. 1. Сложение столбиком: 358 + 267 = 625. Красным показан перенос.</figcaption></figure>\n<p>Записывай числа друг под другом так, чтобы <b>разряд стоял под разрядом</b>: единицы под единицами, десятки под десятками, сотни под сотнями. Слева поставь знак «+», подведи черту. Складывать начинай с единиц, потом десятки, потом сотни.</p>\n<div class=\"rule\"><b>Правило сложения.</b> 1) Подпиши разряд под разрядом. 2) Складывай по разрядам, начиная с единиц. 3) Если сумма в разряде 10 или больше, запиши в ответ единицы, а десяток (<b>перенос</b>) прибавь к следующему разряду.</div>\n<p class=\"example\"><b>Пример 1.</b> Найди 358 + 267. <br>Решение. Единицы: 8 + 7 = 15, пишем 5, а 1 десяток запоминаем. Десятки: 5 + 6 = 11 и ещё запомненный 1 — это 12, пишем 2, а 1 сотню запоминаем. Сотни: 3 + 2 = 5 и ещё 1 — это 6. Получилось 625. <br>Проверка: 625 − 267 = 358. <br>Ответ: 625.</p>\n<h3>Вычитание столбиком</h3>\n<p>Вычитание записывают так же: уменьшаемое сверху, вычитаемое снизу, разряд под разрядом. Начинают с единиц. Если единиц в уменьшаемом не хватает, «занимают» один десяток и превращают его в 10 единиц. Если десятков нет — занимают сотню.</p>\n<div class=\"rule\"><b>Правило вычитания.</b> 1) Подпиши разряд под разрядом. 2) Вычитай по разрядам, начиная с единиц. 3) Если уменьшаемого разряда не хватает, займи единицу из старшего разряда: она станет 10 единицами младшего. Не забудь, что в старшем разряде стало на 1 меньше.</div>\n<p class=\"example\"><b>Пример 2.</b> Найди 462 − 175. <br>Решение. Единицы: 2 меньше 5, занимаем десяток: 12 − 5 = 7. Десятков осталось 5 (было 6): 5 меньше 7, занимаем сотню: 15 − 7 = 8. Сотен осталось 3 (было 4): 3 − 1 = 2. Получилось 287. <br>Проверка: 287 + 175 = 462. <br>Ответ: 287.</p>\n<p class=\"example\"><b>Пример 3.</b> Найди 704 − 268. <br>Решение. Единицы: 4 меньше 8. Десятков в числе нет (0), поэтому занимаем сотню: 7 сотен становятся 6 сотнями и 10 десятками. Из этих десятков занимаем 1 для единиц: теперь 14 единиц и 9 десятков. Единицы: 14 − 8 = 6. Десятки: 9 − 6 = 3. Сотни: 6 − 2 = 4. Получилось 436. <br>Проверка: 436 + 268 = 704. <br>Ответ: 436.</p>\n<h3>Проверка вычислений</h3>\n<p>Сложение проверяют вычитанием: из суммы вычитают одно слагаемое и получают другое. Вычитание проверяют сложением: разность плюс вычитаемое должно дать уменьшаемое. Если не получилось, ищи ошибку: чаще всего забывают перенос или заём.</p>\n<p class=\"example\"><b>Пример 4 (задача).</b> В магазине было 540 кг яблок. Продали 265 кг, потом привезли ещё 190 кг. Сколько килограммов яблок стало? <br>Решение. 1) 540 − 265 = 275 (кг) — осталось после продажи. 2) 275 + 190 = 465 (кг). <br>Ответ: 465 кг.</p>\n<p class=\"note\">Проверь себя. Как записывать числа при сложении столбиком? С какого разряда начинают? Что такое перенос? Что делать, если при вычитании в разряде не хватает единиц? Как проверить вычитание?</p>",
+      "exercises": [
+        {
+          "text": "Вычисли столбиком: 243 + 135; 426 + 253.",
+          "answer": "<p>378; 679.</p>"
+        },
+        {
+          "text": "Вычисли столбиком: 485 + 379. Проверь вычитанием.",
+          "answer": "<p>485 + 379 = 864 (5 + 9 = 14, 8 + 7 + 1 = 16, 4 + 3 + 1 = 8). Проверка: 864 − 379 = 485.</p>"
+        },
+        {
+          "text": "Вычисли столбиком: 756 − 324; 802 − 457.",
+          "answer": "<p>432; 345 (проверка: 345 + 457 = 802).</p>"
+        },
+        {
+          "text": "Вычисли столбиком: 600 − 283. Проверь сложением.",
+          "answer": "<p>317. Проверка: 317 + 283 = 600.</p>"
+        },
+        {
+          "text": "Найди сумму и проверь: 275 + 148.",
+          "answer": "<p>423. Проверка: 423 − 148 = 275.</p>"
+        },
+        {
+          "text": "Найди x: x + 247 = 500; x − 138 = 262.",
+          "answer": "<p>x = 500 − 247 = 253; x = 262 + 138 = 400.</p>"
+        },
+        {
+          "text": "В библиотеке 345 книг по природе и 278 по спорту. Сколько всего книг? На сколько книг по природе больше?",
+          "answer": "<p>345 + 278 = 623 (книги). 345 − 278 = 67. Ответ: 623 книги; на 67 больше.</p>"
+        }
+      ],
+      "compare": "<p>Письменное сложение и вычитание чисел в пределах 1000 изучают в 3 классе и сейчас. Запись «в столбик» с переносом и заёмом десятка в советском учебнике и в современной программе совпадают.</p>"
     },
     {
-      "title": "Площадь прямоугольника. Единицы площади и массы",
-      "html": "<p>Длина измеряет отрезок, а <b>площадь</b> показывает, сколько места занимает фигура на плоскости. Площадь можно сравнивать: если одну фигуру можно целиком наложить на другую, её площадь меньше.</p><h3>Единицы площади</h3><p>Площадь измеряют квадратами. Основная единица — <b>квадратный сантиметр</b> (см²): квадрат со стороной 1 см. Для больших площадей берут <b>квадратный дециметр</b> (дм²) и <b>квадратный метр</b> (м²).</p><p class=\"formula\">1 дм² = 100 см² &nbsp; 1 м² = 100 дм²</p><p>Это потому, что в квадрате со стороной 1 дм укладывается 10 рядов по 10 квадратиков по 1 см.</p><h3>Площадь прямоугольника</h3><p>Прямоугольник со сторонами 5 см и 3 см можно разбить на 3 ряда по 5 квадратных сантиметров. Всего 5 · 3 = 15 квадратов.</p><div class=\"rule\">Чтобы найти площадь прямоугольника, нужно умножить его длину на ширину: S = a · b. Стороны должны быть выражены в одних единицах.</div><p class=\"example\">Прямоугольник 6 см на 4 см. S = 6 · 4 = 24 см².</p><p>Квадрат — частный случай прямоугольника, у него все стороны равны: если сторона 7 см, то S = 7 · 7 = 49 см². Обратная задача: площадь 20 см², одна сторона 5 см — вторая 20 : 5 = 4 см.</p><p class=\"note\">Периметр и площадь — разные величины. Периметр — сумма длин сторон, измеряется в см; площадь — в см².</p><h3>Масса</h3><p>Массу измеряют в <b>килограммах</b> (кг) и <b>граммах</b> (г). Грамм — очень маленькая единица: примерно столько весит небольшая скрепка.</p><div class=\"table-wrap\"><table><thead><tr><th>Единица</th><th>Соотношение</th></tr></thead><tbody><tr><td>1 кг</td><td>1000 г</td></tr><tr><td>2 кг 300 г</td><td>2300 г</td></tr><tr><td>1500 г</td><td>1 кг 500 г</td></tr></tbody></table></div><p class=\"example\">В мешке 3 кг сахара, отсыпали 800 г. Сколько осталось? Переведём: 3 кг = 3000 г, 3000 г − 800 г = 2200 г = 2 кг 200 г.</p><p>Массы можно складывать и вычитать только после перевода в одинаковые единицы. Сравнивают массы так же: 2 кг 100 г больше, чем 2000 г, потому что 2100 г &gt; 2000 г. Перед сравнением и действиями всегда сначала приведи величины к одной единице.</p>",
-      "compare": "<p>Площадь, единицы площади (квадратный сантиметр, квадратный дециметр, квадратный метр) и площадь прямоугольника входят по ФОП НОО в программу 3 класса.</p>"
+      "title": "Единицы массы: грамм и килограмм",
+      "html": "<p>Что тяжелее: килограмм ваты или килограмм гвоздей? Многие отвечают: «гвозди!» — и ошибаются. Оба весят одинаково. Вата занимает больше места, но <b>масса</b> у них равна. Масса показывает, сколько «вещества» в предмете, и измеряется на весах.</p>\n<h3>Весы и килограмм</h3>\n<figure><svg viewBox=\"0 0 345 205\" role=\"img\" aria-label=\"Чашечные весы в равновесии. На левой чашке пакет с надписью 1 кг, на правой две гири по 500 граммов\"><line x1=\"30\" y1=\"175\" x2=\"315\" y2=\"175\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"172\" y1=\"50\" x2=\"172\" y2=\"175\" stroke=\"currentColor\" class=\"accent\"/><line x1=\"70\" y1=\"50\" x2=\"270\" y2=\"50\" stroke=\"currentColor\" class=\"accent\"/><circle cx=\"172\" cy=\"50\" r=\"4\" stroke=\"currentColor\" fill=\"currentColor\" class=\"accent\"/><line x1=\"70\" y1=\"50\" x2=\"25\" y2=\"120\" stroke=\"currentColor\"/><line x1=\"70\" y1=\"50\" x2=\"115\" y2=\"120\" stroke=\"currentColor\"/><line x1=\"270\" y1=\"50\" x2=\"220\" y2=\"120\" stroke=\"currentColor\"/><line x1=\"270\" y1=\"50\" x2=\"320\" y2=\"120\" stroke=\"currentColor\"/><path d=\"M20 120 L120 120 Q70 155 20 120 Z\" stroke=\"currentColor\" fill=\"none\"/><path d=\"M215 120 L325 120 Q270 155 215 120 Z\" stroke=\"currentColor\" fill=\"none\"/><rect x=\"40\" y=\"92\" width=\"60\" height=\"28\" stroke=\"currentColor\" fill=\"none\" class=\"accent\"/><text x=\"70\" y=\"111\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"accent\">1 кг</text><rect x=\"219\" y=\"98\" width=\"44\" height=\"22\" stroke=\"currentColor\" fill=\"none\" class=\"red\"/><text x=\"241\" y=\"114\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">500 г</text><rect x=\"271\" y=\"98\" width=\"44\" height=\"22\" stroke=\"currentColor\" fill=\"none\" class=\"red\"/><text x=\"293\" y=\"114\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"red\">500 г</text><text x=\"172\" y=\"195\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" class=\"muted\">1 кг = 500 г + 500 г</text></svg><figcaption>Рис. 1. Чашечные весы в равновесии: масса пакета равна массе гирь.</figcaption></figure>\n<p>На <b>чашечных весах</b> предмет кладут на одну чашку, а гири — на другую. Если чашки находятся на одном уровне, масса предмета равна массе гирь. Основная единица массы, которую мы используем, — <b>килограмм</b> (кг). Им измеряют, например, картофель, муку, арбуз или самого человека.</p>\n<h3>Грамм</h3>\n<p>Для небольших предметов килограмм слишком большая мера: ложка сахара или конфета весят совсем мало. Для них есть меньшая мера — <b>грамм</b> (г).</p>\n<p class=\"formula\">1 кг = 1000 г</p>\n<p>Половина килограмма — 500 г, четверть килограмма — 250 г.</p>\n<h3>Другие единицы массы</h3>\n<p>Очень большие грузы (зерно в вагоне, груз на самосвале) измеряют в центнерах и тоннах: 1 ц = 100 кг, 1 т = 1000 кг, а значит, 1 т = 10 ц.</p>\n<div class=\"table-wrap\"><table><thead><tr><th>Единица</th><th>Обозначение</th><th>Сколько в ней меньших единиц</th></tr></thead><tbody><tr><td>грамм</td><td>г</td><td>—</td></tr><tr><td>килограмм</td><td>кг</td><td>1000 г</td></tr><tr><td>центнер</td><td>ц</td><td>100 кг</td></tr><tr><td>тонна</td><td>т</td><td>1000 кг, 10 ц</td></tr></tbody></table></div>\n<h3>Переход от одних единиц к другим</h3>\n<p>Масса может быть записана составным числом: 2 кг 300 г. Чтобы выразить его в граммах, 2 кг превращают в 2000 г и прибавляют 300 г. Обратно: чтобы выразить граммы в килограммах, смотрят, сколько в числе целых тысяч.</p>\n<div class=\"rule\">Чтобы перейти от крупной единицы к мелкой, умножай (1 кг = 1000 г, поэтому кг умножаем на 1000). Чтобы перейти от мелкой единицы к крупной, дели (граммы делим на 1000, остаток — граммы).</div>\n<p class=\"example\"><b>Пример 1.</b> Выразить 2 кг 300 г в граммах. <br>Решение. 2 кг = 2 · 1000 = 2000 г. Прибавляем 300 г: 2000 + 300 = 2300. <br>Ответ: 2300 г.</p>\n<p class=\"example\"><b>Пример 2.</b> Выразить 4700 г в килограммах и граммах. <br>Решение. В 4700 четыре целые тысячи и ещё 700. Значит, 4700 г = 4 кг 700 г. <br>Ответ: 4 кг 700 г.</p>\n<p>Складывать и вычитать массу можно только в одинаковых единицах: килограммы с килограммами, граммы с граммами, или всё перевести в граммы.</p>\n<p class=\"example\"><b>Пример 3 (задача).</b> В одном пакете 800 г сахара. Сколько килограммов сахара в 3 таких пакетах? <br>Решение. 800 · 3 = 2400 (г). 2400 г = 2 кг 400 г. <br>Ответ: 2 кг 400 г.</p>\n<p class=\"example\"><b>Пример 4 (задача).</b> Арбуз уравновешен гирями 2 кг, 500 г и 200 г. Какова его масса? <br>Решение. Масса арбуза равна массе гирь: 2 кг + 500 г + 200 г = 2 кг 700 г. <br>Ответ: 2 кг 700 г.</p>\n<p class=\"note\">Проверь себя. Сколько граммов в 1 кг? Что тяжелее: килограмм ваты или килограмм железа? Сколько килограммов в 1 ц и в 1 т? Как выразить 3 кг 50 г в граммах?</p>",
+      "exercises": [
+        {
+          "text": "Выразить в граммах: 3 кг, 5 кг 200 г. Выразить в килограммах: 5 т, 4 ц.",
+          "answer": "<p>3 кг = 3000 г; 5 кг 200 г = 5200 г. 5 т = 5000 кг; 4 ц = 400 кг.</p>"
+        },
+        {
+          "text": "Выразить в граммах: 2 кг 400 г, 1 кг 50 г.",
+          "answer": "<p>2400 г; 1050 г.</p>"
+        },
+        {
+          "text": "Выразить в килограммах и граммах: 4700 г, 6030 г.",
+          "answer": "<p>4 кг 700 г; 6 кг 30 г.</p>"
+        },
+        {
+          "text": "Сравни: 2 кг … 2000 г; 3 кг 500 г … 3050 г; 1 ц … 90 кг.",
+          "answer": "<p>2 кг = 2000 г; 3500 г &gt; 3050 г; 100 кг &gt; 90 кг.</p>"
+        },
+        {
+          "text": "Арбуз уравновешен на весах гирями 2 кг, 500 г и 200 г. Какая масса арбуза?",
+          "answer": "<p>2 кг + 500 г + 200 г = 2 кг 700 г (2700 г).</p>"
+        },
+        {
+          "text": "В одном пакете 800 г сахара. Сколько килограммов и граммов сахара в 3 пакетах?",
+          "answer": "<p>800 · 3 = 2400 г = 2 кг 400 г.</p>"
+        },
+        {
+          "text": "Купили 3 кг яблок и 1 кг 500 г груш. Сколько фруктов купили? На сколько яблок больше?",
+          "answer": "<p>3 кг + 1 кг 500 г = 4 кг 500 г. 3 кг − 1 кг 500 г = 1 кг 500 г. Ответ: 4 кг 500 г; на 1 кг 500 г.</p>"
+        }
+      ],
+      "compare": "<p>Килограмм и грамм (1 кг = 1000 г) используются и в советском, и в современном учебнике; соотношения 1 ц = 100 кг и 1 т = 1000 кг тоже остались прежними.</p>"
     }
   ],
   "quiz": [
     {
+      "kind": "single",
+      "type": "theory",
       "topic": 0,
-      "type": "practice",
-      "kind": "single",
-      "question": "Чему равно произведение 6 · 7?",
-      "options": [
-        "42",
-        "36",
-        "48",
-        "49"
-      ],
-      "answer": 0,
-      "explanation": "6 · 7 = 42. Проверка: 6 · 6 + 6 = 36 + 6 = 42."
-    },
-    {
-      "topic": 0,
-      "type": "theory",
-      "kind": "single",
-      "question": "Как называются числа 4 и 3 в записи 4 · 3 = 12?",
-      "options": [
-        "множители",
-        "слагаемые",
-        "делимое",
-        "делитель"
-      ],
-      "answer": 0,
-      "explanation": "Числа, которые перемножают, называют множителями, а результат — произведением."
-    },
-    {
-      "topic": 0,
-      "type": "theory",
-      "kind": "multiple",
-      "question": "Какие равенства верны? Выбери все верные.",
-      "options": [
-        "8 · 1 = 8",
-        "0 : 5 = 0",
-        "7 · 0 = 7",
-        "9 : 0 = 9",
-        "3 · 4 = 4 · 3"
-      ],
-      "answers": [
-        0,
-        1,
-        4
-      ],
-      "explanation": "Умножение на 1 не меняет число, ноль, делённый на число, даёт ноль, множители можно переставлять. 7 · 0 = 0, а на ноль делить нельзя."
-    },
-    {
-      "topic": 1,
-      "type": "practice",
-      "kind": "input",
-      "question": "Вычисли: 14 · 3",
-      "answers": [
-        "42"
-      ],
-      "explanation": "14 · 3 = (10 + 4) · 3 = 30 + 12 = 42."
-    },
-    {
-      "topic": 1,
-      "type": "practice",
-      "kind": "single",
-      "question": "Чему равно 48 : 4?",
-      "options": [
-        "12",
-        "11",
-        "14",
-        "10"
-      ],
-      "answer": 0,
-      "explanation": "4 · 12 = 48, значит 48 : 4 = 12."
-    },
-    {
-      "topic": 1,
-      "type": "theory",
-      "kind": "single",
-      "question": "Как по правилу умножения суммы на число вычислить 14 · 3?",
-      "options": [
-        "(10 + 4) · 3 = 10 · 3 + 4 · 3",
-        "(10 + 4) · 3 = 10 + 3 + 4 + 3",
-        "14 · 3 = 10 · 3 · 4",
-        "14 · 3 = 10 + 4 + 3"
-      ],
-      "answer": 0,
-      "explanation": "Каждое слагаемое умножают на 3 и результаты складывают: 30 + 12 = 42."
-    },
-    {
-      "topic": 2,
-      "type": "practice",
-      "kind": "input",
-      "question": "Вычисли 17 : 5. Ответ запиши с остатком.",
-      "answers": [
-        "3 (ост. 2)",
-        "3 ост 2",
-        "3 остаток 2",
-        "3, остаток 2"
-      ],
-      "explanation": "5 · 3 = 15, остаток 17 − 15 = 2. Проверка: 3 · 5 + 2 = 17."
-    },
-    {
-      "topic": 2,
-      "type": "theory",
-      "kind": "single",
-      "question": "Какое условие верно для остатка при делении с остатком?",
-      "options": [
-        "остаток меньше делителя",
-        "остаток больше делителя",
-        "остаток может быть равен делителю",
-        "остаток всегда равен 0"
-      ],
-      "answer": 0,
-      "explanation": "Остаток всегда меньше делителя, иначе в частном можно взять ещё одну единицу."
-    },
-    {
-      "topic": 3,
-      "type": "practice",
-      "kind": "input",
-      "question": "Запиши число, в котором 6 сотен, 3 десятка и 1 единица.",
-      "answers": [
-        "631"
-      ],
-      "explanation": "Сотни пишут первой цифрой, десятки второй, единицы третьей: 631."
-    },
-    {
-      "topic": 3,
-      "type": "theory",
-      "kind": "single",
-      "question": "Какое из чисел больше: 302 или 320?",
-      "options": [
-        "302",
-        "320",
-        "302 и 320 равны",
-        "сравнить нельзя"
-      ],
+      "question": "Как называется результат умножения?",
+      "options": ["множитель", "произведение", "частное", "остаток"],
       "answer": 1,
-      "explanation": "Сотен поровну, а десятков в числе 320 два, в числе 302 — ни одного, поэтому 320 больше."
+      "explanation": "В записи 4 · 6 = 24 числа 4 и 6 — множители, а 24 — произведение."
     },
     {
+      "kind": "multiple",
+      "type": "theory",
+      "topic": 1,
+      "question": "Какие равенства верны?",
+      "options": ["5 · 1 = 5", "5 · 0 = 5", "0 : 5 = 0", "5 : 0 = 5"],
+      "answers": [0, 2],
+      "explanation": "Умножение на 1 не меняет число, а нуль, делённый на число, даёт нуль. Деление на нуль невозможно, поэтому 5 : 0 не равно 5."
+    },
+    {
+      "kind": "single",
+      "type": "theory",
+      "topic": 2,
+      "question": "Как называется единица площади — квадрат со стороной 1 см?",
+      "options": ["сантиметр", "квадратный сантиметр", "кубический сантиметр", "метр"],
+      "answer": 1,
+      "explanation": "Площадь измеряют квадратными сантиметрами, их обозначение см²."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
+      "topic": 2,
+      "question": "Найди площадь прямоугольника со сторонами 9 см и 4 см. Ответ запиши в квадратных сантиметрах.",
+      "answers": ["36", "36 см²", "36 см2", "36 кв. см"],
+      "explanation": "S = a · b = 9 · 4 = 36 см²."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
+      "topic": 3,
+      "question": "Найди значение выражения 17 · 4.",
+      "answers": ["68"],
+      "explanation": "17 = 10 + 7: 10 · 4 + 7 · 4 = 40 + 28 = 68."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
       "topic": 4,
-      "type": "practice",
-      "kind": "input",
-      "question": "Вычисли: 503 − 278",
-      "answers": [
-        "225"
-      ],
-      "explanation": "Занимаем десяток и сотню при вычитании единиц и десятков. Проверка: 225 + 278 = 503."
+      "question": "Раздели 47 на 6 с остатком. Запиши неполное частное и остаток.",
+      "answers": ["7 (ост. 5)", "7 ост 5", "7 остаток 5", "7, остаток 5"],
+      "explanation": "6 · 7 = 42, 47 − 42 = 5. Остаток 5 меньше делителя 6."
     },
     {
-      "topic": 5,
-      "type": "practice",
       "kind": "input",
-      "question": "Чему равна площадь прямоугольника со сторонами 7 см и 5 см? Ответ дай в квадратных сантиметрах.",
-      "answers": [
-        "35",
-        "35 см²",
-        "35 см2",
-        "35 кв. см",
-        "35 квадратных сантиметров"
-      ],
-      "explanation": "S = a · b = 7 · 5 = 35. Площадь измеряют в квадратных сантиметрах."
+      "type": "practice",
+      "topic": 5,
+      "question": "Круг разделён на 4 равные части, две из них закрашены. Какая доля круга закрашена? Ответ запиши дробью.",
+      "answers": ["1/2", "2/4", "половина", "одна вторая"],
+      "explanation": "Две части из четырёх — это 2/4, то есть половина круга, или 1/2."
+    },
+    {
+      "kind": "single",
+      "type": "theory",
+      "topic": 6,
+      "question": "Сколько сантиметров в одном метре?",
+      "options": ["10", "100", "1000", "1 000 000"],
+      "answer": 1,
+      "explanation": "1 м = 100 см. Тысяча сантиметров — это 10 метров."
+    },
+    {
+      "kind": "multiple",
+      "type": "practice",
+      "topic": 6,
+      "question": "Какие записи разрядных слагаемых верны?",
+      "options": ["305 = 300 + 5", "340 = 300 + 40", "482 = 400 + 8 + 2", "608 = 600 + 80"],
+      "answers": [0, 1],
+      "explanation": "305 = 300 + 0 + 5 и 340 = 300 + 40 верны. 400 + 8 + 2 = 410, а 600 + 80 = 680, поэтому две последние записи неверны."
+    },
+    {
+      "kind": "single",
+      "type": "theory",
+      "topic": 7,
+      "question": "С какого разряда начинают сложение столбиком?",
+      "options": ["с сотен", "с единиц", "с десятков", "с любого разряда"],
+      "answer": 1,
+      "explanation": "Складывают сначала единицы, затем десятки и сотни, а перенос десятка прибавляют к следующему разряду."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
+      "topic": 7,
+      "question": "Вычисли столбиком: 612 − 348.",
+      "answers": ["264"],
+      "explanation": "Проверка: 264 + 348 = 612. При вычитании дважды занимали единицу из старшего разряда."
+    },
+    {
+      "kind": "input",
+      "type": "practice",
+      "topic": 8,
+      "question": "Вырази в граммах: 2 кг 150 г.",
+      "answers": ["2150", "2150 г", "2150 грамм"],
+      "explanation": "2 кг = 2000 г, 2000 + 150 = 2150 г."
     }
   ],
   "control": [
     {
       "topic": 0,
-      "points": 2,
-      "text": "Вычисли: 7 · 8.",
-      "answers": [
-        "56"
-      ],
-      "solution": "<p>Это один из трудных случаев таблицы умножения. Разложим второй множитель: 7 · 8 = 7 · 7 + 7 = 49 + 7 = 56.</p><p>Ответ: 56.</p>"
-    },
-    {
-      "topic": 1,
-      "points": 3,
-      "text": "Вычисли: 96 : 6.",
-      "answers": [
-        "16"
-      ],
-      "solution": "<p>Разложим 96 на удобные слагаемые: 60 и 36. 60 : 6 = 10, 36 : 6 = 6. Складываем частные: 10 + 6 = 16.</p><p>Проверка: 16 · 6 = 96.</p><p>Ответ: 16.</p>"
-    },
-    {
-      "topic": 2,
+      "text": "Найди x: 9 · x = 72.",
       "points": 4,
-      "text": "Раздели 47 на 6 с остатком. Запиши частное и остаток.",
-      "answers": [
-        "7 (ост. 5)",
-        "7 ост 5",
-        "7 остаток 5",
-        "7, остаток 5"
-      ],
-      "solution": "<p>Ищем наибольшее число, которое при умножении на 6 не превышает 47: 6 · 7 = 42, 6 · 8 = 48 — это больше 47. Значит, частное 7.</p><p>Остаток: 47 − 42 = 5. Остаток меньше делителя 6, значит, всё верно.</p><p>Проверка: 7 · 6 + 5 = 47.</p><p>Ответ: 7 (ост. 5).</p>"
+      "answers": ["8", "x = 8", "x=8"],
+      "solution": "<p>Неизвестный множитель находим делением произведения на известный множитель: x = 72 : 9. Так как 9 · 8 = 72, получаем x = 8.</p><p>Ответ: 8.</p>"
     },
     {
       "topic": 3,
-      "points": 2,
-      "text": "Запиши число, которое следует сразу за 599.",
-      "answers": [
-        "600"
-      ],
-      "solution": "<p>После 599 идёт число, в котором 6 сотен, 0 десятков и 0 единиц: 600.</p><p>Ответ: 600.</p>"
+      "text": "Вычисли: 24 · 6 + 96 : 8 − 15.",
+      "points": 6,
+      "answers": ["141"],
+      "solution": "<p>Сначала умножение и деление. 24 · 6 = 20 · 6 + 4 · 6 = 120 + 24 = 144. 96 : 8 = 12, проверка: 8 · 12 = 96.</p><p>Затем сложение и вычитание слева направо: 144 + 12 − 15 = 156 − 15 = 141.</p><p>Ответ: 141.</p>"
     },
     {
       "topic": 4,
-      "points": 5,
-      "text": "Вычисли: 800 − 367.",
-      "answers": [
-        "433"
-      ],
-      "solution": "<p>В уменьшаемом 800 нет десятков и единиц, поэтому занимаем сотню: 800 = 7 сотен 10 десятков. Из 10 десятков занимаем один: 9 десятков и 10 единиц.</p><p>Единицы: 10 − 7 = 3. Десятки: 9 − 6 = 3. Сотни: 7 − 3 = 4.</p><p>Проверка: 433 + 367 = 800.</p><p>Ответ: 433.</p>"
+      "text": "Из проволоки длиной 50 м режут куски по 7 м. Сколько полных кусков получится и сколько метров проволоки останется?",
+      "points": 6,
+      "answers": ["7 (ост. 1)", "7 ост 1", "7 остаток 1", "7, остаток 1"],
+      "solution": "<p>Делим с остатком: 50 : 7. Наибольшее число из таблицы на 7, не большее 50, — это 49 = 7 · 7. Значит, полных кусков 7, а остаток 50 − 49 = 1 (м).</p><p>Проверка: 7 · 7 + 1 = 50.</p><p>Ответ: 7 (ост. 1), то есть 7 кусков и 1 м проволоки.</p>"
+    },
+    {
+      "topic": 2,
+      "text": "Прямоугольник 8 см на 5 см разрезали на два прямоугольника: 8 см на 2 см и 8 см на 3 см. Чему равна суммарная площадь двух кусков? Ответ запиши в квадратных сантиметрах.",
+      "points": 7,
+      "answers": ["40", "40 см²", "40 см2", "40 кв. см"],
+      "solution": "<p>Площадь первого куска: 8 · 2 = 16 (см²). Площадь второго: 8 · 3 = 24 (см²). Сумма: 16 + 24 = 40 (см²).</p><p>Это совпадает с площадью целого прямоугольника 8 · 5 = 40 (см²): при разрезании площадь не меняется.</p><p>Ответ: 40 см².</p>"
     },
     {
       "topic": 5,
-      "points": 5,
-      "text": "Площадь прямоугольника равна 36 см², длина — 9 см. Найди ширину прямоугольника в сантиметрах.",
-      "answers": [
-        "4",
-        "4 см"
-      ],
-      "solution": "<p>Площадь прямоугольника равна S = a · b, значит, b = S : a. Длина a = 9 см, площадь S = 36 см².</p><p>Ширина: 36 : 9 = 4 (см). Проверка: 9 · 4 = 36.</p><p>Ответ: 4 см.</p>"
+      "text": "Пирог разрезали на 8 равных кусков. Дедушка съел 2 куска, внук съел 1 кусок. Какую часть пирога съели дедушка и внук вместе? Ответ запиши дробью.",
+      "points": 6,
+      "answers": ["3/8", "три восьмых", "3 восьмых"],
+      "solution": "<p>Вместе съели 2 + 1 = 3 куска. Каждый кусок составляет одну восьмую пирога, значит, съедено три восьмых: 3/8.</p><p>Ответ: 3/8 (три восьмых).</p>"
+    },
+    {
+      "topic": 7,
+      "text": "Вычисли: 504 − 287 + 396.",
+      "points": 7,
+      "answers": ["613"],
+      "solution": "<p>Сначала 504 − 287 столбиком. Единицы: 4 меньше 7, занимаем из сотен, 14 − 7 = 7. Десятки: 9 − 8 = 1. Сотни: 4 − 2 = 2. Получаем 217, проверка: 217 + 287 = 504.</p><p>Затем 217 + 396: единицы 7 + 6 = 13, пишем 3, перенос 1; десятки 1 + 9 + 1 = 11, пишем 1, перенос 1; сотни 2 + 3 + 1 = 6. Получаем 613.</p><p>Ответ: 613.</p>"
+    },
+    {
+      "topic": 8,
+      "text": "В три мешка насыпали по 2 кг 500 г крупы, а потом из них отсыпали 1 кг 800 г. Сколько граммов крупы осталось?",
+      "points": 8,
+      "answers": ["5700", "5700 г", "5700 грамм"],
+      "solution": "<p>В одном мешке 2 кг 500 г = 2500 г. В трёх мешках 2500 · 3 = 7500 г.</p><p>Отсыпали 1 кг 800 г = 1800 г. Осталось 7500 − 1800 = 5700 г.</p><p>Ответ: 5700 г.</p>"
     }
   ]
 }

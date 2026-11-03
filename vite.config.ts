@@ -34,11 +34,16 @@ export default defineConfig(({ command, isPreview }) => ({
     // Keep this list in sync with the PrimeVue components used in the app (see components.d.ts).
     include: [
       'primevue/button',
+      'primevue/inputnumber',
       'primevue/inputtext',
       'primevue/message',
+      'primevue/popover',
       'primevue/progressbar',
+      'primevue/progressspinner',
+      'primevue/select',
       'primevue/selectbutton',
       'primevue/skeleton',
+      'primevue/textarea',
     ],
   },
   resolve: {

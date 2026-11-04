@@ -85,7 +85,9 @@ export function subjectThemeVars(theme: SubjectTheme): Record<string, string> {
     '--app-paper-size': paper.size,
   }
   if (theme.pattern === 'millimeter' || theme.pattern === 'stars') {
-    vars['--app-grid-line'] = `color-mix(in srgb, ${accent} 30%, transparent)`
+    // Graph paper and star maps are only a faint hint behind the text, so the lines stay light.
+    const strength = theme.pattern === 'millimeter' ? 13 : 22
+    vars['--app-grid-line'] = `color-mix(in srgb, ${accent} ${strength}%, transparent)`
   }
   return vars
 }

@@ -4,7 +4,7 @@ import { ref } from 'vue'
 import { useProgressStore } from '@/entities/progress'
 import { ROUTE_NAMES } from '@/shared/config'
 
-import PupilIcon from './PupilIcon.vue'
+import PioneerTieIcon from './PioneerTieIcon.vue'
 
 const progress = useProgressStore()
 
@@ -27,7 +27,7 @@ function choose(childId: string) {
     @click="popover?.toggle($event)"
   >
     <template #icon>
-      <PupilIcon />
+      <PioneerTieIcon />
     </template>
   </Button>
 
@@ -44,7 +44,7 @@ function choose(childId: string) {
             @click="choose(child.id)"
           >
             <i v-if="child.id === progress.activeChildId" class="pi pi-check-circle" aria-hidden="true" />
-            <PupilIcon v-else />
+            <PioneerTieIcon v-else />
             {{ child.name }}
           </button>
         </li>

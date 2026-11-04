@@ -7,6 +7,8 @@ import { findGrade, GRADE_NUMBERS, GRADES } from '@/entities/subject'
 import { ROUTE_NAMES } from '@/shared/config'
 import { SubjectGrid } from '@/widgets/subject-grid'
 
+import HomeScene from './HomeScene.vue'
+
 import type { GradeNumber } from '@/entities/subject'
 
 const route = useRoute()
@@ -53,6 +55,7 @@ const selectedGrade = computed<GradeNumber>({
 
 <template>
   <div class="home-page">
+    <HomeScene />
     <section class="home-page__hero" aria-labelledby="home-title">
       <div class="home-page__intro">
         <h1 id="home-title" class="home-page__title">Школьная программа с 1 по 11 класс</h1>

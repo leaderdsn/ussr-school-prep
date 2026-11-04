@@ -2,6 +2,9 @@
 
 .home-page
   +ds.container
+  // Own stacking context: the decorative scene sits behind the content at z-index -1
+  position: relative
+  z-index: 0
   display: grid
   gap: ds.$space-8
   padding-block: ds.$space-8

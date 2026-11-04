@@ -8,6 +8,8 @@ import { ControlRunner } from '@/features/run-control'
 import { QuizRunner } from '@/features/run-quiz'
 import { CONTROL_STEP, ROUTE_NAMES, TEST_STEP } from '@/shared/config'
 
+import { paginateHtml, PAGINATE_FROM } from '../lib/paginate'
+
 import GradeRail from './GradeRail.vue'
 import TopicExercises from './TopicExercises.vue'
 
@@ -36,9 +38,25 @@ const gradeProgress = computed(() => progress.getGrade(gradeId))
 const seenCount = computed(() => Math.min(gradeProgress.value.seenTopics.length, titles.value.length))
 const percent = computed(() => (titles.value.length === 0 ? 0 : Math.round((seenCount.value / titles.value.length) * 100)))
 const topic = computed(() => (typeof current.value === 'number' ? (grade.value?.topics[current.value - 1] ?? null) : null))
+// Long reading texts are split into book pages; exercises and the comparison come after the last page.
+const pages = computed(() => {
+  const html = topic.value?.html ?? ''
+  return theme.value?.pattern === 'book' && html.length > PAGINATE_FROM ? paginateHtml(html) : [html]
+})
+const page = ref(0)
+const lessonTop = ref<HTMLElement | null>(null)
+const onLastPage = computed(() => page.value >= pages.value.length - 1)
 const isLastTopic = computed(() => current.value === titles.value.length)
 
 watch(() => gradeId, load, { immediate: true })
+watch([() => gradeId, current], () => {
+  page.value = 0
+})
+
+function turnPage(delta: number) {
+  page.value = Math.min(Math.max(page.value + delta, 0), pages.value.length - 1)
+  lessonTop.value?.scrollIntoView({ block: 'start' })
+}
 
 watch(
   [() => gradeId, current],
@@ -102,7 +120,7 @@ function goTo(target: GradeStep) {
         :control-passed="gradeProgress.control.passedAt !== null"
       />
 
-      <section class="lesson" :class="[`lesson--${summary.subject.era}`, { 'lesson--book': theme?.pattern === 'book' }]" aria-live="polite" :aria-busy="loading">
+      <section ref="lessonTop" class="lesson" :class="[`lesson--${summary.subject.era}`, { 'lesson--book': theme?.pattern === 'book' }]" aria-live="polite" :aria-busy="loading">
         <div v-if="loading" class="lesson__loading" role="status">
           <span class="visually-hidden">Загружаем материал…</span>
           <Skeleton height="2rem" width="60%" />
@@ -142,9 +160,14 @@ function goTo(target: GradeStep) {
           <template v-else-if="topic">
             <h2 class="lesson__title">{{ current }}. {{ topic.title }}</h2>
             <!-- eslint-disable-next-line vue/no-v-html -- trusted HTML bundled with the app -->
-            <article class="content" v-html="topic.html" />
-            <TopicExercises :exercises="topic.exercises" :topic-key="`${gradeId}:${current}`" />
-            <aside class="compare" :class="`compare--${summary.subject.era}`" aria-labelledby="compare-title">
+            <article class="content" v-html="pages[page]" />
+            <nav v-if="pages.length > 1" class="lesson__pager" aria-label="Страницы темы">
+              <Button icon="pi pi-chevron-left" label="Назад" severity="secondary" variant="outlined" :disabled="page === 0" @click="turnPage(-1)" />
+              <span class="lesson__page-number">Страница {{ page + 1 }} из {{ pages.length }}</span>
+              <Button icon="pi pi-chevron-right" icon-pos="right" label="Дальше" :disabled="onLastPage" @click="turnPage(1)" />
+            </nav>
+            <TopicExercises v-if="onLastPage" :exercises="topic.exercises" :topic-key="`${gradeId}:${current}`" />
+            <aside v-if="onLastPage" class="compare" :class="`compare--${summary.subject.era}`" aria-labelledby="compare-title">
               <h3 id="compare-title" class="compare__title">
                 <i class="pi pi-arrow-right-arrow-left" aria-hidden="true" />
                 {{ COMPARE_TITLES[summary.subject.era] }}

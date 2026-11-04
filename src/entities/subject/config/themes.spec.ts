@@ -6,7 +6,7 @@ import type { PaperPattern } from './themes'
 
 describe('subjectTheme', () => {
   it('берёт оформление предмета поверх оформления эпохи', () => {
-    expect(subjectTheme({ id: 'physics', era: 'ussr' })).toMatchObject({ pattern: 'millimeter', icon: 'pi pi-bolt' })
+    expect(subjectTheme({ id: 'physics', era: 'ussr' })).toMatchObject({ pattern: 'millimeter', icon: 'svg:physics' })
     expect(subjectTheme({ id: 'world-around', era: 'rf' })).toMatchObject({ pattern: 'plain', icon: 'pi pi-globe' })
   })
 

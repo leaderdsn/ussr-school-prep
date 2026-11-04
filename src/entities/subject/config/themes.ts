@@ -27,11 +27,11 @@ const SUBJECT_THEMES: Readonly<Record<string, Partial<SubjectTheme>>> = {
   russian: { accent: { light: '#6d2f8a', dark: '#d3a6f0' }, pattern: 'ruled', icon: 'svg:russian' },
   reading: { accent: { light: '#9a3b1f', dark: '#ffab91' }, pattern: 'book', icon: 'svg:reading' },
   literature: { accent: { light: '#5b3a29', dark: '#e0b8a0' }, pattern: 'book', icon: 'svg:literature' },
-  physics: { accent: { light: '#a14a12', dark: '#ffb37a' }, pattern: 'millimeter', icon: 'pi pi-bolt' },
-  chemistry: { accent: { light: '#1f6f6a', dark: '#7fd6cd' }, pattern: 'squared', icon: 'pi pi-sitemap' },
-  astronomy: { accent: { light: '#26346e', dark: '#a9b8ff' }, pattern: 'stars', icon: 'pi pi-star' },
+  physics: { accent: { light: '#a14a12', dark: '#ffb37a' }, pattern: 'millimeter', icon: 'svg:physics' },
+  chemistry: { accent: { light: '#1f6f6a', dark: '#7fd6cd' }, pattern: 'squared', icon: 'svg:chemistry' },
+  astronomy: { accent: { light: '#26346e', dark: '#a9b8ff' }, pattern: 'stars', icon: 'svg:astronomy' },
   'world-around': { accent: { light: '#2b8a3e', dark: '#69db7c' }, icon: 'pi pi-globe' },
-  'social-studies': { accent: { light: '#1864ab', dark: '#74c0fc' }, icon: 'pi pi-users' },
+  'social-studies': { accent: { light: '#1864ab', dark: '#74c0fc' }, icon: 'svg:social-studies' },
 }
 
 export function subjectTheme(subject: Pick<Subject, 'id' | 'era'>): SubjectTheme {

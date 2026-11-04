@@ -87,18 +87,6 @@ $margin: clamp(1.5rem, 4vw, 3rem)
     text-transform: uppercase
     opacity: 0.85
 
-  &__pager
-    display: flex
-    align-items: center
-    justify-content: space-between
-    gap: ds.$space-3
-    margin-top: ds.$space-4
-
-  &__page-number
-    color: var(--p-text-muted-color)
-    font-size: ds.$font-size-sm
-    text-align: center
-
   &__title
     margin: 0
     font-size: clamp(1.375rem, 3.5vw, 2rem)
@@ -165,6 +153,23 @@ $margin: clamp(1.5rem, 4vw, 3rem)
 
   &__loading > *
     width: 100%
+
+  &__pager
+    display: grid
+    grid-template-columns: auto 1fr auto
+    align-items: center
+    gap: ds.$space-3
+    margin-top: ds.$space-2
+    padding-top: ds.$space-4
+    border-top: 1px dashed var(--p-content-border-color)
+    font-family: ds.$font-family
+    line-height: normal
+    text-indent: 0
+
+  &__page-number
+    color: var(--p-text-muted-color)
+    font-size: ds.$font-size-sm
+    text-align: center
 
   &__nav
     display: flex

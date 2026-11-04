@@ -127,7 +127,7 @@ function pointsLabel(points: number): string {
         <div v-if="checked" class="task__solution">
           <p class="task__solution-title">Решение</p>
           <!-- eslint-disable-next-line vue/no-v-html -- trusted HTML bundled with the app -->
-          <div class="content" v-html="task.solution" />
+          <div class="content content--flow" v-html="task.solution" />
           <button type="button" class="task__review" @click="emit('review-topic', task.topic)">
             Перечитать тему
           </button>

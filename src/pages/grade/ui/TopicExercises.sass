@@ -34,6 +34,10 @@
   grid-template-columns: 2rem minmax(0, 1fr)
   gap: ds.$space-3
   align-items: start
+  padding: ds.$space-3 ds.$space-4 ds.$space-3 ds.$space-3
+  border: 1px solid var(--p-content-border-color)
+  border-radius: ds.$radius-md
+  background: color-mix(in srgb, var(--app-card) 70%, transparent)
 
   &__number
     display: grid
@@ -55,6 +59,15 @@
     > .content
       width: 100%
 
+    // The task itself: a bit larger and airier than the running text, formulas stay on the line
+    > .content:first-child
+      font-size: 1.0625rem
+      line-height: 1.6
+
+    :deep(sub),
+    :deep(sup)
+      line-height: 0
+
   &__toggle
     display: inline-flex
     align-items: center
@@ -71,12 +84,21 @@
     &:focus-visible
       +ds.focus-ring
 
-  // Checked by the teacher's red pen
+  // Checked by the teacher's red pen; plain type, because formulas are unreadable in handwriting
   &__answer
     width: 100%
     padding: ds.$space-2 ds.$space-3
     border-left: 3px solid var(--app-ink-red)
-    color: var(--app-ink-red)
-    font-family: ds.$font-family-hand
-    font-size: 1.25rem
-    line-height: 1.35
+    background: color-mix(in srgb, var(--app-ink-red) 7%, transparent)
+    font-size: 1rem
+    line-height: 1.55
+
+    &::before
+      content: 'Ответ'
+      display: block
+      margin-bottom: ds.$space-1
+      color: var(--app-ink-red)
+      font-size: ds.$font-size-xs
+      font-weight: 700
+      letter-spacing: 0.06em
+      text-transform: uppercase

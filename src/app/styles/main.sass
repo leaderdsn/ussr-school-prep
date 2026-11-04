@@ -170,3 +170,14 @@
 
   .content
     +ds.content
+
+  // Text of an exercise or a solution is inline HTML (formulas with <sub>, <sup>): it flows as one text,
+  // not as a grid where every inline element becomes its own row.
+  .content.content--flow
+    display: block
+
+    > p + p,
+    > * + div,
+    > p + ul,
+    > p + ol
+      margin-top: ds.$space-2

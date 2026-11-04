@@ -125,9 +125,18 @@
       stroke-linecap: round
       stroke-linejoin: round
 
+    // Labels get a halo in the colour of the sheet, so lines of the drawing never cut through the letters
     text
       fill: currentColor
-      stroke: none
+      stroke: var(--app-card)
+      stroke-width: 4px
+      stroke-linejoin: round
+      paint-order: stroke
+      font-weight: 500
+
+    // Grey captions inside drawings stay readable: closer to the main text colour than the muted one
+    text.muted
+      color: color-mix(in srgb, var(--p-text-color) 72%, var(--p-text-muted-color))
 
   figcaption
     color: var(--p-text-muted-color)

@@ -102,7 +102,7 @@ function goTo(target: GradeStep) {
         :control-passed="gradeProgress.control.passedAt !== null"
       />
 
-      <section class="lesson" :class="`lesson--${summary.subject.era}`" aria-live="polite" :aria-busy="loading">
+      <section class="lesson" :class="[`lesson--${summary.subject.era}`, { 'lesson--book': theme?.pattern === 'book' }]" aria-live="polite" :aria-busy="loading">
         <div v-if="loading" class="lesson__loading" role="status">
           <span class="visually-hidden">Загружаем материал…</span>
           <Skeleton height="2rem" width="60%" />

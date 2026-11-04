@@ -5,7 +5,7 @@ import type { Era, Subject } from '../model/types'
  * Soviet subjects get an exercise-book sheet (squared, ruled, graph paper), RF subjects a clean modern sheet.
  * Colours are a stylisation, not a claim about real textbook covers.
  */
-export type PaperPattern = 'squared' | 'ruled' | 'millimeter' | 'stars' | 'plain'
+export type PaperPattern = 'squared' | 'ruled' | 'millimeter' | 'stars' | 'book' | 'plain'
 
 export type SubjectTheme = {
   /** Accent for the light theme and for the dark (chalkboard) theme. */
@@ -25,8 +25,8 @@ const SUBJECT_THEMES: Readonly<Record<string, Partial<SubjectTheme>>> = {
   algebra: { accent: { light: '#1d5b8f', dark: '#8cc2ff' }, pattern: 'squared', icon: 'pi pi-chart-scatter' },
   geometry: { accent: { light: '#2e6b3a', dark: '#8fd19e' }, pattern: 'squared', icon: 'pi pi-compass' },
   russian: { accent: { light: '#6d2f8a', dark: '#d3a6f0' }, pattern: 'ruled', icon: 'pi pi-pen-to-square' },
-  reading: { accent: { light: '#9a3b1f', dark: '#ffab91' }, pattern: 'ruled', icon: 'pi pi-book' },
-  literature: { accent: { light: '#5b3a29', dark: '#e0b8a0' }, pattern: 'ruled', icon: 'pi pi-bookmark' },
+  reading: { accent: { light: '#9a3b1f', dark: '#ffab91' }, pattern: 'book', icon: 'pi pi-book' },
+  literature: { accent: { light: '#5b3a29', dark: '#e0b8a0' }, pattern: 'book', icon: 'pi pi-bookmark' },
   physics: { accent: { light: '#a14a12', dark: '#ffb37a' }, pattern: 'millimeter', icon: 'pi pi-bolt' },
   chemistry: { accent: { light: '#1f6f6a', dark: '#7fd6cd' }, pattern: 'squared', icon: 'pi pi-sitemap' },
   astronomy: { accent: { light: '#26346e', dark: '#a9b8ff' }, pattern: 'stars', icon: 'pi pi-star' },
@@ -62,6 +62,11 @@ const PAPERS: Readonly<Record<PaperPattern, { image: string; size: string }>> = 
       `radial-gradient(circle at 44% 86%, ${line} 2px, transparent 2.5px)`,
     ].join(', '),
     size: '7rem 7rem, 5rem 5rem, 11rem 11rem',
+  },
+  // A book page: no ruling, only a soft shade towards the spine and the outer edge.
+  book: {
+    image: 'linear-gradient(90deg, rgb(90 60 20 / 9%), transparent 2.5rem, transparent calc(100% - 1.5rem), rgb(90 60 20 / 6%))',
+    size: '100% 100%',
   },
   plain: { image: 'none', size: 'auto' },
 }

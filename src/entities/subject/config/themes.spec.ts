@@ -32,7 +32,7 @@ describe('subjectThemeVars', () => {
 })
 
 describe('бумага урока', () => {
-  const patterns: PaperPattern[] = ['squared', 'ruled', 'millimeter', 'stars', 'plain']
+  const patterns: PaperPattern[] = ['squared', 'ruled', 'millimeter', 'stars', 'book', 'plain']
 
   it.each(patterns)('%s: у каждого слоя фона свой размер', (pattern) => {
     const vars = subjectThemeVars({ accent: { light: '#000', dark: '#fff' }, pattern, icon: '' })

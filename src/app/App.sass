@@ -2,6 +2,10 @@
 
 .app-main
   flex: 1
+  // Stacking context for the home-page background pictures (they sit behind the content and scroll with it)
+  position: relative
+  isolation: isolate
+  overflow-x: clip
 
 .app-footer
   +ds.container
@@ -20,11 +24,3 @@
   &:hover
     color: var(--app-link)
 
-.app-footer__credits
-  flex-basis: 100%
-  margin: 0
-  font-size: ds.$font-size-xs
-
-  a
-    color: inherit
-    text-decoration: underline

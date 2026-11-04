@@ -162,9 +162,9 @@ function goTo(target: GradeStep) {
             <!-- eslint-disable-next-line vue/no-v-html -- trusted HTML bundled with the app -->
             <article class="content" v-html="pages[page]" />
             <nav v-if="pages.length > 1" class="lesson__pager" aria-label="Страницы темы">
-              <Button icon="pi pi-chevron-left" label="Назад" severity="secondary" variant="outlined" :disabled="page === 0" @click="turnPage(-1)" />
-              <span class="lesson__page-number">Страница {{ page + 1 }} из {{ pages.length }}</span>
-              <Button icon="pi pi-chevron-right" icon-pos="right" label="Дальше" :disabled="onLastPage" @click="turnPage(1)" />
+              <Button icon="pi pi-angle-left" aria-label="Предыдущая страница" rounded severity="secondary" variant="text" :disabled="page === 0" @click="turnPage(-1)" />
+              <span class="lesson__page-number">— {{ page + 1 }} / {{ pages.length }} —</span>
+              <Button icon="pi pi-angle-right" aria-label="Следующая страница" rounded severity="secondary" variant="text" :disabled="onLastPage" @click="turnPage(1)" />
             </nav>
             <TopicExercises v-if="onLastPage" :exercises="topic.exercises" :topic-key="`${gradeId}:${current}`" />
             <aside v-if="onLastPage" class="compare" :class="`compare--${summary.subject.era}`" aria-labelledby="compare-title">

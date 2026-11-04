@@ -23,7 +23,7 @@ const ERA_THEMES: Readonly<Record<Era, SubjectTheme>> = {
 const SUBJECT_THEMES: Readonly<Record<string, Partial<SubjectTheme>>> = {
   math: { accent: { light: '#b3261e', dark: '#ff8a80' }, pattern: 'squared', icon: 'pi pi-calculator' },
   algebra: { accent: { light: '#1d5b8f', dark: '#8cc2ff' }, pattern: 'squared', icon: 'svg:algebra' },
-  geometry: { accent: { light: '#2e6b3a', dark: '#8fd19e' }, pattern: 'squared', icon: 'pi pi-compass' },
+  geometry: { accent: { light: '#2e6b3a', dark: '#8fd19e' }, pattern: 'squared', icon: 'svg:geometry' },
   russian: { accent: { light: '#6d2f8a', dark: '#d3a6f0' }, pattern: 'ruled', icon: 'pi pi-pen-to-square' },
   reading: { accent: { light: '#9a3b1f', dark: '#ffab91' }, pattern: 'book', icon: 'pi pi-book' },
   literature: { accent: { light: '#5b3a29', dark: '#e0b8a0' }, pattern: 'book', icon: 'pi pi-bookmark' },

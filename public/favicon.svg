@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#1f4ea3"/>
-  <path d="M6 9.5c3.5-1.2 7-1 10 1v13c-3-2-6.5-2.2-10-1z" fill="#fff"/>
-  <path d="M26 9.5c-3.5-1.2-7-1-10 1v13c3-2 6.5-2.2 10-1z" fill="#dbe6fb"/>
-  <path d="M19 13.5l5-1.5M19 16.5l5-1.5M19 19.5l5-1.5" stroke="#c62828" stroke-width="1.2" stroke-linecap="round"/>
+  <title>Советский учебник</title>
+  <rect width="32" height="32" rx="4" fill="#a61e22"/>
+  <rect width="6" height="32" rx="4" fill="#7d1418"/>
+  <rect x="5" width="1.2" height="32" fill="#5c0d10"/>
+  <rect x="9.2" y="3.5" width="19.3" height="25" rx="1" fill="none" stroke="#f1c453" stroke-width="1.2"/>
+  <polygon points="18.85,7.20 20.44,11.42 24.94,11.62 21.42,14.43 22.61,18.78 18.85,16.30 15.09,18.78 16.28,14.43 12.76,11.62 17.26,11.42" fill="#f1c453"/>
+  <path d="M14.3 22.5h9.1M16 25h5.7" stroke="#f1c453" stroke-width="1.3" stroke-linecap="round"/>
 </svg>

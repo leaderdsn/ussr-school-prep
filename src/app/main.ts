@@ -2,6 +2,7 @@
 import '@fontsource/caveat/400.css'
 import '@fontsource/caveat/700.css'
 import '@fontsource/old-standard-tt/400.css'
+import '@fontsource/ruslan-display/400.css'
 import '@fontsource/old-standard-tt/700.css'
 import '@fontsource/pt-sans/400.css'
 import '@fontsource/pt-sans/400-italic.css'

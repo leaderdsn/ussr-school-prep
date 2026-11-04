@@ -31,6 +31,7 @@
 @layer app
   :root
     --app-font-heading: #{ds.$font-stack-schoolbook}
+    --app-font-display: #{ds.$font-stack-display}
     --app-font-body: #{ds.$font-stack-text}
     --app-font-hand: #{ds.$font-stack-hand}
     --app-radius-sm: 0.25rem
@@ -99,6 +100,7 @@
   // Modern RF school: clean sheet, sans-serif headings, rounder corners, no squares.
   :root[data-era="rf"]
     --app-font-heading: #{ds.$font-stack-modern}
+    --app-font-display: #{ds.$font-stack-modern}
     --app-font-body: #{ds.$font-stack-modern}
     --app-radius-sm: 0.5rem
     --app-radius-md: 0.75rem
@@ -147,6 +149,12 @@
     font-family: ds.$font-family-heading
     font-weight: 700
     letter-spacing: 0.005em
+
+  // Page titles: cover lettering (the display face has a single weight)
+  h1
+    font-family: ds.$font-family-display
+    font-weight: 400
+    letter-spacing: 0.01em
 
   #app
     display: flex

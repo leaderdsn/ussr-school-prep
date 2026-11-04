@@ -10,7 +10,7 @@ export const CONTENT_LIMITS = {
   topics: { min: 4, max: 12 },
   topicWords: { min: 300, max: 1500 },
   // Reading books hold whole stories, so their topics may be longer.
-  readingTopicWords: { min: 300, max: 6000 },
+  readingTopicWords: { min: 300, max: 20000 },
   exercises: { min: 3, max: 10 },
   quiz: { min: 10, max: 12 },
   control: { min: 5, max: 7 },

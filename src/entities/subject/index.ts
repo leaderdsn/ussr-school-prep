@@ -5,6 +5,7 @@ export { accentValue, subjectTheme } from './config/themes'
 export type { PaperPattern, SubjectTheme } from './config/themes'
 export { isAnswerAccepted, normalizeAnswer } from './lib/answer'
 export { useSubjectTheme } from './lib/useSubjectTheme'
+export { default as SubjectIcon } from './ui/SubjectIcon.vue'
 export { checkHtml } from './lib/validate'
 export { COMPARE_TITLES, ERA_LABELS } from './model/era'
 export type {

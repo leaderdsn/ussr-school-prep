@@ -11,7 +11,7 @@ export type SubjectTheme = {
   /** Accent for the light theme and for the dark (chalkboard) theme. */
   accent: { light: string; dark: string }
   pattern: PaperPattern
-  /** PrimeIcons class of the emblem on the "textbook cover". */
+  /** Emblem on the "textbook cover": a PrimeIcons class or a drawn icon of SubjectIcon ("svg:<name>"). */
   icon: string
 }
 
@@ -22,7 +22,7 @@ const ERA_THEMES: Readonly<Record<Era, SubjectTheme>> = {
 
 const SUBJECT_THEMES: Readonly<Record<string, Partial<SubjectTheme>>> = {
   math: { accent: { light: '#b3261e', dark: '#ff8a80' }, pattern: 'squared', icon: 'pi pi-calculator' },
-  algebra: { accent: { light: '#1d5b8f', dark: '#8cc2ff' }, pattern: 'squared', icon: 'pi pi-chart-scatter' },
+  algebra: { accent: { light: '#1d5b8f', dark: '#8cc2ff' }, pattern: 'squared', icon: 'svg:algebra' },
   geometry: { accent: { light: '#2e6b3a', dark: '#8fd19e' }, pattern: 'squared', icon: 'pi pi-compass' },
   russian: { accent: { light: '#6d2f8a', dark: '#d3a6f0' }, pattern: 'ruled', icon: 'pi pi-pen-to-square' },
   reading: { accent: { light: '#9a3b1f', dark: '#ffab91' }, pattern: 'book', icon: 'pi pi-book' },

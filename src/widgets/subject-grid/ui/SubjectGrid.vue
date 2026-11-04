@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
 import { PASS_SCORES, schoolMark, useProgressStore } from '@/entities/progress'
-import { accentValue, ERA_LABELS, findGrade, gradeId, subjectTheme, SUBJECTS } from '@/entities/subject'
+import { accentValue, ERA_LABELS, findGrade, gradeId, SubjectIcon, subjectTheme, SUBJECTS } from '@/entities/subject'
 import { ROUTE_NAMES } from '@/shared/config'
 
 import type { GradeNumber } from '@/entities/subject'
@@ -51,7 +51,7 @@ const cards = computed(() =>
       >
         <span class="subject-card__head">
           <span class="subject-card__title">
-            <i class="subject-card__icon" :class="card.icon" aria-hidden="true" />
+            <SubjectIcon class="subject-card__icon" :icon="card.icon" />
             {{ card.subject.title }}
           </span>
           <span class="subject-card__era" :class="`subject-card__era--${card.subject.era}`">

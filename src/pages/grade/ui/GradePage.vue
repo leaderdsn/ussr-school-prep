@@ -3,7 +3,7 @@ import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 import { useProgressStore } from '@/entities/progress'
-import { COMPARE_TITLES, ERA_LABELS, fetchGrade, findGrade, subjectTheme, useSubjectTheme } from '@/entities/subject'
+import { COMPARE_TITLES, ERA_LABELS, fetchGrade, findGrade, SubjectIcon, subjectTheme, useSubjectTheme } from '@/entities/subject'
 import { ControlRunner } from '@/features/run-control'
 import { QuizRunner } from '@/features/run-quiz'
 import { CONTROL_STEP, ROUTE_NAMES, TEST_STEP } from '@/shared/config'
@@ -95,7 +95,7 @@ function goTo(target: GradeStep) {
     </RouterLink>
 
     <header class="cover" :class="`cover--${summary.subject.era}`">
-      <span class="cover__emblem" aria-hidden="true"><i :class="theme?.icon" /></span>
+      <span class="cover__emblem" aria-hidden="true"><SubjectIcon v-if="theme" :icon="theme.icon" /></span>
       <div class="cover__heading">
         <p class="cover__eyebrow">{{ ERA_LABELS[summary.subject.era] }}</p>
         <h1 class="cover__title">{{ heading }}</h1>

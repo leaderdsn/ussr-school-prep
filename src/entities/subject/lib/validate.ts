@@ -23,7 +23,7 @@ export const CONTENT_LIMITS = {
  * so figures follow the light and dark themes.
  */
 export const ALLOWED_CLASSES: readonly string[] = [
-  'rule', 'example', 'formula', 'note', 'table-wrap',
+  'rule', 'example', 'formula', 'note', 'source', 'table-wrap',
   'accent', 'red', 'muted', 'thin', 'dashed', 'soft',
 ]
 

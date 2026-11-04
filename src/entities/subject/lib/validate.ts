@@ -9,6 +9,8 @@ import type { Grade, GradeNumber, GradeSummary, Subject } from '../model/types'
 export const CONTENT_LIMITS = {
   topics: { min: 4, max: 12 },
   topicWords: { min: 300, max: 1500 },
+  // Reading books hold whole stories, so their topics may be longer.
+  readingTopicWords: { min: 300, max: 6000 },
   exercises: { min: 3, max: 10 },
   quiz: { min: 10, max: 12 },
   control: { min: 5, max: 7 },
@@ -188,12 +190,13 @@ function validateExercises(raw: unknown, path: string, issues: Issues) {
   })
 }
 
-function validateTopics(raw: unknown, issues: Issues): number {
+function validateTopics(raw: unknown, issues: Issues, subjectId: unknown): number {
   if (!Array.isArray(raw)) {
     issues.push('topics: ожидается массив')
     return 0
   }
-  const { topics, topicWords } = CONTENT_LIMITS
+  const { topics } = CONTENT_LIMITS
+  const topicWords = subjectId === 'reading' ? CONTENT_LIMITS.readingTopicWords : CONTENT_LIMITS.topicWords
   if (!inRange(raw.length, topics)) issues.push(`topics: нужно ${topics.min}–${topics.max} тем, сейчас ${raw.length}`)
 
   const titles: unknown[] = []
@@ -354,7 +357,7 @@ export function validateGrade(data: unknown, subjects: readonly Subject[], fileN
   }
   if (!isText(textbook)) issues.push('textbook: укажите учебник')
 
-  const topicCount = validateTopics(data.topics, issues)
+  const topicCount = validateTopics(data.topics, issues, subjectId)
   validateQuiz(data.quiz, topicCount, issues)
   validateControl(data.control, topicCount, issues)
   return issues

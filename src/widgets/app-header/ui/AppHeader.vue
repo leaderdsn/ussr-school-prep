@@ -4,7 +4,7 @@ import { SyncButton } from '@/features/sync-progress'
 import { ThemeToggle } from '@/features/toggle-theme'
 import { env, ROUTE_NAMES } from '@/shared/config'
 
-const logo = `${import.meta.env.BASE_URL}favicon.svg`
+const logo = `${import.meta.env.BASE_URL}favicon.png`
 </script>
 
 <template>

@@ -8,16 +8,11 @@ import reader from '../assets/reader.jpg'
 // Pure decoration, hidden from assistive technology.
 type Picture = { src: string; style: Record<string, string> }
 
+// Every picture appears once; they are scattered over the height of the page in a deliberately uneven order.
 const pictures: Picture[] = [
-  { src: pair, style: { top: '1.5%', left: '1.2%', width: 'clamp(9rem, 15vw, 16rem)', '--turn': '-4deg' } },
-  { src: board, style: { top: '6%', right: '1.5%', width: 'clamp(8rem, 13vw, 14rem)', '--turn': '3deg' } },
-  { src: reader, style: { top: '19%', left: '0.6%', width: 'clamp(7rem, 11vw, 12rem)', '--turn': '2.5deg' } },
-  { src: pair, style: { top: '30%', right: '0.8%', width: 'clamp(7.5rem, 12vw, 13rem)', '--turn': '-2deg' } },
-  { src: board, style: { top: '44%', left: '1.6%', width: 'clamp(8rem, 13vw, 14rem)', '--turn': '-3deg' } },
-  { src: reader, style: { top: '54%', right: '1.8%', width: 'clamp(8.5rem, 14vw, 15rem)', '--turn': '4deg' } },
-  { src: pair, style: { top: '67%', left: '0.8%', width: 'clamp(7rem, 11vw, 12rem)', '--turn': '3deg' } },
-  { src: reader, style: { top: '78%', right: '0.6%', width: 'clamp(7rem, 11vw, 12rem)', '--turn': '-3.5deg' } },
-  { src: board, style: { top: '88%', left: '1.4%', width: 'clamp(8rem, 12vw, 13rem)', '--turn': '-2deg' } },
+  { src: pair, style: { top: '3%', left: '1.4%', width: 'clamp(9.5rem, 16vw, 17rem)', '--turn': '-4deg' } },
+  { src: board, style: { top: '41%', right: '1.6%', width: 'clamp(9rem, 15vw, 16rem)', '--turn': '3deg' } },
+  { src: reader, style: { top: '74%', left: '0.9%', width: 'clamp(8.5rem, 14vw, 15rem)', '--turn': '2.5deg' } },
 ]
 </script>
 

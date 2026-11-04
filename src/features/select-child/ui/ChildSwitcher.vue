@@ -4,6 +4,8 @@ import { ref } from 'vue'
 import { useProgressStore } from '@/entities/progress'
 import { ROUTE_NAMES } from '@/shared/config'
 
+import PupilIcon from './PupilIcon.vue'
+
 const progress = useProgressStore()
 
 const popover = ref<{ toggle: (event: Event) => void; hide: () => void } | null>(null)
@@ -17,14 +19,17 @@ function choose(childId: string) {
 <template>
   <Button
     class="child-switcher"
-    icon="pi pi-user"
     :label="progress.activeChild.name"
     :aria-label="`Занимается: ${progress.activeChild.name}. Сменить профиль`"
     severity="secondary"
     variant="text"
     aria-haspopup="dialog"
     @click="popover?.toggle($event)"
-  />
+  >
+    <template #icon>
+      <PupilIcon />
+    </template>
+  </Button>
 
   <Popover ref="popover">
     <div class="child-panel">
@@ -38,7 +43,8 @@ function choose(childId: string) {
             :aria-pressed="child.id === progress.activeChildId"
             @click="choose(child.id)"
           >
-            <i :class="child.id === progress.activeChildId ? 'pi pi-check-circle' : 'pi pi-user'" aria-hidden="true" />
+            <i v-if="child.id === progress.activeChildId" class="pi pi-check-circle" aria-hidden="true" />
+            <PupilIcon v-else />
             {{ child.name }}
           </button>
         </li>

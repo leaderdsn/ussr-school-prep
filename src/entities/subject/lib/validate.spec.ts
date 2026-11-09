@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import gradesIndex from '../data/grades-index.json'
 import subjects from '../data/subjects.json'
 
-import { checkHtml, countWords, summarizeGrade, validateGrade, validateSubjects } from './validate'
+import { checkHtml, contentImages, countWords, summarizeGrade, validateGrade, validateSubjects } from './validate'
 
 import type { Grade, Subject } from '../model/types'
 
@@ -44,7 +44,7 @@ describe('checkHtml', () => {
     ['<p onclick="x()">a</p>', 'атрибут «onclick»'],
     ['<p style="color:red">a</p>', 'атрибут «style»'],
     ['<p class="rule fancy">a</p>', 'класс «fancy»'],
-    ['<img src="a.png">', 'тег <img>'],
+    ['<img src="a.png">', 'только у <img>'],
     ['<b>javascript:void(0)</b>', 'javascript:'],
   ])('ловит %s', (html, message) => {
     expect(checkHtml(html, 'x').join(' ')).toContain(message)
@@ -79,6 +79,31 @@ describe('checkHtml: рисунки', () => {
     [svg("<line stroke='#f00'/>"), 'цвет задавайте классом'],
   ])('ловит ошибку в рисунке %#', (html, message) => {
     expect(checkHtml(html, 'x').join(' ')).toContain(message)
+  })
+})
+
+describe('checkHtml: картинки и фото', () => {
+  it('пропускает картинку проекта с описанием', () => {
+    const html = '<figure><img src="/content-images/lynx.jpg" alt="Рысь на снегу" loading="lazy"><figcaption>Рис. 1</figcaption></figure>'
+    expect(checkHtml(html, 'x')).toEqual([])
+  })
+
+  it.each([
+    ['<img src="https://example.com/a.jpg" alt="a">', 'только у <img> и только файл из /content-images/'],
+    ['<img src="/content-images/../secret.jpg" alt="a">', 'только у <img>'],
+    ['<img src="/content-images/a.gif" alt="a">', 'только у <img>'],
+    ['<img src="/content-images/a.jpg">', 'нужен alt'],
+    ['<img alt="a">', 'нужен src'],
+    ['<p src="/content-images/a.jpg">a</p>', 'только у <img>'],
+  ])('ловит %s', (html, message) => {
+    expect(checkHtml(html, 'x').join(' ')).toContain(message)
+  })
+
+  it('находит картинки урока', () => {
+    expect(contentImages('<img src="/content-images/a.jpg" alt="a"><p>x</p><img alt="b" src="/content-images/b.png">')).toEqual([
+      '/content-images/a.jpg',
+      '/content-images/b.png',
+    ])
   })
 })
 

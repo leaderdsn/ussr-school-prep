@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import { checkHtml } from '@/entities/subject'
+import { checkHtml, withContentBase } from '@/entities/subject'
 
 import { linesToList, listToLines } from '../model/draft'
 
@@ -75,7 +75,7 @@ function patch(fields: Partial<ControlTask>) {
         <li v-for="issue in solutionIssues" :key="issue">{{ issue }}</li>
       </ul>
       <!-- eslint-disable-next-line vue/no-v-html -- shown only after the content validator accepted it -->
-      <div v-else class="content content--flow" v-html="task.solution" />
+      <div v-else class="content content--flow" v-html="withContentBase(task.solution)" />
     </div>
 
     <Button label="Удалить задание" icon="pi pi-trash" severity="danger" variant="text" size="small" @click="emit('remove')" />

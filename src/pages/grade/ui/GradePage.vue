@@ -3,7 +3,7 @@ import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 import { useProgressStore } from '@/entities/progress'
-import { COMPARE_TITLES, ERA_LABELS, fetchGrade, findGrade, SubjectIcon, subjectTheme, useSubjectTheme } from '@/entities/subject'
+import { COMPARE_TITLES, ERA_LABELS, fetchGrade, findGrade, SubjectIcon, subjectTheme, useSubjectTheme, withContentBase } from '@/entities/subject'
 import { ControlRunner } from '@/features/run-control'
 import { QuizRunner } from '@/features/run-quiz'
 import { CONTROL_STEP, ROUTE_NAMES, TEST_STEP } from '@/shared/config'
@@ -40,7 +40,7 @@ const percent = computed(() => (titles.value.length === 0 ? 0 : Math.round((seen
 const topic = computed(() => (typeof current.value === 'number' ? (grade.value?.topics[current.value - 1] ?? null) : null))
 // Long reading texts are split into book pages; exercises and the comparison come after the last page.
 const pages = computed(() => {
-  const html = topic.value?.html ?? ''
+  const html = withContentBase(topic.value?.html ?? '')
   return theme.value?.pattern === 'book' && html.length > PAGINATE_FROM ? paginateHtml(html) : [html]
 })
 const page = ref(0)
@@ -173,7 +173,7 @@ function goTo(target: GradeStep) {
                 {{ COMPARE_TITLES[summary.subject.era] }}
               </h3>
               <!-- eslint-disable-next-line vue/no-v-html -- trusted HTML bundled with the app -->
-              <div class="content" v-html="topic.compare" />
+              <div class="content" v-html="withContentBase(topic.compare)" />
             </aside>
             <nav class="lesson__nav" aria-label="Переход между шагами">
               <Button

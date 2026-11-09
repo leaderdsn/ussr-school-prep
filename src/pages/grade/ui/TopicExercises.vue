@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 
+import { withContentBase } from '@/entities/subject'
+
 import type { Exercise } from '@/entities/subject'
 
 const { exercises, topicKey } = defineProps<{
@@ -36,7 +38,7 @@ function toggle(index: number) {
         <span class="exercise__number" aria-hidden="true">{{ index + 1 }}</span>
         <div class="exercise__body">
           <!-- eslint-disable-next-line vue/no-v-html -- trusted HTML bundled with the app -->
-          <div class="content content--flow" v-html="exercise.text" />
+          <div class="content content--flow" v-html="withContentBase(exercise.text)" />
           <button
             type="button"
             class="exercise__toggle"
@@ -47,7 +49,7 @@ function toggle(index: number) {
             {{ shown.has(index) ? 'Скрыть ответ' : 'Проверить себя' }}
           </button>
           <!-- eslint-disable-next-line vue/no-v-html -- trusted HTML bundled with the app -->
-          <div v-if="shown.has(index)" class="exercise__answer content content--flow" v-html="exercise.answer" />
+          <div v-if="shown.has(index)" class="exercise__answer content content--flow" v-html="withContentBase(exercise.answer)" />
         </div>
       </li>
     </ol>

@@ -56,10 +56,16 @@
    - подписи — `<text>`; стрелки — `<marker>` в `<defs>`, ссылка `marker-end="url(#id)"`; id маркеров делать
      уникальными внутри класса (`arrow-t2`);
    - размер `viewBox` около 300×150…400×300, шрифт подписей `font-size="14"`.
+   - **настоящие картинки и фото** (животные, растения, природа, планеты, портреты писателей, исторические
+     сюжеты) лучше рисовать не самим, а брать из Wikimedia Commons со свободной лицензией (public domain, CC0,
+     CC BY, CC BY-SA): `pnpm content:image "File:Название.jpg" имя-латиницей` скачает файл в
+     `public/content-images/` и напечатает `<figure>` для урока. В тексте — `<img src="/content-images/имя.jpg"
+     alt="описание" loading="lazy">`, в `<figcaption>` — автор, лицензия и ссылка на страницу Commons.
+     Ссылки на чужие сайты в `src` запрещены. Только для нового контента: готовые классы не переделывать.
 5. HTML: теги p, h3, h4, b, strong, i, em, u, br, sup, sub, small, span, div, ul, ol, li, table, thead, tbody, tr,
    th, td, figure, figcaption и теги SVG (svg, g, defs, marker, line, polyline, polygon, rect, circle, ellipse,
    path, text, tspan). Классы: `rule`, `example`, `formula`, `note`, `table-wrap`, `accent`, `red`, `muted`,
-   `thin`, `dashed`, `soft`. Без скриптов, стилей, картинок-файлов и обработчиков событий. Знаки `<` `>` в
+   `thin`, `dashed`, `soft`. Без скриптов, стилей и обработчиков событий; картинки — только `<img>` из `/content-images/`. Знаки `<` `>` в
    тексте — `&lt;` `&gt;`. Полный список атрибутов — в `src/entities/subject/lib/validate.ts`.
 6. В `compare` — только проверяемые различия (программа, учебник, порядок тем, ОГЭ/ЕГЭ). Без оценок и без политики.
    Если в факте не уверен — не писать его.

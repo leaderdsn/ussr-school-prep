@@ -18,6 +18,7 @@
     "content:status": "node scripts/content.ts status",
     "content:index": "node scripts/content.ts index",
     "content:check": "node scripts/content.ts check",
+    "content:image": "node scripts/content-image.ts",
     "prepare": "husky"
   },
   "dependencies": {

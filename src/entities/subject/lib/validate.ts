@@ -34,11 +34,14 @@ export const ALLOWED_TAGS: readonly string[] = [
   'ul', 'ol', 'li', 'table', 'thead', 'tbody', 'tr', 'th', 'td',
   // Figures: <figure><svg viewBox="…" role="img" aria-label="…">…</svg><figcaption>…</figcaption></figure>
   'figure', 'figcaption',
+  // Real pictures and photos: <figure><img src="/content-images/…" alt="…"><figcaption>… Источник: автор, лицензия</figcaption></figure>
+  'img',
   'svg', 'g', 'defs', 'marker', 'line', 'polyline', 'polygon', 'rect', 'circle', 'ellipse', 'path', 'text', 'tspan',
 ]
 
 const ALLOWED_ATTRIBUTES: readonly string[] = [
   'class', 'colspan', 'rowspan',
+  'src', 'alt', 'loading',
   'viewbox', 'role', 'aria-label', 'id',
   'x', 'y', 'x1', 'y1', 'x2', 'y2', 'cx', 'cy', 'r', 'rx', 'ry', 'width', 'height', 'points', 'd', 'transform',
   'stroke', 'fill', 'stroke-width', 'stroke-dasharray', 'stroke-linecap', 'stroke-linejoin',
@@ -50,6 +53,8 @@ const ALLOWED_ATTRIBUTES: readonly string[] = [
 const COLOR_ATTRIBUTES: readonly string[] = ['stroke', 'fill']
 const ALLOWED_COLORS: readonly string[] = ['none', 'currentcolor']
 const MARKER_LINK = /^url\(#[\w-]+\)$/
+/** Pictures are files of the project (public/content-images), never links to other sites. */
+export const CONTENT_IMAGE = /^\/content-images\/[a-z0-9][a-z0-9-]*\.(?:jpg|jpeg|png|webp)$/
 const ATTRIBUTE = /\s([^\s=/"'>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>]+)))?/g
 
 const SUBJECT_ID = /^[a-z][a-z0-9-]*$/
@@ -91,6 +96,11 @@ export function countWords(html: string): number {
   return text.split(/\s+/).filter((token) => /[\p{L}\p{N}]/u.test(token)).length
 }
 
+/** Paths of the pictures an HTML fragment refers to. */
+export function contentImages(html: string): string[] {
+  return [...html.matchAll(/<img\b[^>]*\bsrc\s*=\s*"([^"]+)"/gi)].map((match) => match[1]!)
+}
+
 /** Checks that HTML uses only the allowed tags, attributes and classes and contains no scripts. */
 export function checkHtml(html: string, path: string): Issues {
   const issues: Issues = []
@@ -116,11 +126,17 @@ export function checkHtml(html: string, path: string): Issues {
         for (const cls of value.split(/\s+/).filter(Boolean)) {
           if (!ALLOWED_CLASSES.includes(cls)) issues.push(`${path}: класс «${cls}» не разрешён`)
         }
+      } else if (attr === 'src' && (name !== 'img' || !CONTENT_IMAGE.test(value))) {
+        issues.push(`${path}: src="${value}" — только у <img> и только файл из /content-images/ (латиница, jpg/png/webp)`)
       } else if (COLOR_ATTRIBUTES.includes(attr) && !ALLOWED_COLORS.includes(value.toLowerCase())) {
         issues.push(`${path}: ${attr}="${value}" — цвет задавайте классом (accent, red, muted, soft)`)
       } else if (/url\(/i.test(value) && !MARKER_LINK.test(value)) {
         issues.push(`${path}: в «${attr}» допустима только ссылка на маркер url(#id)`)
       }
+    }
+    if (name === 'img') {
+      if (!/\bsrc\s*=/i.test(attrs!)) issues.push(`${path}: у <img> нужен src`)
+      if (!/\balt\s*=\s*"[^"]+"/i.test(attrs!)) issues.push(`${path}: у <img> нужен alt с описанием картинки`)
     }
     if (name === 'svg') {
       if (!/\bviewbox\s*=/i.test(attrs!)) issues.push(`${path}: у <svg> нужен viewBox`)

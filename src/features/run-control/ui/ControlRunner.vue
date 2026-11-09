@@ -2,6 +2,7 @@
 import { computed, nextTick, ref, useTemplateRef, watch } from 'vue'
 
 import { PASS_SCORES, useProgressStore } from '@/entities/progress'
+import { withContentBase } from '@/entities/subject'
 
 import { scoreControl } from '../model/control'
 
@@ -127,7 +128,7 @@ function pointsLabel(points: number): string {
         <div v-if="checked" class="task__solution">
           <p class="task__solution-title">Решение</p>
           <!-- eslint-disable-next-line vue/no-v-html -- trusted HTML bundled with the app -->
-          <div class="content content--flow" v-html="task.solution" />
+          <div class="content content--flow" v-html="withContentBase(task.solution)" />
           <button type="button" class="task__review" @click="emit('review-topic', task.topic)">
             Перечитать тему
           </button>

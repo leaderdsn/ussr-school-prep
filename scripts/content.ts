@@ -4,10 +4,10 @@
  *   pnpm content:index  — regenerate grades-index.json from grades/*.json
  *   pnpm content:check  — validate subjects.json, every grade file and the index
  */
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-import { summarizeGrade, validateGrade, validateSubjects } from '../src/entities/subject/lib/validate.ts'
+import { contentImages, summarizeGrade, validateGrade, validateSubjects } from '../src/entities/subject/lib/validate.ts'
 
 import type { Grade, GradeSummary, Subject } from '../src/entities/subject/model/types.ts'
 
@@ -15,6 +15,7 @@ const DATA_DIR = join(import.meta.dirname, '../src/entities/subject/data')
 const GRADES_DIR = join(DATA_DIR, 'grades')
 const SUBJECTS_FILE = join(DATA_DIR, 'subjects.json')
 const INDEX_FILE = join(DATA_DIR, 'grades-index.json')
+const PUBLIC_DIR = join(import.meta.dirname, '../public')
 
 /** Work order: these groups first (by grade inside a group), then everything else in catalog order. */
 const QUEUE_GROUPS: readonly (readonly string[])[] = [
@@ -101,6 +102,10 @@ function check(): boolean {
       continue
     }
     problems.push(...validateGrade(data, subjects, name).map((issue) => `${name}.json: ${issue}`))
+    // Every picture the lesson refers to must be a file of the project
+    for (const src of new Set(contentImages(JSON.stringify(data).replaceAll('\\"', '"')))) {
+      if (!existsSync(join(PUBLIC_DIR, src))) problems.push(`${name}.json: нет файла картинки public${src}`)
+    }
   }
 
   if (problems.length === 0) {

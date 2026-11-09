@@ -36,6 +36,7 @@ pnpm dev          # http://localhost:5173
 | `pnpm content:status` | Какие классы написаны и что следующее в очереди |
 | `pnpm content:index` | Пересобрать `grades-index.json` из файлов классов |
 | `pnpm content:check` | Проверить каталог, все файлы классов и актуальность индекса |
+| `pnpm content:image "File:…" имя` | Скачать картинку со свободной лицензией из Wikimedia Commons в `public/content-images/` |
 
 ## Стек
 

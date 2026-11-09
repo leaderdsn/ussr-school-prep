@@ -138,6 +138,14 @@
     text.muted
       color: color-mix(in srgb, var(--p-text-color) 72%, var(--p-text-muted-color))
 
+  // A real picture or photo; the caption names the author and the licence
+  figure img
+    display: block
+    max-width: 100%
+    max-height: 26rem
+    height: auto
+    border-radius: tokens.$radius-sm
+
   figcaption
     color: var(--p-text-muted-color)
     font-size: tokens.$font-size-sm

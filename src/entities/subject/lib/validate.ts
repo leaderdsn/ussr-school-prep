@@ -25,6 +25,8 @@ export const CONTENT_LIMITS = {
 export const ALLOWED_CLASSES: readonly string[] = [
   'rule', 'example', 'formula', 'note', 'source', 'table-wrap',
   'accent', 'red', 'muted', 'thin', 'dashed', 'soft',
+  // Real colours that must not follow the theme: stripes of the Russian flag
+  'flag-white', 'flag-blue', 'flag-red',
 ]
 
 export const ALLOWED_TAGS: readonly string[] = [
